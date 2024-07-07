@@ -463,38 +463,38 @@
           <ul class="clients-list has-scrollbar">
 
             <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-1-color.png" alt="client logo">
+              <a href="https://www.microsoft.com/software-download/windows11" target="_main">
+                <img src="./assets/images/logo-1-color.png" alt="Windows logo">
               </a>
             </li>
 
             <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-2-color.png" alt="client logo">
+              <a href="https://www.visa.co.in/" target="_main">
+                <img src="./assets/images/logo-2-color.png" alt="Visa logo">
               </a>
             </li>
 
             <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-3-color.png" alt="client logo">
+              <a href="https://about.meta.com/metaverse/" target="_main">
+                <img src="./assets/images/logo-3-color.png" alt="Meta logo">
               </a>
             </li>
 
             <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-4-color.png" alt="client logo">
+              <a href="https://www.oreo.com/"  target="_main">
+                <img src="./assets/images/logo-4-color.png" alt="Oreo logo">
               </a>
             </li>
 
             <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-5-color.png" alt="client logo">
+              <a href="https://www.unilever.com/"  target="_main">
+                <img src="./assets/images/logo-5-color.png" alt="Unilever logo">
               </a>
             </li>
 
             <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-6-color.png" alt="client logo">
+              <a href="https://www.paypal.com/in/home"  target="_main">
+                <img src="./assets/images/logo-6-color.png" alt="Paypal logo">
               </a>
             </li>
 
