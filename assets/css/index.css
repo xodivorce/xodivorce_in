@@ -340,13 +340,10 @@
     font-weight: var(--fw-500);
     background-color: var(--vegas-gold); 
     color: var(--eerie-black-);
-    border-radius: 8px;
     width: max-content;
     border-radius: 20px;
     cursor: pointer;
-    text-align: center;
     display: inline-block;
-    margin: 0 auto;
     margin-left: 15px;
     transition: transform 0.5s, box-shadow 0.5s, background-color 0.5s, border-radius 0.5s;
   }
@@ -1603,7 +1600,8 @@
      * SIDEBAR
      */
   
-    .contacts-list {
+    .ainer
+    acts-list {
       grid-template-columns: 1fr 1fr;
       gap: 30px 15px;
     }

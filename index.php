@@ -50,16 +50,9 @@
         </figure>
 
         <div class="info-content">
-  <h1 class="name" title="Prasid Mandal">Xodivorce</h1>
-
-  
-  <button class="view-cv-btn" onclick="alert('Feature coming soon...!')">View CV</button>
-  </div>
-
-
-
-
-
+          <h1 class="name" title="Prasid Mandal">Xodivorce</h1>
+          <a href="/assets/pdf/CV.pdf " download class="view-cv-btn">View CV</a>
+        </div>
 
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
@@ -779,7 +772,6 @@
           <div class="container">
           <div class="title"><i class="fa-regular fa-clock icon-spin"></i>&nbsp; Coming Soon</div>
           <div class="subtitle">Please be patient, something interesting is cooking up...!!<br>
-          The Beta version doesnot represent the Final qulaity...!!
           </div>
         </div>
 
@@ -972,8 +964,7 @@
 
         <div class="container">
           <div class="title"><i class="fa-regular fa-clock icon-spin"></i>&nbsp; Coming Soon</div>
-          <div class="subtitle">Please be patient, something interesting is cooking up...!!<br>
-          The Beta version doesnot represent the Final qulaity...!!
+          <div class="subtitle">Please be patient, something interesting is cooking up...!!
           </div>
         </div>
 
@@ -1195,7 +1186,7 @@
 
             <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
+            <button class="form-btn" type="submit" disabled data-form-btn onclick="alert('Whoopsie! 🐾 Our feedback feature seems to be chasing squirrels right now. Please reach out to us via email or try again later. 🌟')">
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>
