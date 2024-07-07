@@ -304,71 +304,32 @@
   /*-----------------------------------*\
     #SIDEBAR
   \*-----------------------------------*/
-  
   .sidebar {
     margin-bottom: 15px;
     max-height: 112px;
     overflow: hidden;
     transition: var(--transition-2);
-  }
-  
-  .sidebar.active { max-height: 405px; }
-  
-  .sidebar-info {
+}
+
+.sidebar.active {
+    max-height: 405px;
+}
+
+.sidebar-info {
     position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 15px;
-  }
-  
-  .avatar-box {
+}
+
+.avatar-box {
     background: var(--bg-gradient-onyx);
     border-radius: 20px;
-  }
-
-  .info-content .name {
-    color: var(--white-2);
-    font-size: var(--fs-3);
-    font-weight: var(--fw-500);
-    letter-spacing: -0.25px;
-    margin-bottom: 10px;
-  }
-
-  .view-cv-btn {
-    padding: 3px 16px; 
-    font-weight: var(--fw-500);
-    background-color: var(--vegas-gold); 
-    color: var(--eerie-black-);
-    width: max-content;
-    border-radius: 20px;
-    cursor: pointer;
-    display: inline-block;
-    margin-left: 15px;
-    transition: transform 0.5s, box-shadow 0.5s, background-color 0.5s, border-radius 0.5s;
-  }
-  
-  .view-cv-btn:hover {
-    box-shadow: 0 4px 15px rgba(167, 167, 167, 0.898);
-    background-color: var(--white-1); 
-    border-radius: 8px;
-  }
-
-  @media (max-width: 579px) {
-    .view-cv-btn {
-      padding: 2px 12px;
-      font-size: 14px; 
-    }
-  }
-  @media (max-width: 1200px) {
-    .view-cv-btn {
-      margin-left:0;
-    }
-  }
+}
 
 
-  
-  .info_more-btn {
+.info_more-btn {
     position: absolute;
     top: -15px;
     right: -15px;
@@ -380,9 +341,9 @@
     box-shadow: var(--shadow-2);
     transition: var(--transition-1);
     z-index: 1;
-  }
-  
-  .info_more-btn::before {
+}
+
+.info_more-btn::before {
     content: "";
     position: absolute;
     inset: 1px;
@@ -390,76 +351,84 @@
     background: var(--bg-gradient-jet);
     transition: var(--transition-1);
     z-index: -1;
-  }
-  
-  .info_more-btn:hover,
-  .info_more-btn:focus { background: var(--bg-gradient-yellow-1); }
-  
-  .info_more-btn:hover::before,
-  .info_more-btn:focus::before { background: var(--bg-gradient-yellow-2); }
-  
-  .info_more-btn span { display: none; }
-  
-  .sidebar-info_more {
+}
+
+.info_more-btn:hover,
+.info_more-btn:focus {
+    background: var(--bg-gradient-yellow-1);
+}
+
+.info_more-btn:hover::before,
+.info_more-btn:focus::before {
+    background: var(--bg-gradient-yellow-2);
+}
+
+.info_more-btn span {
+    display: none;
+}
+
+.sidebar-info_more {
     opacity: 0;
     visibility: hidden;
     transition: var(--transition-2);
-  }
-  
-  .sidebar.active .sidebar-info_more {
+}
+
+.sidebar.active .sidebar-info_more {
     opacity: 1;
     visibility: visible;
-  }
-  
-  .contacts-list {
+}
+
+.contacts-list {
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
-  }
-  
-  .contact-item {
+}
+
+.contact-item {
     min-width: 100%;
     display: flex;
     align-items: center;
     gap: 16px;
-  }
-  
-  .contact-info {
+}
+
+.contact-info {
     max-width: calc(100% - 46px);
     width: calc(100% - 46px);
-  }
-  
-  .contact-title {
+}
+
+.contact-title {
     color: var(--light-gray-70);
     font-size: var(--fs-8);
     text-transform: uppercase;
     margin-bottom: 2px;
-  }
-  
-  .contact-info :is(.contact-link, time, address) {
+}
+
+.contact-info :is(.contact-link, time, address) {
     color: var(--white-2);
     font-size: var(--fs-7);
-  }
-  
-  .contact-info address { font-style: normal; }
-  
-  .social-list {
+}
+
+.contact-info address {
+    font-style: normal;
+}
+
+.social-list {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 15px;
     padding-bottom: 4px;
     padding-left: 7px;
-  }
-  
-  .social-item .social-link {
+}
+
+.social-item .social-link {
     color: var(--light-gray-70);
     font-size: 18px;
-  }
-  
-  
-  .social-item .social-link:hover { color: var(--light-gray); }
-  
+}
+
+.social-item .social-link:hover {
+    color: var(--light-gray);
+}
   
 
   
