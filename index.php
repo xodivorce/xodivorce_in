@@ -50,10 +50,16 @@
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Prasid Mandal">Xodivorce</h1>
+  <h1 class="name" title="Prasid Mandal">Xodivorce</h1>
 
-          <p class="title">Web developer</p>
-        </div>
+  
+  <button class="view-cv-btn" onclick="alert('Feature coming soon...!')">View CV</button>
+  </div>
+
+
+
+
+
 
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
@@ -208,8 +214,9 @@
 
         <section class="about-text">
           <p>
-            Anyeonghaseyo, I'm Prasid a Creative Director and UI/UX Designer from Kolkata, India, working in Web & iOS App development.
-            I excel at transforming complex problems into elegant, beautiful, and intuitive designs.
+          Anyeonghaseyo, I'm Prasid, a Creative Director and UI/UX Designer from Kolkata, India, 
+          specializing in Web & iOS App development. I excel at transforming complex problems into elegant, 
+          beautiful, and intuitive designs.
           </p>
 
           <p>
