@@ -168,7 +168,7 @@
     -->
 
     <div class="main-content">
-      <div class="main">
+    
     <section class="about-text hoverAnimatedContainer">
 
 
