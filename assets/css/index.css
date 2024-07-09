@@ -26,7 +26,33 @@
   100% { transform: rotate(360deg); }
 }
 
+/* Cursor Hover Animination */
+.hoverAnimatedContainer {
+  position: relative;
+  overflow: hidden;
+  --mouse-x: 0;
+  --mouse-y: 0;
+}
 
+.hoverAnimatedContainer:hover::before {
+  opacity: 1;
+ 
+}
+
+.hoverAnimatedContainer::before {
+  background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.112), transparent 40%);
+  border-radius: 20px;
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+  transition: opacity 500ms;
+  pointer-events: none;
+ 
+}
 
 
 

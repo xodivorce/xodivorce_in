@@ -1,7 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="Official Portfolio Website of Prasid Mandal - Full-Stack Web, iOS Developer and UI/UX Designer - (Also Reknowned as @xodivorce). | Know More About Him and His WorkExperince">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Xodivorce - Personal Portfolio</title>
@@ -30,6 +32,7 @@
 
 <body>
 
+
   <!--
     - #MAIN
   -->
@@ -38,10 +41,12 @@
     <div class="loader"></div>
   </div> 
   <main>
+    
 
     <!--
       - #SIDEBAR
     -->
+
 
     <aside class="sidebar" data-sidebar>
 
@@ -163,6 +168,9 @@
     -->
 
     <div class="main-content">
+      <div class="main">
+    <section class="about-text hoverAnimatedContainer">
+
 
       <!--
         - #NAVBAR
@@ -202,10 +210,12 @@
       -->
 
       <article class="about  active" data-page="about">
+        
 
         <header>
           <h2 class="h2 article-title">About me</h2>
         </header>
+        
 
         <section class="about-text">
           <p>
@@ -214,12 +224,7 @@
           beautiful, and intuitive designs.
           </p>
 
-          <p>
-            My passion is to build your website so that it is functional and user-friendly but at the same time attractive.
-            Moreover, I
-            add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
-            across your
-            message and identity in the most creative way. Have been crafting modern websites and iOS apps for 4+ years.
+          <p id="message">
             </p>
         </section>
 
@@ -1194,7 +1199,7 @@
             </button>
 
           </form>
-
+          </div>
         </section>
 
       </article>
@@ -1202,10 +1207,6 @@
     </div>
 
   </main>
-
-
-
-
 
 
   <!--
@@ -1221,4 +1222,4 @@
 
 </body>
 
-</html>
+

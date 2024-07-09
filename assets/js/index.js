@@ -4,8 +4,47 @@ document.addEventListener("DOMContentLoaded", function() {
   }, 1500);
 });
 
+//Cursor Hover Animination
+const animate_card_mouseover_effect = e => {
+  const { currentTarget: target } = e;
+  const rect = target.getBoundingClientRect(),
+    x = e.clientX - rect.left,
+    y = e.clientY - rect.top;
+
+  target.style.setProperty("--mouse-x", `${x}px`);
+  target.style.setProperty("--mouse-y", `${y}px`);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".hoverAnimatedContainer");
+  if (cards) {
+    for (const card of cards) {
+      card.onmousemove = e => animate_card_mouseover_effect(e);
+    }
+  }
+});
+
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
+
+//Cacualte Date & About
+function calculateYearDiff(startDate) {
+  const start = new Date(startDate);
+  const now = new Date();
+  const diff = now.getFullYear() - start.getFullYear();
+  return diff;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const messageElement = document.getElementById('message');
+  const years = calculateYearDiff('2020-01-01');
+  messageElement.innerHTML = `My passion is to build your website so that it is functional and user-friendly but at the same time attractive.
+            Moreover, I
+            add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
+            across your
+            message and identity in the most creative way. Have been crafting modern websites and iOS apps for  ${years}+ years.`;
+});
+
 
 
 
