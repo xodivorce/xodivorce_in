@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Official Portfolio Website of Prasid Mandal - Full-Stack Web, iOS Developer and UI/UX Designer - (Also Reknowned as @xodivorce). | Know More About Him and His WorkExperince">
+  <meta name="description" content="Official Portfolio Website of Prasid Mandal - Full-Stack Web, iOS Developer and UI/UX Designer - (Also Reknowned as @xodivorce).">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Xodivorce - Personal Portfolio</title>

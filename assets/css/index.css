@@ -55,11 +55,6 @@
 }
 
 
-@media (min-width: 450px){
-  .hoverAnimatedContainer::before {
-    display: none;
-  }
-}
 
 
 :root {
