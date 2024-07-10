@@ -433,7 +433,7 @@
 
               <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
 
-              <time datetime="2021-06-14">14 June, 2021</time>
+              <time datetime="2023-10-13">13 October, 2023</time>
 
               <div data-modal-text>
                 <p>
