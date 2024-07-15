@@ -433,7 +433,7 @@
 
               <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
 
-              <time datetime="2021-06-14">14 June, 2021</time>
+              <time datetime="2023-10-13">13 October, 2023</time>
 
               <div data-modal-text>
                 <p>
@@ -1163,46 +1163,151 @@
 
       <!--
         - #CONTACT
-      -->
+      --><article class="contact" data-page="contact">
+  <header>
+    <h2 class="h2 article-title">Contact</h2>
+  </header>
 
-      <article class="contact" data-page="contact">
+  <section class="mapbox" data-mapbox>
+    <figure>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117925.21689758253!2d88.26495109688607!3d22.535564936243723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f882db4908f667%3A0x43e330e68f6c2cbc!2sKolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1720215955684!5m2!1sen!2sin"
+        width="400" height="300" loading="lazy"></iframe>
+    </figure>
+  </section>
 
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
+  <section class="contact-form">
+    <h3 class="h3 form-title">Contact Form</h3>
+    <?php
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
 
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117925.21689758253!2d88.26495109688607!3d22.535564936243723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f882db4908f667%3A0x43e330e68f6c2cbc!2sKolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1720215955684!5m2!1sen!2sin"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section>
+    require 'vendor/autoload.php';
 
-        <section class="contact-form">
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $fullname = filter_var($_POST['fullname'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+        $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+        $message = filter_var($_POST['message'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-          <h3 class="h3 form-title">Contact Form</h3>
+        $name_restriction = ['xodivorce','bantu'];
+        $email_restriction = ['hey@xodivorce.in', 'prasidmandal@gamil.com'];
+        $message_restriction = ['Chutiya', 'Bloodshed', 'Bloody', 'Betrayed', 'Ashamed', 'Abused', 'Cheated', 'Chamcha',
+         'Chachagiri', 'Chelas', 'Childishness', 'Coward', 'Criminal', 'Crocodile Tears', 'Disgrace', 'Donkey', 'Eyewash',
+          'Fudge', 'Hooliganism', 'Hypocrisy', 'Incompetent', 'Mislead', 'Lie', 'Untrue', 'Drama', 'Anarchist', 'Gaddar',
+           'Girgit', 'Goons', 'Ghadiyali Ansu', 'Apmaan', 'Asatya', 'Ahankaar', 'Corrupt', 'Kala Din', 'Kala Bazaari',
+            'Khareed Farokht', 'Danga', 'Dalal', 'Daadagari', 'Dohra Charitra', 'Bechara', 'Bobcut', 'Lollypop', 'Vishwasghat',
+             'Behri Sarkar', 'Sexual Harassment', 'Samvedanheen', 'Foolish', 'Pitthu', 'Bahenchod', 'Abalchoda', 'Chodon', 'Bara',
+              'Bal', 'Bichi', 'Babarbichi', 'Baper', 'Anal', 'Atal', 'Biri', 'Mod', 'Gaja', 'Gandu', 'Fuck', 'Fucker',
+               'Motherfucker', 'Motherchod', 'Chod', 'Bahenchod', 'Matherchod', 'Khankir Chele', 'Magi', 'Khanki', 'Gud', 'Gar',
+                'Gudmarani', 'Garmarani', 'Marani', 'Shegomotherqueen', 'Segomarani', 'Chodonami', 'Bokachoda', 'Choda', 'Handlemarani',
+                 'Marchis', 'Chinnar', 'Randi', 'Rand', 'Bantu', 'Boudi', 'Seggo', 'Panu', 'Porn', 'Xxx', 'Pornstar', 'Khor', 'Gajakhor',
+                  'Panukhor', 'Birikhor', 'Gajakhor', 'Gungan', 'Balchoda', 'Choda', 'Dhon', 'Penus', 'Vgaina', 'Testicles', 'Kamrosh',
+                   'Rosh', 'Chut', 'Bichirbal', 'Dhonerbal', 'Chutme', 'Sex', 'Sexy', 'Syandha', 'Syandhanamak', 'Marchi',
+                    'OnlyFans', 'Pornhub', 'Xhamster', 'Xvideous', 'Xxxvideous', 'Xxximages', '#Freepalestine', 'Freepalestine', 'Land',
+                     'Lulla', 'Mume', 'Mumechoco', 'Mai', 'Dudu', 'Mal', 'Sperm', 'Masterbate', 'Gay', 'Lesbian', 'Bl', 'Bisexual',
+                      'Lgbtq', 'Lgbt', 'Lgbtq+', 'chotilulla' , 'Vikhari', 'Bhikhari', 'Chaddi', 'Nunu', 'Panty', 'Bikini', 'Bra',
+                      'Mutra', 'Mut', 'Malmutra', 'Malmutrakached', 'Dalla', 'Dogla', 'Doglapan'];
 
-          <form action="#" class="form" data-form>
+        // Check if the email address is valid and not in the email restriction list
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL) || in_array($email, $email_restriction)) {
+            echo "<script>alert('Invalid email format or restricted email address'); window.history.back();</script>";
+        } else {
+            // Check for restricted keywords in fullname
+            foreach ($name_restriction as $keyword) {
+                if (stripos($fullname, $keyword) !== false) {
+                    echo "<script>alert('Your name contains restricted keywords.'); window.history.back();</script>";
+                    exit;
+                }
+            }
 
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+            // Check for restricted keywords in message
+            foreach ($message_restriction as $keyword) {
+                if (stripos($message, $keyword) !== false) {
+                    echo "<script>alert('Your message contains restricted keywords.'); window.history.back();</script>";
+                    exit;
+                }
+            }
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
+            $mail = new PHPMailer(true);
+            try {
+                // Server settings
+                $mail->isSMTP();
+                $mail->Host = 'mail.neosubhamoy.com';
+                $mail->SMTPAuth = true;
+                $mail->Username = 'hey@xodivorce.in';
+                $mail->Password = 'Xodivorce192';
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+                $mail->Port = 465;
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+                // Recipients
+                $mail->setFrom('hey@xodivorce.in', 'Xodivorce Website'); // Set the sender address
+                $mail->addAddress('hey@xodivorce.in'); // Email address to receive the messages
+                $mail->addReplyTo($email, $fullname); // Add reply-to address
 
-            <button class="form-btn" type="submit" disabled data-form-btn onclick="alert('Whoopsie! 🐾 Our feedback feature seems to be chasing squirrels right now. Please reach out to us via email or try again later. 🌟')">
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
+                // Content
+                $mail->isHTML(true);
+                $mail->Subject = 'New Contact Form Submission';
+                $mail->Body    = "You have received a new message from the contact form on your website.<br><br>" .
+                                 "Full Name: " . $fullname . "<br>" .
+                                 "Email: " . $email . "<br>" .
+                                 "Message: <br>" . nl2br($message);
 
-          </form>
-          </div>
-        </section>
+                $mail->send();
+                echo "<script>alert('Message sent successfully!'); window.location.href = window.location.href;</script>";
+            } catch (Exception $e) {
+                echo "<script>alert('Message could not be sent. Mailer Error: {$mail->ErrorInfo}');</script>";
+            }
+        }
+    }
+    ?>
+    <form action="" method="post" class="form" data-form onsubmit="return validateForm()">
+      <div class="input-wrapper">
+        <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+        <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+      </div>
+      <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+      <!--<button class="form-btn" type="submit" disabled data-form-btn onclick="alert('Whoopsie! 🐾 Our feedback feature seems to be chasing squirrels right now. Please reach out to us via email or try again later. 🌟')">-->
+      <button class="form-btn" type="submit" data-form-btn>
+        <ion-icon name="paper-plane"></ion-icon>
+        <span>Send Message</span>
+      </button>
+    </form>
+  </section>
+</article>
 
-      </article>
+<script>
+function validateForm() {
+  const email = document.querySelector('input[name="email"]').value;
+  const fullname = document.querySelector('input[name="fullname"]').value;
+  const message = document.querySelector('textarea[name="message"]').value;
+
+  const nameRestriction = ['xodivorce'];
+  const messageRestriction = ['chutiya'];
+  const emailRestriction = ['hey@xodivorce.in'];
+
+  if (emailRestriction.includes(email)) {
+    alert('You cannot use this email address.');
+    return false;
+  }
+
+  for (let keyword of nameRestriction) {
+    if (fullname.toLowerCase().includes(keyword)) {
+      alert('Your name contains restricted keywords.');
+      return false;
+    }
+  }
+
+  for (let keyword of messageRestriction) {
+    if (message.toLowerCase().includes(keyword)) {
+      alert('Your message contains restricted keywords.');
+      return false;
+    }
+  }
+
+  return true;
+}
+</script>
+
 
     </div>
 

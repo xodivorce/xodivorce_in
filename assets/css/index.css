@@ -30,6 +30,7 @@
 .hoverAnimatedContainer {
   position: relative;
   overflow: hidden;
+  cursor: url("/assets/images/cursor/cursor-2.png"), auto;
   --mouse-x: 0;
   --mouse-y: 0;
 }
@@ -54,7 +55,9 @@
  
 }
 
-
+body{
+  cursor: url("/assets/images/cursor/cursor-2.png"), auto;
+}
 
 
 :root {
@@ -66,7 +69,6 @@
     );
     --bg-gradient-jet:
      #1e293b;
-    
     --bg-gradient-yellow-1: linear-gradient(
       to bottom right, 
       #37bbf9b9 0%, 
