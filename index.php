@@ -19,6 +19,7 @@
   -->
   <link rel="stylesheet" href="./assets/css/index.css">
   <link rel="stylesheet" href="./assets/css/exeption.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
 
   <!--
@@ -26,8 +27,8 @@
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!--<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">-->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -1189,33 +1190,37 @@
         $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
         $message = filter_var($_POST['message'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-        $name_restriction = ['xodivorce','bantu'];
-        $email_restriction = ['hey@xodivorce.in', 'prasidmandal@gamil.com'];
-        $message_restriction = ['Chutiya', 'Bloodshed', 'Bloody', 'Betrayed', 'Ashamed', 'Abused', 'Cheated', 'Chamcha',
-         'Chachagiri', 'Chelas', 'Childishness', 'Coward', 'Criminal', 'Crocodile Tears', 'Disgrace', 'Donkey', 'Eyewash',
-          'Fudge', 'Hooliganism', 'Hypocrisy', 'Incompetent', 'Mislead', 'Lie', 'Untrue', 'Drama', 'Anarchist', 'Gaddar',
-           'Girgit', 'Goons', 'Ghadiyali Ansu', 'Apmaan', 'Asatya', 'Ahankaar', 'Corrupt', 'Kala Din', 'Kala Bazaari',
-            'Khareed Farokht', 'Danga', 'Dalal', 'Daadagari', 'Dohra Charitra', 'Bechara', 'Bobcut', 'Lollypop', 'Vishwasghat',
-             'Behri Sarkar', 'Sexual Harassment', 'Samvedanheen', 'Foolish', 'Pitthu', 'Bahenchod', 'Abalchoda', 'Chodon', 'Bara',
-              'Bal', 'Bichi', 'Babarbichi', 'Baper', 'Anal', 'Atal', 'Biri', 'Mod', 'Gaja', 'Gandu', 'Fuck', 'Fucker',
-               'Motherfucker', 'Motherchod', 'Chod', 'Bahenchod', 'Matherchod', 'Khankir Chele', 'Magi', 'Khanki', 'Gud', 'Gar',
-                'Gudmarani', 'Garmarani', 'Marani', 'Shegomotherqueen', 'Segomarani', 'Chodonami', 'Bokachoda', 'Choda', 'Handlemarani',
-                 'Marchis', 'Chinnar', 'Randi', 'Rand', 'Bantu', 'Boudi', 'Seggo', 'Panu', 'Porn', 'Xxx', 'Pornstar', 'Khor', 'Gajakhor',
-                  'Panukhor', 'Birikhor', 'Gajakhor', 'Gungan', 'Balchoda', 'Choda', 'Dhon', 'Penus', 'Vgaina', 'Testicles', 'Kamrosh',
-                   'Rosh', 'Chut', 'Bichirbal', 'Dhonerbal', 'Chutme', 'Sex', 'Sexy', 'Syandha', 'Syandhanamak', 'Marchi',
-                    'OnlyFans', 'Pornhub', 'Xhamster', 'Xvideous', 'Xxxvideous', 'Xxximages', '#Freepalestine', 'Freepalestine', 'Land',
-                     'Lulla', 'Mume', 'Mumechoco', 'Mai', 'Dudu', 'Mal', 'Sperm', 'Masterbate', 'Gay', 'Lesbian', 'Bl', 'Bisexual',
-                      'Lgbtq', 'Lgbt', 'Lgbtq+', 'chotilulla' , 'Vikhari', 'Bhikhari', 'Chaddi', 'Nunu', 'Panty', 'Bikini', 'Bra',
-                      'Mutra', 'Mut', 'Malmutra', 'Malmutrakached', 'Dalla', 'Dogla', 'Doglapan'];
+
+        //Restrictions-->
+
+        //Your Name
+        $name_restriction = ['xodivorce','bantu','Prasid Mandal'];
+        //Email Address
+        $email_restriction = ['hey@xodivorce.in', 'prasidmandal@gmail.com'];
+        //Your message
+        $message_restriction = [
+          'Chutiya', 'Blood', 'Betrayed', 'Ashamed', 'Abused', 'Cheated', 'Chamcha', 'Chachagiri', 'Chelas', 'Childishness', 'Coward', 
+          'Criminal', 'Crocodile Tears', 'Disgrace', 'Donkey', 'Fudge', 'Hooliganism', 'Hypocrisy', 'Incompetent', 'Anarchist', 'Gaddar', 
+          'Girgit', 'Goons', 'Ghadiyali Ansu', 'Apmaan', 'Asatya', 'Ahankaar', 'Corrupt', 'Kala Din', 'Kala Bazaari', 'Khareed Farokht', 
+          'Danga', 'Dalal', 'Daadagari', 'Dohra Charitra', 'Bechara', 'Bobcut', 'Lollypop', 'Vishwasghat', 'Behri Sarkar', 'Sexual Harassment', 
+          'Samvedanheen', 'Foolish', 'Pitthu', 'Chodon', 'Bara', 'Bal', 'Bichi', 'Baper', 'Anal', 'Atal', 'Biri', 'Mod', 'Gaja', 'Gandu', 
+          'Fuck', 'Chod', 'Magi', 'Khanki', 'Gud', 'Gar', 'Marani', 'Shegomotherqueen', 'Segomarani', 'Choda', 'Marchis', 'Chinnar', 'Randi', 
+          'Rand', 'Bantu', 'Boudi', 'Seggo', 'Panu', 'Porn', 'Xxx', 'Pornstar', 'Khor', 'Gungan', 'Choda', 'Dhon', 'Penus', 'Vgaina', 
+          'Testicles', 'Kamrosh', 'Chut', 'Chutme', 'Sex', 'Sexy', 'Syandha', 'Marchi', 'OnlyFans', 'Pornhub', 'Land', 'Lulla', 'Mume', 
+          'Mumechoco', 'Dudu', 'Sperm', 'Masterbate', 'Gay', 'Lesbian', 'Bl', 'Bisexual', 'Lgbtq', 'Lgbt', 'Lgbtq+', 'Vikhari', 'Bhikhari', 
+          'Chaddi', 'Nunu', 'Panty', 'Bikini', 'Bra', 'Mut', 'Malmutra', 'Dalla', 'Dogla', 'Balckmail', 'Suiside', 'Murder'
+      ];
+      
 
         // Check if the email address is valid and not in the email restriction list
         if (!filter_var($email, FILTER_VALIDATE_EMAIL) || in_array($email, $email_restriction)) {
-            echo "<script>alert('Invalid email format or restricted email address'); window.history.back();</script>";
+            echo "<script>alert('Whoopsie! 🐾 It seems there's a keyword restriction or the email address is playing hide-and-seek!
+             🕵️‍♂️ Please check the email address and try again ✨. Thanks a bunch!'); window.history.back();</script>";
         } else {
             // Check for restricted keywords in fullname
             foreach ($name_restriction as $keyword) {
                 if (stripos($fullname, $keyword) !== false) {
-                    echo "<script>alert('Your name contains restricted keywords.'); window.history.back();</script>";
+                    echo "<script>alert('Whoopsie! 🐾 It seems your name contains restricted keywords.'); window.history.back();</script>";
                     exit;
                 }
             }
@@ -1223,7 +1228,7 @@
             // Check for restricted keywords in message
             foreach ($message_restriction as $keyword) {
                 if (stripos($message, $keyword) !== false) {
-                    echo "<script>alert('Your message contains restricted keywords.'); window.history.back();</script>";
+                    echo "<script>alert('Whoopsie! 🐾 It seems your message contains restricted keywords! 🕵️‍♂️ Please check and try again ✨'); window.history.back();</script>";
                     exit;
                 }
             }
@@ -1247,15 +1252,15 @@
                 // Content
                 $mail->isHTML(true);
                 $mail->Subject = 'New Contact Form Submission';
-                $mail->Body    = "You have received a new message from the contact form on your website.<br><br>" .
+                $mail->Body    = "Ta-da! You've got mail! 💌 from the contact form on your website.<br><br>" .
                                  "Full Name: " . $fullname . "<br>" .
                                  "Email: " . $email . "<br>" .
                                  "Message: <br>" . nl2br($message);
 
                 $mail->send();
-                echo "<script>alert('Message sent successfully!'); window.location.href = window.location.href;</script>";
+                echo "<script>alert('Success! Your message has taken off like a rocket! 🚀 We'll get back to you soon. Thanks for reaching out! ✨'); window.location.href = window.location.href;</script>";
             } catch (Exception $e) {
-                echo "<script>alert('Message could not be sent. Mailer Error: {$mail->ErrorInfo}');</script>";
+                echo "<script>alert('Whoopsie! 🐾 Our feedback feature seems to be chasing squirrels right now. Please reach out to us via email or try again later. 🌟 Mailer Error: {$mail->ErrorInfo}');</script>";
             }
         }
     }
@@ -1274,40 +1279,6 @@
     </form>
   </section>
 </article>
-
-<script>
-function validateForm() {
-  const email = document.querySelector('input[name="email"]').value;
-  const fullname = document.querySelector('input[name="fullname"]').value;
-  const message = document.querySelector('textarea[name="message"]').value;
-
-  const nameRestriction = ['xodivorce'];
-  const messageRestriction = ['chutiya'];
-  const emailRestriction = ['hey@xodivorce.in'];
-
-  if (emailRestriction.includes(email)) {
-    alert('You cannot use this email address.');
-    return false;
-  }
-
-  for (let keyword of nameRestriction) {
-    if (fullname.toLowerCase().includes(keyword)) {
-      alert('Your name contains restricted keywords.');
-      return false;
-    }
-  }
-
-  for (let keyword of messageRestriction) {
-    if (message.toLowerCase().includes(keyword)) {
-      alert('Your message contains restricted keywords.');
-      return false;
-    }
-  }
-
-  return true;
-}
-</script>
-
 
     </div>
 
