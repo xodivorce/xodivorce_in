@@ -1,8 +1,8 @@
-# xodivorce - Portfolio Website
+# Xodivorce - Portfolio Website
 
 ### Welcome to the Official Portfolio Website of Prasid (@xodivorce) ✨
 [![status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
-[![version](https://img.shields.io/badge/version-v8.0.1-yellow.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
+[![version](https://img.shields.io/badge/version-v8.0.2-yellow.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
 [![PRs](https://img.shields.io/badge/PRs-welcome-blue.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
 <br></br>
 
@@ -23,7 +23,7 @@ Want to jump in and sprinkle some magic on this project? Follow these steps:
 1. **Fork and Clone**:
    - Hit “Fork” at the top-right of the page to make your copy. Then clone it to your local machine:
      ```bash
-     git clone git@github.com:your_username/xodivorce_in.git
+     git clone git@github.com:xodivorce/xodivorce_in.git
      ```
 
 2. **Set Up Your Local Playground**:
@@ -78,7 +78,7 @@ Don’t be shy! [Open an issue](https://github.com/xodivorce/xodivorce_in/issues
 
 ### 📝 License & Usage
 
-This project is licensed under the [**xodivorce License Agreement**](#license). By accessing or contributing to this project, you agree to the following terms:
+This project is licensed under the [**xodivorce License Agreement**](xodivorce_license.txt). By accessing or contributing to this project, you agree to the following terms:
 
 1. **Contributions**:
    - Contributions (code, documentation, etc.) are welcome but must be reviewed and approved by the Owner.
@@ -93,16 +93,15 @@ This project is licensed under the [**xodivorce License Agreement**](#license). 
    - Modified versions of the content cannot be distributed without prior written permission.
 
 5. **Requesting Permission**:
-   - To use any content from this project, contact the Owner at [hey@xodivorce.in].
+   - To use any content from this project, contact the Owner at hey@xodivorce.in .
 
 6. **Copyright Infringement**:
    - Unauthorized use may result in a copyright strike and legal action.
 
-**🌟 Love this project? Give it a star to show your support!**
+**🌟 Like this project? Please consider giving it a star to show your support!**
 
-<br></br>
 <br></br>
 
 ****
 
-A Community-Driven Project - Crafted with ❤️ by **xodivorce** 🚀🤘
+An Open Sourced Project - Crafted with ❤️ by **xodivorce**
