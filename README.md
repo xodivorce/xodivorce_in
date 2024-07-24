@@ -2,7 +2,7 @@
 
 ### Welcome to the Official Portfolio Website of Prasid ([@xodivorce](https://instagram.com/xodivorce)) ✨
 [![status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
-[![version](https://img.shields.io/badge/version-v8.0.3-yellow.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
+[![version](https://img.shields.io/badge/version-v8.0.5-yellow.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
 [![PRs](https://img.shields.io/badge/PRs-welcome-blue.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
 <br></br>
 
@@ -72,13 +72,13 @@ Want to jump in and sprinkle some magic on this project? Follow these steps:
     - Enjoy the glory of your awesome contribution! We appreciate all your help and ideas.
 
 🚀 **Got Ideas or Spotted a Bug?**  
-Don’t be shy! [Open an issue](https://github.com/xodivorce/xodivorce_in/issues) to discuss new features, enhancements, or any bugs you find. Your feedback is golden!!
+Don’t be shy! [**Open an issue**](https://github.com/xodivorce/xodivorce_in/issues) to discuss new features, enhancements, or any bugs you find. Your feedback is golden!!
 
 - Let’s create something epic together! 🌟
 
 ### 📝 License & Usage
 
-This project is licensed under the [**xodivorce License Agreement**](xodivorce_license.txt) . By accessing or contributing to this project, you agree to the following terms:
+This project is licensed under the [**Xodivorce License Agreement**](xodivorce_license.txt) . By accessing or contributing to this project, you agree to the following terms:
 
 1. **Contributions**:
    - Contributions (code, documentation, etc.) are welcome but must be reviewed and approved by the Owner.
@@ -93,7 +93,7 @@ This project is licensed under the [**xodivorce License Agreement**](xodivorce_l
    - Modified versions of the content cannot be distributed without prior written permission.
 
 5. **Requesting Permission**:
-   - To use any content from this project, contact the Owner at hey@xodivorce.in .
+   - To use any content from this project, contact the Owner at **hey@xodivorce.in** .
 
 6. **Copyright Infringement**:
    - Unauthorized use may result in a copyright strike and legal action.
