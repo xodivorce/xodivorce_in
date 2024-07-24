@@ -1266,7 +1266,7 @@
                 // Content
                 $mail->isHTML(true);
                 $mail->Subject = 'New Contact Form Submission';
-                $mail->Body    = "Ta-da! You've got mail! 💌 from the contact form on your website.<br><br>" .
+                $mail->Body    = "Ta-da! You've got a mail, from the contact form on your website.<br><br>" .
                                  "Full Name: " . $fullname . "<br>" .
                                  "Email: " . $email . "<br>" .
                                  "Message: <br>" . nl2br($message);
