@@ -72,7 +72,7 @@ Want to jump in and sprinkle some magic on this project? Follow these steps:
     - Enjoy the glory of your awesome contribution! We appreciate all your help and ideas.
 
 🚀 **Got Ideas or Spotted a Bug?**  
-Don’t be shy! [**Open an issue**](https://github.com/xodivorce/xodivorce_in/issues) to discuss new features, enhancements, or any bugs you find. Your feedback is golden!!
+Don’t be shy! [*Open an issue*](https://github.com/xodivorce/xodivorce_in/issues) to discuss new features, enhancements, or any bugs you find. Your feedback is golden!!
 
 - Let’s create something epic together! 🌟
 
@@ -93,7 +93,7 @@ This project is licensed under the [**Xodivorce License Agreement**](xodivorce_l
    - Modified versions of the content cannot be distributed without prior written permission.
 
 5. **Requesting Permission**:
-   - To use any content from this project, contact the Owner at **hey@xodivorce.in** .
+   - To use any content from this project, contact the Owner at *hey@xodivorce.in* .
 
 6. **Copyright Infringement**:
    - Unauthorized use may result in a copyright strike and legal action.
