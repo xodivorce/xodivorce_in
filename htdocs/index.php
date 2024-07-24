@@ -650,7 +650,7 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
+                <h5 class="h5">Web Development</h5>
                 <data value="80">80%</data>
               </div>
 
