@@ -699,6 +699,20 @@
 
             </li>
 
+            <li class="skill-item">
+              
+              <div class="title-wrapper"
+              <h5 class="h5">PHP</h5>
+              <data value="30">30%</data>
+            </div>
+
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 30%;"></div>
+            </div>
+
+            </li>
+
+
           </ul>
 
         </section>

@@ -56,9 +56,19 @@
 }
 
 body{
-  cursor: url("/assets/images/cursor/cursor-2.png"), auto;
-}
 
+  /*For blocking inspect elements*/
+  -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+
+    -webkit-user-drag: none; /* Disable dragging in Safari */
+    -khtml-user-drag: none; /* Disable dragging in Konqueror */
+    -moz-user-drag: none; /* Disable dragging in Firefox */
+    -o-user-drag: none; /* Disable dragging in Opera */
+    user-drag: none; /* Non-prefixed version, currently supported by Chrome and other browsers */
+}
 
 :root {
 

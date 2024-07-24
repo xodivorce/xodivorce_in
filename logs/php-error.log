@@ -1,4 +1,0 @@
-[09-Jul-2024 08:39:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function non_existent_function() in /Users/xodivorce/Documents/xodivorce_in/test_error.php:3
-Stack trace:
-#0 {main}
-  thrown in /Users/xodivorce/Documents/xodivorce_in/test_error.php on line 3

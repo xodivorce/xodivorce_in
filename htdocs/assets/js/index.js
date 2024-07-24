@@ -198,3 +198,6 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+//Right-click disable
+document.addEventListener('contextmenu', event => event.preventDefault());
