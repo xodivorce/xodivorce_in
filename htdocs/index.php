@@ -787,55 +787,63 @@
               </li>
 
             </ul>
+            
 
           </div>
+          
+          <ul class="project-list">
 
+          <!-- 
+          //For Isuues, Deploy Comeing-soon
 
           <div class="container">
           <div class="title"><i class="fa-regular fa-clock icon-spin"></i>&nbsp; Coming Soon</div>
-          <div class="subtitle">Please be patient, something interesting is cooking up...!!<br>
+          <div class="subtitle">Please be patient, something interesting is cooking up...!!
           </div>
         </div>
+        -->
+        <?php
+        $xodivorce_org_link = "https://github.com/xodivorce/xodivorce_org";
+        $xodivorce_org_image = "./assets/images/xodivorce_org.png";
+        $xodivorce_org_title = "Xodivorce.Org";
+        $xodivorce_org_category= "Web development";
+        ?>
+
+        <li class="project-item active" data-filter-item data-category="web development">
+          <a href="<?php echo $xodivorce_org_link; ?>">
+            <figure class="project-img">
+              <div class="project-item-icon-box">
+                <ion-icon name="eye-outline"></ion-icon>
+              </div>
+              <img src="<?php echo $xodivorce_org_image; ?>" alt="<?php echo $xodivorce_org_title; ?>" loading="lazy">
+            </figure>
+             <h3 class="project-title"><?php echo $xodivorce_org_title; ?></h3>
+              <p class="project-category"><?php echo $xodivorce_org_category; ?></p>
+            </a>
+          </li>
 
 
-          <ul class="project-list">
+
+          <?php
+          $xodivorce_in_link = "https://github.com/xodivorce/xodivorce_in";
+          $xodivorce_in_image = "./assets/images/xodivorce_in.png";
+          $xodivorce_in_title = "Xodivorce.In";
+          $xodivorce_in_category = "Web development";
+          ?>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="<?php echo $xodivorce_in_link; ?>">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src= "<?php echo $xodivorce_in_image; ?>" alt="<?php echo $xodivorce_in_title; ?>" loading="lazy">
+                </figure> 
+                <h3 class="project-title"><?php echo $xodivorce_in_title; ?></h3>
+                <p class="project-category"><?php echo $xodivorce_in_category; ?></p>
+              </a>
+            </li>
             <!--
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Finance</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Orizon</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
 
             <li class="project-item  active" data-filter-item data-category="web design">
               <a href="#">
@@ -854,24 +862,30 @@
 
               </a>
             </li>
+            
+            -->
+            
+            <?php
+            $face_recognise_attend_link = "https://github.com/xodivorce/face_recognise_attend";
+            $face_recognise_attend_image = "./assets/images/face_recognation.png";
+            $face_recognise_attend_title = "Face Recognise";
+            $face_recognise_attend_category = "Applications";
+            ?>
 
             <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
+              <a href="<?php echo $face_recognise_attend_link; ?>">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                  <img src="<?php echo $face_recognise_attend_image; ?>" alt="<?php echo $face_recognise_attend_title; ?>" loading="lazy">
                 </figure>
-
-                <h3 class="project-title">Brawlhalla</h3>
-
-                <p class="project-category">Applications</p>
-
+                <h3 class="project-title"><?php echo $face_recognise_attend_title; ?></h3>
+                <p class="project-category"><?php echo $face_recognise_attend_category; ?></p>
               </a>
             </li>
+            
+            <!--
 
             <li class="project-item  active" data-filter-item data-category="web design">
               <a href="#">
@@ -962,15 +976,16 @@
 
               </a>
             </li>
-            -->
+            
 
           </ul>
+          
+          -->
 
         </section>
         
 
       </article>
-
 
 
       <!--
@@ -983,47 +998,52 @@
           <h2 class="h2 article-title">Blog</h2>
         </header>
 
-
-        <div class="container">
+        <!-- 
+          //For Isuues, Deploy Comeing-soon
+          
+          <div class="container">
           <div class="title"><i class="fa-regular fa-clock icon-spin"></i>&nbsp; Coming Soon</div>
           <div class="subtitle">Please be patient, something interesting is cooking up...!!
           </div>
         </div>
-
+        -->
 
 
         <section class="blog-posts">
 
           <ul class="blog-posts-list">
-           <!--
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
+           
+          <?php
+          $blog_post_link = "https://youtu.be/omSz7gUnyG0?si=Q-vBdK7aT1PWik-i";
+          $blog_post_image = "./assets/images/Gta_IV_TUTORIAL.jpg";
+          $blog_post_image_alt = "GTA IV conferences in 2024";
+          $blog_post_category = "Game";
+          $blog_post_date = "2024-06-27";
+          $blog_post_date_formatted = "Jun 27, 2024";
+          $blog_post_title = "GTA IV conferences in 2024";
+          $blog_post_text = "Hey there, awesome people! 🚀 In this video, I’ll show you how to effortlessly install CrossOver on your macOS.
+           It's quick, it's easy, and it’s perfect for all you gamers and app lovers out there! 🎮🍏";
+          ?>
+          <li class="blog-post-item">
+            <a href="<?php echo $blog_post_link; ?>">
+              <figure class="blog-banner-box">
+                <img src="<?php echo $blog_post_image; ?>" alt="<?php echo $blog_post_image_alt; ?>" loading="lazy">
+              </figure>
+              <div class="blog-content">
+                 <div class="blog-meta">
+                  <p class="blog-category"><?php echo $blog_post_category; ?></p>
+                  <span class="dot"></span>
+                  <time datetime="<?php echo $blog_post_date; ?>"><?php echo $blog_post_date_formatted; ?></time>
                 </div>
+                <h3 class="h3 blog-item-title"><?php echo $blog_post_title; ?></h3>
+                <p class="blog-text">
+                   <?php echo $blog_post_text; ?>
+                   </p>
+                  </div>
+                </a>
+              </li>
 
-              </a>
-            </li>
-
+            <!--
 
             <li class="blog-post-item">
               <a href="#">
@@ -1164,6 +1184,7 @@
 
               </a>
             </li>
+            
             -->
 
           </ul>
