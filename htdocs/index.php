@@ -884,6 +884,29 @@
                 <p class="project-category"><?php echo $face_recognise_attend_category; ?></p>
               </a>
             </li>
+
+
+
+
+            <?php
+            $breakout_ball_link = "https://github.com/xodivorce/Breakout-Game";
+            $breakout_ball_image = "./assets/images/breakout_game.png";
+            $breakout_ball_title = "Breakout Ball Game";
+            $breakout_ball_category = "Applications";
+            ?>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="<?php echo $breakout_ball_link; ?>">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="<?php echo $breakout_ball_image; ?>" alt="<?php echo $breakout_ball_title; ?>" loading="lazy">
+                </figure>
+                <h3 class="project-title"><?php echo $breakout_ball_title; ?></h3>
+                <p class="project-category"><?php echo $breakout_ball_category; ?></p>
+              </a>
+            </li>
             
             <!--
 
@@ -922,24 +945,81 @@
 
               </a>
             </li>
+            
+            -->
 
+            <?php
+            $kei_portfolio_link = "https://github.com/xodivorce/kei_portfolio";
+            $kei_portfolio_image = "./assets/images/kei_portfolio.png";
+            $kei_portfolio_title = "STUDENT INFORMATION SYSTEM";
+            $kei_portfolio_category = "Web development";
+            ?>
+            
             <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
+              <a href="<?php echo $kei_portfoliolink; ?>">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
+                  <img src= "<?php echo $kei_portfolio_image; ?>" alt="<?php echo $kei_portfolio_title; ?>" loading="lazy">
+                </figure> 
+                <h3 class="project-title"><?php echo $kei_portfolio_title; ?></h3>
+                <p class="project-category"><?php echo $kei_portfolio_category; ?></p>
               </a>
             </li>
+
+            
+
+            
+            <?php
+            $solar_system_design_link = "https://github.com/xodivorce/solar_system_design";
+            $solar_system_design_image = "./assets/images/solar_system_design.png";
+            $solar_system_design_title = "SOLAR SYATEM DESIGN";
+            $solar_system_design_category = "Web design";
+            ?>
+            
+            <li class="project-item active" data-filter-item data-category="web design">
+              <a href="<?php echo $solar_system_design_link; ?>">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  
+                  <img src="<?php echo $solar_system_design_image; ?>" alt="<?php echo $solar_system_design_title; ?>" loading="lazy">
+                </figure>
+                <h3 class="project-title"><?php echo $solar_system_design_title; ?></h3>
+                <p class="project-category"><?php echo $solar_system_design_category; ?></p>
+              </a>
+            
+            </li>
+
+            
+
+
+            <?php
+            $kei_portfolio_design_link = "https://github.com/xodivorce/kei-portfolio";
+            $kei_portfolio_design_image = "./assets/images/kei_portfolio_design.png";
+            $kei_portfolio_design_title = "STUDENT INFORMATION SYSTEM";
+            $kei_portfolio_design_category = "Web design";
+            ?>
+            
+            <li class="project-item active" data-filter-item data-category="web design">
+              <a href="<?php echo $kei_portfolio_design_link; ?>">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="<?php echo $kei_portfolio_design_image; ?>" alt="<?php echo $kei_portfolio_design_title; ?>" loading="lazy">
+                </figure>
+                <h3 class="project-title"><?php echo $kei_portfolio_design_title; ?></h3>
+                <p class="project-category"><?php echo $kei_portfolio_design_category; ?></p>
+              </a>
+            </li>
+            
+            
+
+
+            <!--
 
             <li class="project-item  active" data-filter-item data-category="applications">
               <a href="#">
