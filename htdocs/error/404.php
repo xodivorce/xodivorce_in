@@ -1,9 +1,12 @@
+<?php
+include 'core/route.php'; // Include route.php from the core directory
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/404.css">
+    <?php includeCss('404.css'); ?> <!-- Test with absolute path -->
     <title>404 Page Not Found</title>
     <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -22,7 +25,6 @@
                             </h3>
                             <p>Looks like we hit a roadblock! 🚧✨</p>
                             <a href="mailto:hey@xodivorce.in" class="link_404">🍳 Cooked up a mail! 🥄</a>
-
                         </div>
                     </div>
                 </div>
