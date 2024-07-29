@@ -972,7 +972,7 @@
 
             
             <?php
-            $solar_system_design_link = "https://github.com/xodivorce/solar_system_design";
+            $solar_system_design_link = "https://github.com/xodivorce/solar_syestem_design";
             $solar_system_design_image = "./assets/images/solar_system_design.png";
             $solar_system_design_title = "SOLAR SYATEM DESIGN";
             $solar_system_design_category = "Web design";
