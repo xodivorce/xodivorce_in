@@ -2,17 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// Database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "xodivorce_maintenance";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+require __DIR__ . '/connection.php'; // Corrected path to connection.php
 
 $sql = "SELECT is_active FROM maintenance ORDER BY updated_at DESC LIMIT 1";
 $result = $conn->query($sql);
