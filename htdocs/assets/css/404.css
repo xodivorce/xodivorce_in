@@ -52,11 +52,11 @@
     transition: background 0.3s, transform 0.3s;
     position: relative;
     overflow: hidden;
-    background-image: linear-gradient(to bottom, #ff6347, #ff4500); /* Gradient effect */
+    background-image: linear-gradient(to bottom, #ff6347, #ff4500);
 }
 
 .link_404:hover {
-    background: #ff4500; /* Darker Tomato color on hover */
+    background: #ff4500;
     transform: scale(1.05);
 }
 
@@ -83,6 +83,6 @@
     margin-top: 0px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
+    align-items: center; 
 }
 
