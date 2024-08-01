@@ -597,19 +597,23 @@
 
           <ol class="timeline-list">
 
+          
+          <li class="timeline-item">
+    <h4 class="h4 timeline-item-title">Web Developer</h4>
+    <span>2024 – Present</span>
+    <p class="timeline-text">
+        Self-employed in Basirhat, West Bengal. Developed and managed web projects, including xodivorce.in. Collaborated with clients to create and deploy customized web solutions using HTML5, CSS3, JavaScript, PHP, and MySQL. Ensured mobile-friendliness with responsive design principles.
+    </p>
+</li>
+
+
             <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Creative Designer</h4>
-
-              <span>2023 — Present</span>
-
-              <p class="timeline-text">
-              Currently excelling as a professional video editor, coder, front-end developer, and photographer. 
-              Combining creativity with technical expertise to deliver compelling visual content and innovative solutions.
-               Continuously enhancing skills as a dedicated computer science student, mastering a diverse range of technologies and frameworks.
-              </p>
-
-            </li>
+    <h4 class="h4 timeline-item-title">CITA - IT And ITAS</h4>
+    <span>2023 - 2024</span>
+    <p class="timeline-text">
+        Completed Youth Computer Training at CITA in Basirhat, West Bengal. Acquired practical experience with a range of IT tools and technologies. Successfully finished the IT/ITAS training program, which lasted for 6 months.
+    </p>
+</li>
 
             <li class="timeline-item">
 
