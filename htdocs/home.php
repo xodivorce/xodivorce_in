@@ -59,7 +59,7 @@
 
         <div class="info-content">
           <h1 class="name" title="Prasid Mandal">Xodivorce</h1>
-          <a href="/assets/pdf/CV.pdf " download class="view-cv-btn">View CV</a>
+          <a href="./assets/pdf/Curriculum_Vitae.pdf" download class="view-cv-btn">View CV</a>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -1402,6 +1402,7 @@
     - custom js link
   -->
   <script src="./assets/js/home.js"></script>
+  <script src="./assets/js/developer_tools.js"></script>
 
   <!--
     - ionicon link

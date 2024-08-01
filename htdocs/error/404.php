@@ -30,7 +30,5 @@
         </div>
     </section>
 </body>
-<script>
-    document.addEventListener('contextmenu', event => event.preventDefault());
-</script>
+<script src="./assets/js/developer_tools.js"></script>
 </html>
