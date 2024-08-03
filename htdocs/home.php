@@ -1365,7 +1365,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                          "Message: <br>" . nl2br($message);
 
         $mail->send();
-        echo "<script>alert('Success! Your message has taken off like a rocket! 🚀 We\'ll get back to you soon. Thanks for reaching out! ✨'); window.location.href = 'thankyou.php';</script>";
+        echo "<script>alert('Success! Your message has taken off like a rocket! 🚀 We\'ll get back to you soon. Thanks for reaching out! ✨');</script>";
     } catch (Exception $e) {
         echo "<script>alert('Whoopsie! 🐾 Our feedback feature seems to be chasing squirrels right now. Please reach out to us via email or try again later. 🌟 Mailer Error: {$mail->ErrorInfo}');</script>";
     }
