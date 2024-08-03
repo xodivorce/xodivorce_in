@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-require __DIR__ . '/connection.php'; // Corrected path to connection.php
+require __DIR__ . '/connection.php';
 
 $sql = "SELECT is_active FROM maintenance ORDER BY updated_at DESC LIMIT 1";
 $result = $conn->query($sql);

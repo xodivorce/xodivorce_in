@@ -1299,89 +1299,82 @@
   <section class="contact-form">
     <h3 class="h3 form-title">Contact Form</h3>
     <?php
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use Dotenv\Dotenv;
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $fullname = filter_var($_POST['fullname'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-        $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-        $message = filter_var($_POST['message'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+// Load environment variables from .env file
 
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
-        //Restrictions-->
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $fullname = filter_var($_POST['fullname'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $message = filter_var($_POST['message'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-        //Your Name
-        $name_restriction = ['xodivorce','bantu','Prasid Mandal'];
-        //Email Address
-        $email_restriction = ['hey@xodivorce.in', 'prasidmandal@gmail.com'];
-        //Your message
-        $message_restriction = [
-          'Chutiya', 'Blood', 'Betrayed', 'Ashamed', 'Abused', 'Cheated', 'Chamcha', 'Chachagiri', 'Chelas', 'Childishness', 'Coward', 
-          'Criminal', 'Crocodile Tears', 'Disgrace', 'Donkey', 'Fudge', 'Hooliganism', 'Hypocrisy', 'Incompetent', 'Anarchist', 'Gaddar', 
-          'Girgit', 'Goons', 'Ghadiyali Ansu', 'Apmaan', 'Asatya', 'Ahankaar', 'Corrupt', 'Kala Din', 'Kala Bazaari', 'Khareed Farokht', 
-          'Danga', 'Dalal', 'Daadagari', 'Dohra Charitra', 'Bechara', 'Bobcut', 'Lollypop', 'Vishwasghat', 'Behri Sarkar', 'Sexual Harassment', 
-          'Samvedanheen', 'Foolish', 'Pitthu', 'Chodon', 'Bara', 'Bal', 'Bichi', 'Baper', 'Anal', 'Atal', 'Biri', 'Mod', 'Gaja', 'Gandu', 
-          'Fuck', 'Chod', 'Magi', 'Khanki', 'Gud', 'Gar', 'Marani', 'Shegomotherqueen', 'Segomarani', 'Choda', 'Marchis', 'Chinnar', 'Randi', 
-          'Rand', 'Bantu', 'Boudi', 'Seggo', 'Panu', 'Porn', 'Xxx', 'Pornstar', 'Khor', 'Gungan', 'Choda', 'Dhon', 'Penus', 'Vgaina', 
-          'Testicles', 'Kamrosh', 'Chut', 'Chutme', 'Sex', 'Sexy', 'Syandha', 'Marchi', 'OnlyFans', 'Pornhub', 'Land', 'Lulla', 'Mume', 
-          'Mumechoco', 'Dudu', 'Sperm', 'Masterbate', 'Gay', 'Lesbian', 'Bl', 'Bisexual', 'Lgbtq', 'Lgbt', 'Lgbtq+', 'Vikhari', 'Bhikhari', 
-          'Chaddi', 'Nunu', 'Panty', 'Bikini', 'Bra', 'Mut', 'Malmutra', 'Dalla', 'Dogla', 'Balckmail', 'Suiside', 'Murder'
-      ];
-      
+    // Load restricted values from environment variables
+    $name_restriction = explode(',', $_ENV['RESTRICTED_NAMES']);
+    $email_restriction = explode(',', $_ENV['RESTRICTED_EMAILS']);
+    $message_restriction = explode(',', $_ENV['RESTRICTED_MESSAGES']);
 
-        // Check if the email address is valid and not in the email restriction list
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL) || in_array($email, $email_restriction)) {
-            echo "<script>alert('Whoopsie! 🐾 It seems there's a keyword restriction or the email address is playing hide-and-seek!
-             🕵️‍♂️ Please check the email address and try again ✨. Thanks a bunch!'); window.history.back();</script>";
-        } else {
-            // Check for restricted keywords in fullname
-            foreach ($name_restriction as $keyword) {
-                if (stripos($fullname, $keyword) !== false) {
-                    echo "<script>alert('Whoopsie! 🐾 It seems your name contains restricted keywords.'); window.history.back();</script>";
-                    exit;
-                }
-            }
-
-            // Check for restricted keywords in message
-            foreach ($message_restriction as $keyword) {
-                if (stripos($message, $keyword) !== false) {
-                    echo "<script>alert('Whoopsie! 🐾 It seems your message contains restricted keywords! 🕵️‍♂️ Please check and try again ✨'); window.history.back();</script>";
-                    exit;
-                }
-            }
-
-            $mail = new PHPMailer(true);
-            try {
-                // Server settings
-                $mail->isSMTP();
-                $mail->Host = 'mail.neosubhamoy.com';
-                $mail->SMTPAuth = true;
-                $mail->Username = 'hey@xodivorce.in';
-                $mail->Password = 'Xodivorce192';
-                $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-                $mail->Port = 465;
-
-                // Recipients
-                $mail->setFrom('hey@xodivorce.in', 'Xodivorce Website'); // Set the sender address
-                $mail->addAddress('hey@xodivorce.in'); // Email address to receive the messages
-                $mail->addReplyTo($email, $fullname); // Add reply-to address
-
-                // Content
-                $mail->isHTML(true);
-                $mail->Subject = 'New Contact Form Submission';
-                $mail->Body    = "Ta-da! You've got a mail, from the contact form on your website.<br><br>" .
-                                 "Full Name: " . $fullname . "<br>" .
-                                 "Email: " . $email . "<br>" .
-                                 "Message: <br>" . nl2br($message);
-
-                $mail->send();
-                echo "<script>alert('Success! Your message has taken off like a rocket! 🚀 We'll get back to you soon. Thanks for reaching out! ✨'); window.location.href = window.location.href;</script>";
-            } catch (Exception $e) {
-                echo "<script>alert('Whoopsie! 🐾 Our feedback feature seems to be chasing squirrels right now. Please reach out to us via email or try again later. 🌟 Mailer Error: {$mail->ErrorInfo}');</script>";
+    // Check if the email address is valid and not in the email restriction list
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL) || in_array($email, $email_restriction)) {
+        echo "<script>alert('Whoopsie! 🐾 It seems there's a keyword restriction or the email address is playing hide-and-seek! 🕵️‍♂️ Please check the email address and try again ✨. Thanks a bunch!'); window.history.back();</script>";
+    } else {
+        // Check for restricted keywords in fullname
+        foreach ($name_restriction as $keyword) {
+            if (stripos($fullname, $keyword) !== false) {
+                echo "<script>alert('Whoopsie! 🐾 It seems your name contains restricted keywords.'); window.history.back();</script>";
+                exit;
             }
         }
+
+        // Check for restricted keywords in message
+        foreach ($message_restriction as $keyword) {
+            if (stripos($message, $keyword) !== false) {
+                echo "<script>alert('Whoopsie! 🐾 It seems your message contains restricted keywords! 🕵️‍♂️ Please check and try again ✨'); window.history.back();</script>";
+                exit;
+            }
+        }
+
+        $mail = new PHPMailer(true);
+        try {
+            // Server settings
+            $mail->isSMTP();
+            $mail->Host = $_ENV['SMTP_HOST'];
+            $mail->SMTPAuth = true;
+            $mail->Username = $_ENV['SMTP_USER'];
+            $mail->Password = $_ENV['SMTP_PASS'];
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+            $mail->Port = $_ENV['SMTP_PORT'];
+
+            // Enable verbose debug output
+            $mail->SMTPDebug = 2; // 0 = off (for production use), 1 = commands only, 2 = data and commands
+
+            // Recipients
+            $mail->setFrom($_ENV['SMTP_USER'], 'Xodivorce Website'); // Set the sender address
+            $mail->addAddress($_ENV['SMTP_SENDTO']); // Email address to receive the messages
+            $mail->addReplyTo($email, $fullname); // Add reply-to address
+
+            // Content
+            $mail->isHTML(true);
+            $mail->Subject = 'New Contact Form Submission';
+            $mail->Body    = "Ta-da! You've got a mail, from the contact form on your website.<br><br>" .
+                             "Full Name: " . $fullname . "<br>" .
+                             "Email: " . $email . "<br>" .
+                             "Message: <br>" . nl2br($message);
+
+            $mail->send();
+            echo "<script>alert('Success! Your message has taken off like a rocket! 🚀 We'll get back to you soon. Thanks for reaching out! ✨'); window.location.href = window.location.href;</script>";
+        } catch (Exception $e) {
+            echo "<script>alert('Whoopsie! 🐾 Our feedback feature seems to be chasing squirrels right now. Please reach out to us via email or try again later. 🌟 Mailer Error: {$mail->ErrorInfo}');</script>";
+        }
     }
-    ?>
+}
+?>
+
+
     <form action="" method="post" class="form" data-form onsubmit="return validateForm()">
       <div class="input-wrapper">
         <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
