@@ -1127,35 +1127,37 @@
                 </a>
               </li>
 
-            <!--
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
+              <?php
+          $blog_post_link = "https://youtu.be/ZHySccRced0?si=4FazfcAWsfvQ4vfn";
+          $blog_post_image = "./assets/images/macos15.1.jpg";
+          $blog_post_image_alt = "YOUR MAC WILL NEVER BE THE SAME";
+          $blog_post_category = "OS";
+          $blog_post_date = "2024-06-27";
+          $blog_post_date_formatted = "AUG 17, 2024";
+          $blog_post_title = "YOUR MAC WILL NEVER BE THE SAME";
+          $blog_post_text = "Hey there, awesome people! 🚀 In this video, I’ll show you how to effortlessly install CrossOver on your macOS.
+           It's quick, it's easy, and it’s perfect for all you gamers and app lovers out there! 🎮🍏";
+          ?>
+          <li class="blog-post-item">
+            <a href="<?php echo $blog_post_link; ?>">
+              <figure class="blog-banner-box">
+                <img src="<?php echo $blog_post_image; ?>" alt="<?php echo $blog_post_image_alt; ?>" loading="lazy">
+              </figure>
+              <div class="blog-content">
+                 <div class="blog-meta">
+                  <p class="blog-category"><?php echo $blog_post_category; ?></p>
+                  <span class="dot"></span>
+                  <time datetime="<?php echo $blog_post_date; ?>"><?php echo $blog_post_date_formatted; ?></time>
                 </div>
+                <h3 class="h3 blog-item-title"><?php echo $blog_post_title; ?></h3>
+                <p class="blog-text">
+                   <?php echo $blog_post_text; ?>
+                   </p>
+                  </div>
+                </a>
+              </li>
 
-              </a>
-            </li>
+            <!--
 
             <li class="blog-post-item">
               <a href="#">
