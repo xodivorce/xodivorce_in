@@ -972,6 +972,27 @@
               </a>
             </li>
 
+
+            <?php
+        $xeporn_link = "https://xeporn-beta-2.vercel.app";
+        $xeporn_image = "./assets/images/xeporn.png";
+        $xeporn_title = "XePORN.In ©2024 𝔟𝔢𝔱𝔞 𝔦𝔦<br> ‣ 𝘦𝘮𝘢𝘪𝘭 𝘧𝘰𝘳 𝘦𝘢𝘳𝘭𝘺 𝘢𝘤𝘤𝘦𝘴..";
+        $xeporn_category= "Web development";
+        ?>
+
+        <li class="project-item active" data-filter-item data-category="web development">
+          <a href="<?php echo $xeporn_link; ?>">
+            <figure class="project-img">
+              <div class="project-item-icon-box">
+                <ion-icon name="eye-outline"></ion-icon>
+              </div>
+              <img src="<?php echo $xeporn_image; ?>" alt="<?php echo $xeporn_title; ?>" loading="lazy">
+            </figure>
+             <h3 class="project-title"><?php echo $xeporn_title; ?></h3>
+              <p class="project-category"><?php echo $xeporn_category; ?></p>
+            </a>
+          </li>
+
             
 
             
