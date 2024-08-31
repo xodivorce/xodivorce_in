@@ -889,7 +889,25 @@
               </a>
             </li>
 
+            <?php
+$xeorl_buzz_link = "https://xeorl.buzz";
+$xeorl_buzz_image = "./assets/images/xeorl_buzz.png";
+$xeorl_buzz_title = "Xeorl - link shortener";
+$xeorl_buzz_category = "Web development";
+?>
 
+<li class="project-item active" data-filter-item data-category="web development">
+  <a href="<?php echo $xeorl_buzz_link; ?>">
+    <figure class="project-img">
+      <div class="project-item-icon-box">
+        <ion-icon name="eye-outline"></ion-icon>
+      </div>
+      <img src="<?php echo $xeorl_buzz_image; ?>" alt="<?php echo $xeorl_buzz_title; ?>" loading="lazy">
+    </figure>
+    <h3 class="project-title"><?php echo $xeorl_buzz_title; ?></h3>
+    <p class="project-category"><?php echo $xeorl_buzz_category; ?></p>
+  </a>
+</li>
 
 
             <?php
@@ -992,6 +1010,8 @@
               <p class="project-category"><?php echo $xeporn_category; ?></p>
             </a>
           </li>
+
+
 
             
 
