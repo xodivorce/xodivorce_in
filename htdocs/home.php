@@ -459,49 +459,51 @@
 
         <section class="clients">
 
-          <h3 class="h3 clients-title">Clients</h3>
+<h3 class="h3 clients-title">Clients</h3>
 
-          <ul class="clients-list has-scrollbar">
 
-            <li class="clients-item">
-              <a href="https://www.microsoft.com/software-download/windows11" target="_main">
-                <img src="./assets/images/logo-1-color.png" alt="Windows logo">
-              </a>
-            </li>
+<ul class="clients-list has-scrollbar">
 
-            <li class="clients-item">
-              <a href="https://www.visa.co.in/" target="_main">
-                <img src="./assets/images/logo-2-color.png" alt="Visa logo">
-              </a>
-            </li>
+  <li class="clients-item">
+    <a href="https://www.microsoft.com/software-download/windows11" target="_main">
+      <img src="./assets/images/logo-1-color.png" alt="Windows logo">
+    </a>
+  </li>
 
-            <li class="clients-item">
-              <a href="https://about.meta.com/metaverse/" target="_main">
-                <img src="./assets/images/logo-3-color.png" alt="Meta logo">
-              </a>
-            </li>
+  <li class="clients-item">
+    <a href="https://www.visa.co.in/" target="_main">
+      <img src="./assets/images/logo-2-color.png" alt="Visa logo">
+    </a>
+  </li>
 
-            <li class="clients-item">
-              <a href="https://www.oreo.com/"  target="_main">
-                <img src="./assets/images/logo-4-color.png" alt="Oreo logo">
-              </a>
-            </li>
+  <li class="clients-item">
+    <a href="https://about.meta.com/metaverse/" target="_main">
+      <img src="./assets/images/logo-3-color.png" alt="Meta logo">
+    </a>
+  </li>
 
-            <li class="clients-item">
-              <a href="https://www.unilever.com/"  target="_main">
-                <img src="./assets/images/logo-5-color.png" alt="Unilever logo">
-              </a>
-            </li>
+  <li class="clients-item">
+    <a href="https://www.oreo.com/" target="_main">
+      <img src="./assets/images/logo-4-color.png" alt="Oreo logo">
+    </a>
+  </li>
 
-            <li class="clients-item">
-              <a href="https://www.paypal.com/in/home"  target="_main">
-                <img src="./assets/images/logo-6-color.png" alt="Paypal logo">
-              </a>
-            </li>
+  <li class="clients-item">
+    <a href="https://www.unilever.com/" target="_main">
+      <img src="./assets/images/logo-5-color.png" alt="Unilever logo">
+    </a>
+  </li>
 
-          </ul>
+  <li class="clients-item">
+    <a href="https://www.paypal.com/in/home" target="_main">
+      <img src="./assets/images/logo-6-color.png" alt="Paypal logo">
+    </a>
+  </li>
 
-        </section>
+</ul>
+
+
+</section>
 
       </article>
 
@@ -655,7 +657,7 @@
 
               <div class="title-wrapper">
                 <h5 class="h5">Web Development</h5>
-                <data value="80">80%</data>
+                <data value="85">85%</data>
               </div>
 
               <div class="skill-progress-bg">
@@ -702,17 +704,47 @@
               </div>
 
             </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">PHP</h5>
+                <data value="65">65%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 65%;"></div>
+              </div>
 
-            <li class="skill-item">
-              
-              <div class="title-wrapper"
-              <h5 class="h5">PHP</h5>
-              <data value="30">30%</data>
-            </div>
+            </li>
 
-            <div class="skill-progress-bg">
-              <div class="skill-progress-fill" style="width: 30%;"></div>
-            </div>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">ASSEMPLY SCRIPT</h5>
+                <data value="25">25%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 25%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">MYSQL</h5>
+                <data value="75">75%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">GIT</h5>
+                <data value="95">95%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 95%;"></div>
+              </div>
 
             </li>
 
@@ -1178,6 +1210,36 @@ $xeorl_buzz_category = "Web development";
           $blog_post_title = "YOUR MAC WILL NEVER BE THE SAME";
           $blog_post_text = "Hey there, awesome people! 🚀 In this video, I’ll show you how to effortlessly install CrossOver on your macOS.
            It's quick, it's easy, and it’s perfect for all you gamers and app lovers out there! 🎮🍏";
+          ?>
+          <li class="blog-post-item">
+            <a href="<?php echo $blog_post_link; ?>">
+              <figure class="blog-banner-box">
+                <img src="<?php echo $blog_post_image; ?>" alt="<?php echo $blog_post_image_alt; ?>" loading="lazy">
+              </figure>
+              <div class="blog-content">
+                 <div class="blog-meta">
+                  <p class="blog-category"><?php echo $blog_post_category; ?></p>
+                  <span class="dot"></span>
+                  <time datetime="<?php echo $blog_post_date; ?>"><?php echo $blog_post_date_formatted; ?></time>
+                </div>
+                <h3 class="h3 blog-item-title"><?php echo $blog_post_title; ?></h3>
+                <p class="blog-text">
+                   <?php echo $blog_post_text; ?>
+                   </p>
+                  </div>
+                </a>
+              </li>
+
+              <?php
+          $blog_post_link = "https://youtu.be/s36d99lSvSs?si=pHruQCenHIjUa2pu";
+          $blog_post_image = "./assets/images/Homebrew.jpg";
+          $blog_post_image_alt = "Programming Like A Pro | #Homebrew ⚡";
+          $blog_post_category = "OS";
+          $blog_post_date = "2024-09-14";
+          $blog_post_date_formatted = "SEP 14, 2024";
+          $blog_post_title = "Programming Like A Pro | #Homebrew ⚡";
+          $blog_post_text = "Welcome to the Homebrew installation tutorial! Works on All Apple Silicons (M1-M4) 🚀
+          Today, we’ll get Homebrew up and running on your Mac in no time! 🍏✨";
           ?>
           <li class="blog-post-item">
             <a href="<?php echo $blog_post_link; ?>">
