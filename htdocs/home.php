@@ -921,6 +921,31 @@
               </a>
             </li>
 
+
+
+            <?php
+            $Anyencypter_link = "https://telegram.me/anyencrypter_bot";
+            $Anyencypter_image = "./assets/images/telegram.png";
+            $Anyencypter_title = "Encrypter";
+            $Anyencypter_category = "Applications";
+            ?>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="<?php echo $Anyencypter_link; ?>">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="<?php echo $Anyencypter_image; ?>" alt="<?php echo $Anyencypter_title; ?>" loading="lazy">
+                </figure>
+                <h3 class="project-title"><?php echo $Anyencypter_title; ?></h3>
+                <p class="project-category"><?php echo $Anyencypter_category; ?></p>
+              </a>
+            </li>
+
+
+
+
             <?php
 $xeorl_buzz_link = "https://xeorl.buzz";
 $xeorl_buzz_image = "./assets/images/xeorl_buzz.png";
@@ -941,6 +966,25 @@ $xeorl_buzz_category = "Web development";
   </a>
 </li>
 
+            <?php
+            // $DDOS_link = "https://telegram.me/ddos_xodivorcebot";
+            $DDOS_image = "./assets/images/ddos.jpg";
+            $DDOS_title = "Propoganda DDOS";
+            $DDOS_category = "Applications";
+            ?>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="<?php echo $DDOS_link; ?>">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="<?php echo $DDOS_image; ?>" alt="<?php echo $DDOS_title; ?>" loading="lazy">
+                </figure>
+                <h3 class="project-title"><?php echo $DDOS_title; ?></h3>
+                <p class="project-category"><?php echo $DDOS_category; ?></p>
+              </a>
+            </li>
 
             <?php
             $breakout_ball_link = "https://github.com/xodivorce/Breakout-Game";
@@ -1259,6 +1303,40 @@ $xeorl_buzz_category = "Web development";
                   </div>
                 </a>
               </li>
+
+
+              
+<?php
+$blog_post_link = "https://www.instagram.com/p/DABUXD9S-NH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==";
+$blog_post_image = "./assets/images/lana.jpg"; // Leave blank as we are embedding the Instagram post
+$blog_post_image_alt = "Memories in 2k24";
+$blog_post_category = "Instagram";
+$blog_post_date = "2024-06-27";
+$blog_post_date_formatted = "Jun 27, 2024";
+$blog_post_title = "Memories in 2k24";
+$blog_post_text = "Memories in 2k24";
+?>
+
+<li class="blog-post-item">
+  <a href="<?php echo $blog_post_link; ?>">
+    <figure class="blog-banner-box">
+      <!-- Embed the Instagram post directly instead of using an img tag -->
+      <blockquote class="instagram-media" data-instgrm-permalink="<?php echo $blog_post_link; ?>" data-instgrm-version="14" style="width:100%;">
+      </blockquote>
+      <script async src="//www.instagram.com/embed.js"></script>
+    </figure>
+    <div class="blog-content">
+      <div class="blog-meta">
+        <p class="blog-category"><?php echo $blog_post_category; ?></p>
+        <span class="dot"></span>
+        <time datetime="<?php echo $blog_post_date; ?>"><?php echo $blog_post_date_formatted; ?></time>
+      </div>
+      <h3 class="h3 blog-item-title"><?php echo $blog_post_title; ?></h3>
+      <p class="blog-text"><?php echo $blog_post_text; ?></p>
+    </div>
+  </a>
+</li>
+
 
             <!--
 
