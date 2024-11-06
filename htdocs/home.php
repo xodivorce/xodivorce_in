@@ -1213,7 +1213,7 @@ $xeorl_buzz_category = "Web development";
         <section class="blog-posts">
 
           <ul class="blog-posts-list">
-           
+                          
           <?php
           $blog_post_link = "https://youtu.be/omSz7gUnyG0?si=Q-vBdK7aT1PWik-i";
           $blog_post_image = "./assets/images/Gta_IV_TUTORIAL.jpg";
@@ -1243,6 +1243,7 @@ $xeorl_buzz_category = "Web development";
                   </div>
                 </a>
               </li>
+              
 
               <?php
           $blog_post_link = "https://youtu.be/ZHySccRced0?si=4FazfcAWsfvQ4vfn";
@@ -1308,13 +1309,13 @@ $xeorl_buzz_category = "Web development";
               
 <?php
 $blog_post_link = "https://www.instagram.com/p/DABUXD9S-NH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==";
-$blog_post_image = "./assets/images/lana.jpg"; // Leave blank as we are embedding the Instagram post
+$blog_post_image = ""; // Leave blank as we are embedding the Instagram post
 $blog_post_image_alt = "Memories in 2k24";
 $blog_post_category = "Instagram";
 $blog_post_date = "2024-06-27";
-$blog_post_date_formatted = "Jun 27, 2024";
-$blog_post_title = "Memories in 2k24";
-$blog_post_text = "Memories in 2k24";
+$blog_post_date_formatted = "Sep 17, 2024";
+$blog_post_title = "LANA <";
+$blog_post_text = "Memories in 2k24, the fan meet up on Sep was unexpected. Although he clicks few of the sorts, click to view on Instagram.";
 ?>
 
 <li class="blog-post-item">
@@ -1336,6 +1337,307 @@ $blog_post_text = "Memories in 2k24";
     </div>
   </a>
 </li>
+
+
+
+              
+<?php
+$blog_post_link = "https://www.instagram.com/p/C64SDX1yI2B/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==";
+$blog_post_image = ""; // Leave blank as we are embedding the Instagram post
+$blog_post_image_alt = "Memories in 2k24";
+$blog_post_category = "Instagram";
+$blog_post_date = "2024-06-27";
+$blog_post_date_formatted = "Oct 5, 2024";
+$blog_post_title = "Prequelapp";
+$blog_post_text = "Try this app @prequelapp with my sorts, in love 😭♥️. The filter named Air, Click to view on Instagram.";
+?>
+
+<li class="blog-post-item">
+  <a href="<?php echo $blog_post_link; ?>">
+    <figure class="blog-banner-box">
+      <!-- Embed the Instagram post directly instead of using an img tag -->
+      <blockquote class="instagram-media" data-instgrm-permalink="<?php echo $blog_post_link; ?>" data-instgrm-version="14" style="width:100%;">
+      </blockquote>
+      <script async src="//www.instagram.com/embed.js"></script>
+    </figure>
+    <div class="blog-content">
+      <div class="blog-meta">
+        <p class="blog-category"><?php echo $blog_post_category; ?></p>
+        <span class="dot"></span>
+        <time datetime="<?php echo $blog_post_date; ?>"><?php echo $blog_post_date_formatted; ?></time>
+      </div>
+      <h3 class="h3 blog-item-title"><?php echo $blog_post_title; ?></h3>
+      <p class="blog-text"><?php echo $blog_post_text; ?></p>
+    </div>
+  </a>
+</li>
+
+
+
+              
+<?php
+$blog_post_link = "https://www.instagram.com/reel/DAuptyny9dz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==";
+$blog_post_image = ""; // Leave blank as we are embedding the Instagram post
+$blog_post_image_alt = "Memories in 2k24";
+$blog_post_category = "Instagram";
+$blog_post_date = "2024-06-27";
+$blog_post_date_formatted = "Oct 5, 2024";
+$blog_post_title = "Happy endings✨";
+$blog_post_text = "Tried this trend '' 💀, better luck next time <3. ''; Everyone does deserve happpy endings 🗿, for me not everyone. Click to view on Instagram.";
+?>
+
+<li class="blog-post-item">
+  <a href="<?php echo $blog_post_link; ?>">
+    <figure class="blog-banner-box">
+      <!-- Embed the Instagram post directly instead of using an img tag -->
+      <blockquote class="instagram-media" data-instgrm-permalink="<?php echo $blog_post_link; ?>" data-instgrm-version="14" style="width:100%;">
+      </blockquote>
+      <script async src="//www.instagram.com/embed.js"></script>
+    </figure>
+    <div class="blog-content">
+      <div class="blog-meta">
+        <p class="blog-category"><?php echo $blog_post_category; ?></p>
+        <span class="dot"></span>
+        <time datetime="<?php echo $blog_post_date; ?>"><?php echo $blog_post_date_formatted; ?></time>
+      </div>
+      <h3 class="h3 blog-item-title"><?php echo $blog_post_title; ?></h3>
+      <p class="blog-text"><?php echo $blog_post_text; ?></p>
+    </div>
+  </a>
+</li>
+
+
+
+<?php
+$blog_post_link = "https://www.instagram.com/p/C_yaQx7TEa7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==";
+$blog_post_image = ""; // Leave blank as we are embedding the Instagram post
+$blog_post_image_alt = "Memories in 2k23";
+$blog_post_category = "Instagram";
+$blog_post_date = "2024-06-27";
+$blog_post_date_formatted = "Sep 12, 2023";
+$blog_post_title = "Maya Pur, Nadia 2k22 ✨";
+$blog_post_text = "Bhaichara..!! @_the_swagatam also some sorts clicked by him. Just in case if you're interested, click to view on Instagram.";
+?>
+
+<li class="blog-post-item">
+  <a href="<?php echo $blog_post_link; ?>">
+    <figure class="blog-banner-box">
+      <!-- Embed the Instagram post directly instead of using an img tag -->
+      <blockquote class="instagram-media" data-instgrm-permalink="<?php echo $blog_post_link; ?>" data-instgrm-version="14" style="width:100%;">
+      </blockquote>
+      <script async src="//www.instagram.com/embed.js"></script>
+    </figure>
+    <div class="blog-content">
+      <div class="blog-meta">
+        <p class="blog-category"><?php echo $blog_post_category; ?></p>
+        <span class="dot"></span>
+        <time datetime="<?php echo $blog_post_date; ?>"><?php echo $blog_post_date_formatted; ?></time>
+      </div>
+      <h3 class="h3 blog-item-title"><?php echo $blog_post_title; ?></h3>
+      <p class="blog-text"><?php echo $blog_post_text; ?></p>
+    </div>
+  </a>
+</li>
+
+
+<?php
+$blog_post_link = "https://www.instagram.com/p/C-80l0gyDkx/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==";
+$blog_post_image = ""; // Leave blank as we are embedding the Instagram post
+$blog_post_image_alt = "Memories in 2k24";
+$blog_post_category = "Instagram";
+$blog_post_date = "2024-06-27";
+$blog_post_date_formatted = "Aug 22, 2023";
+$blog_post_title = "Santiniketan 2k23 🍀";
+$blog_post_text = "Bhaichara..!! @_the_swagatam also some sorts clicked by him. Just in case if you're interested, click to view on Instagram.";
+?>
+
+<li class="blog-post-item">
+  <a href="<?php echo $blog_post_link; ?>">
+    <figure class="blog-banner-box">
+      <!-- Embed the Instagram post directly instead of using an img tag -->
+      <blockquote class="instagram-media" data-instgrm-permalink="<?php echo $blog_post_link; ?>" data-instgrm-version="14" style="width:100%;">
+      </blockquote>
+      <script async src="//www.instagram.com/embed.js"></script>
+    </figure>
+    <div class="blog-content">
+      <div class="blog-meta">
+        <p class="blog-category"><?php echo $blog_post_category; ?></p>
+        <span class="dot"></span>
+        <time datetime="<?php echo $blog_post_date; ?>"><?php echo $blog_post_date_formatted; ?></time>
+      </div>
+      <h3 class="h3 blog-item-title"><?php echo $blog_post_title; ?></h3>
+      <p class="blog-text"><?php echo $blog_post_text; ?></p>
+    </div>
+  </a>
+</li>
+
+
+
+<?php
+$blog_post_link = "https://www.instagram.com/p/C-3EmVtSQ73/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==";
+$blog_post_image = ""; // Leave blank as we are embedding the Instagram post
+$blog_post_image_alt = "Memories in 2k24";
+$blog_post_category = "Instagram";
+$blog_post_date = "2024-06-27";
+$blog_post_date_formatted = "May 14, 2024";
+$blog_post_title = "Best of 2k23 🗿";
+$blog_post_text = "Don't compare me with other, if they're better, go with them; idgaf...!!; click to view on Instagram.";
+?>
+
+<li class="blog-post-item">
+  <a href="<?php echo $blog_post_link; ?>">
+    <figure class="blog-banner-box">
+      <!-- Embed the Instagram post directly instead of using an img tag -->
+      <blockquote class="instagram-media" data-instgrm-permalink="<?php echo $blog_post_link; ?>" data-instgrm-version="14" style="width:100%;">
+      </blockquote>
+      <script async src="//www.instagram.com/embed.js"></script>
+    </figure>
+    <div class="blog-content">
+      <div class="blog-meta">
+        <p class="blog-category"><?php echo $blog_post_category; ?></p>
+        <span class="dot"></span>
+        <time datetime="<?php echo $blog_post_date; ?>"><?php echo $blog_post_date_formatted; ?></time>
+      </div>
+      <h3 class="h3 blog-item-title"><?php echo $blog_post_title; ?></h3>
+      <p class="blog-text"><?php echo $blog_post_text; ?></p>
+    </div>
+  </a>
+</li>
+
+
+
+
+<?php
+$blog_post_link = "https://www.instagram.com/reel/C78eHXlS3jf/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==";
+$blog_post_image = ""; // Leave blank as we are embedding the Instagram post
+$blog_post_image_alt = "Memories in 2k24";
+$blog_post_category = "Instagram";
+$blog_post_date = "2024-06-27";
+$blog_post_date_formatted = "Jun 8 , 2024";
+$blog_post_title = "나비 🦋";
+$blog_post_text = "Nymphalis polychloros & micro generative video.The butterfly(나비) is so pretty 😭🦋♥️ and fully upscaled through AI, click to view on Instagram.";
+?>
+
+<li class="blog-post-item">
+  <a href="<?php echo $blog_post_link; ?>">
+    <figure class="blog-banner-box">
+      <!-- Embed the Instagram post directly instead of using an img tag -->
+      <blockquote class="instagram-media" data-instgrm-permalink="<?php echo $blog_post_link; ?>" data-instgrm-version="14" style="width:100%;">
+      </blockquote>
+      <script async src="//www.instagram.com/embed.js"></script>
+    </figure>
+    <div class="blog-content">
+      <div class="blog-meta">
+        <p class="blog-category"><?php echo $blog_post_category; ?></p>
+        <span class="dot"></span>
+        <time datetime="<?php echo $blog_post_date; ?>"><?php echo $blog_post_date_formatted; ?></time>
+      </div>
+      <h3 class="h3 blog-item-title"><?php echo $blog_post_title; ?></h3>
+      <p class="blog-text"><?php echo $blog_post_text; ?></p>
+    </div>
+  </a>
+</li>
+
+
+
+<?php
+$blog_post_link = "https://www.instagram.com/p/C68ujtkSvvF/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==";
+$blog_post_image = ""; // Leave blank as we are embedding the Instagram post
+$blog_post_image_alt = "Memories in 2k24";
+$blog_post_category = "Instagram";
+$blog_post_date = "2024-06-27";
+$blog_post_date_formatted = "May 14, 2024";
+$blog_post_title = "Spotify 🎧";
+$blog_post_text = "Her~ @this.is.gini , in dream 🌬️✨ !!, I've tried this song and in love with it - spend all days 😭♥️; click to view on Instagram.";
+?>
+
+<li class="blog-post-item">
+  <a href="<?php echo $blog_post_link; ?>">
+    <figure class="blog-banner-box">
+      <!-- Embed the Instagram post directly instead of using an img tag -->
+      <blockquote class="instagram-media" data-instgrm-permalink="<?php echo $blog_post_link; ?>" data-instgrm-version="14" style="width:100%;">
+      </blockquote>
+      <script async src="//www.instagram.com/embed.js"></script>
+    </figure>
+    <div class="blog-content">
+      <div class="blog-meta">
+        <p class="blog-category"><?php echo $blog_post_category; ?></p>
+        <span class="dot"></span>
+        <time datetime="<?php echo $blog_post_date; ?>"><?php echo $blog_post_date_formatted; ?></time>
+      </div>
+      <h3 class="h3 blog-item-title"><?php echo $blog_post_title; ?></h3>
+      <p class="blog-text"><?php echo $blog_post_text; ?></p>
+    </div>
+  </a>
+</li>
+
+
+
+<?php
+$blog_post_link = "https://www.instagram.com/p/C5LnyqLS5HR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==";
+$blog_post_image = ""; // Leave blank as we are embedding the Instagram post
+$blog_post_image_alt = "Memories in 2k24";
+$blog_post_category = "Instagram";
+$blog_post_date = "2024-06-27";
+$blog_post_date_formatted = "Mar 31, 2024";
+$blog_post_title = "Apple Mac M1 💻";
+$blog_post_text = "Sometimes it's you, all you need to find yourself..☺️, I've tried to spend all days through my Mac Air M1; click to view on Instagram.";
+?>
+
+<li class="blog-post-item">
+  <a href="<?php echo $blog_post_link; ?>">
+    <figure class="blog-banner-box">
+      <!-- Embed the Instagram post directly instead of using an img tag -->
+      <blockquote class="instagram-media" data-instgrm-permalink="<?php echo $blog_post_link; ?>" data-instgrm-version="14" style="width:100%;">
+      </blockquote>
+      <script async src="//www.instagram.com/embed.js"></script>
+    </figure>
+    <div class="blog-content">
+      <div class="blog-meta">
+        <p class="blog-category"><?php echo $blog_post_category; ?></p>
+        <span class="dot"></span>
+        <time datetime="<?php echo $blog_post_date; ?>"><?php echo $blog_post_date_formatted; ?></time>
+      </div>
+      <h3 class="h3 blog-item-title"><?php echo $blog_post_title; ?></h3>
+      <p class="blog-text"><?php echo $blog_post_text; ?></p>
+    </div>
+  </a>
+</li>
+           
+
+
+<?php
+$blog_post_link = "https://www.instagram.com/p/CtG2gzyrGEQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==";
+$blog_post_image = ""; // Leave blank as we are embedding the Instagram post
+$blog_post_image_alt = "Memories in 2k24";
+$blog_post_category = "Instagram";
+$blog_post_date = "2024-06-27";
+$blog_post_date_formatted = "Jun 5 , 2024";
+$blog_post_title = "It Ends With Us 🥀";
+$blog_post_text = "There is no such thing as bad people. We're all just people who sometimes do bad things...🥀 #IT ENDS WITH US, click to view on Instagram.";
+?>
+
+<li class="blog-post-item">
+  <a href="<?php echo $blog_post_link; ?>">
+    <figure class="blog-banner-box">
+      <!-- Embed the Instagram post directly instead of using an img tag -->
+      <blockquote class="instagram-media" data-instgrm-permalink="<?php echo $blog_post_link; ?>" data-instgrm-version="14" style="width:100%;">
+      </blockquote>
+      <script async src="//www.instagram.com/embed.js"></script>
+    </figure>
+    <div class="blog-content">
+      <div class="blog-meta">
+        <p class="blog-category"><?php echo $blog_post_category; ?></p>
+        <span class="dot"></span>
+        <time datetime="<?php echo $blog_post_date; ?>"><?php echo $blog_post_date_formatted; ?></time>
+      </div>
+      <h3 class="h3 blog-item-title"><?php echo $blog_post_title; ?></h3>
+      <p class="blog-text"><?php echo $blog_post_text; ?></p>
+    </div>
+  </a>
+</li>
+
+
 
 
             <!--
