@@ -1837,7 +1837,7 @@ TEMP FOR META NOT RELOVED IFRAME
 <!-- Notification -->
 <div id="mobile-notification" class="notification">
     <span class="close-btn" onclick="closeNotification()">&#10005;</span> <!-- Sharper Close Button -->
-    <p><span class="highlight-text">Apologies,</span> some blogs are unreachable due to <span class="highlight-text">x-iframe</span><br> not being resolved by <span class="highlight-text">meta</span>. For the best experience,<br> switch to the <span class="highlight-text">desktop mode</span>. Thanks for your understanding.</p>
+    <p><span class="highlight-text">Apologies</span>, some blogs are unreachable due to <span class="highlight-text">x-iframe</span><br> not being resolved by <span class="highlight-text">meta</span>. For the best experience,<br> switch to the <span class="highlight-text">desktop mode</span>. Thanks for your understanding.</p>
 </div>
 
 <!-- CSS Styling -->
