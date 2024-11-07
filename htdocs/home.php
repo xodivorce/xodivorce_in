@@ -53,7 +53,7 @@
 
       <div class="sidebar-info">
 
-        <figure class="avatar-box">
+        <figure class="avatar-box"> 
           <img src="./assets/images/dp.png" alt="xodivorce" width="80">
         </figure>
 
@@ -967,7 +967,7 @@ $xeorl_buzz_category = "Web development";
 </li>
 
             <?php
-            // $DDOS_link = "https://telegram.me/ddos_xodivorcebot";
+            $DDOS_link = "https://telegram.me/ddos_xodivorcebot";
             $DDOS_image = "./assets/images/ddos.jpg";
             $DDOS_title = "Propoganda DDOS";
             $DDOS_category = "Applications";
@@ -1213,7 +1213,10 @@ $xeorl_buzz_category = "Web development";
         <section class="blog-posts">
 
           <ul class="blog-posts-list">
-                          
+         
+<!--
+ - #YOUTUBE
+-->                 
           <?php
           $blog_post_link = "https://youtu.be/omSz7gUnyG0?si=Q-vBdK7aT1PWik-i";
           $blog_post_image = "./assets/images/Gta_IV_TUTORIAL.jpg";
@@ -1306,6 +1309,41 @@ $xeorl_buzz_category = "Web development";
               </li>
 
 
+
+              <?php
+          $blog_post_link = "https://youtu.be/s36d99lSvSs?si=pHruQCenHIjUa2pu";
+          $blog_post_image = "./assets/images/git.jpg";
+          $blog_post_image_alt = "Programming Like A Pro | #GIT ⚡";
+          $blog_post_category = "OS";
+          $blog_post_date = "2024-09-14";
+          $blog_post_date_formatted = "Upcoming on Nov";
+          $blog_post_title = "Programming Like A Pro | #GIT ⚡";
+          $blog_post_text = "Welcome to the Git installation tutorial! Works on All Apple Silicons (M1-M4) 🚀
+          Today, we’ll get Git up and running on your Mac in no time! 🍏✨";
+          ?>
+          <li class="blog-post-item">
+            <a href="<?php echo $blog_post_link; ?>">
+              <figure class="blog-banner-box">
+                <img src="<?php echo $blog_post_image; ?>" alt="<?php echo $blog_post_image_alt; ?>" loading="lazy">
+              </figure>
+              <div class="blog-content">
+                 <div class="blog-meta">
+                  <p class="blog-category"><?php echo $blog_post_category; ?></p>
+                  <span class="dot"></span>
+                  <time datetime="<?php echo $blog_post_date; ?>"><?php echo $blog_post_date_formatted; ?></time>
+                </div>
+                <h3 class="h3 blog-item-title"><?php echo $blog_post_title; ?></h3>
+                <p class="blog-text">
+                   <?php echo $blog_post_text; ?>
+                   </p>
+                  </div>
+                </a>
+              </li>
+
+
+<!--
+ - #INSTAGRAM
+-->
               
 <?php
 $blog_post_link = "https://www.instagram.com/p/DABUXD9S-NH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==";
@@ -1640,6 +1678,278 @@ $blog_post_text = "There is no such thing as bad people. We're all just people w
 
 
 
+<!--
+ - #FACEBOOK
+-->
+
+<?php
+$blog_posts = [
+    [
+        'link' => "https://www.facebook.com/photo.php?fbid=1105122847587361&set=pb.100042689670857.-2207520000&type=3",
+        'iframe' => "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto%2F%3Ffbid%3D1105122847587361%26set%3Da.100419004724422&show_text=true&width=500" ,
+        'image_alt' => "Memories in 2k24",
+        'category' => "Facebook",
+        'date' => "2024-06-27",
+        'date_formatted' => "Jan 10, 2024",
+        'title' => "Developer",
+        'text' => "⚡ An 18-Year-old Self-Taught Full-Stack Web, Android Developer & UI/UX Designer ✨is hustlin' to spice things up and make them more interesting...!! 🚀; click to view on Facebook."
+    ],
+    [
+        'link' => "https://www.facebook.com/share/17P8aRqnWR/",
+        'iframe' => "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D1168922104540768%26set%3Da.100942014672121%26type%3D3&show_text=false&width=500",
+        'image_alt' => "Be One",
+        'category' => "Facebook",
+        'date' => "2024-07-15",
+        'date_formatted' => "Apr 30, 2024",
+        'title' => "Be One",
+        'text' => "The world is filled with ' Good ' and ' Kind ' people. If you can't fine one, be One; click to view on Facebook."
+    ],
+    [
+          'link' => "https://www.facebook.com/share/p/1CrDQA1gkB/",
+          'iframe' => "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D1004317811001199%26set%3Da.290981085668212%26type%3D3&show_text=true&width=500",
+          'image_alt' => "Be Black",
+          'category' => "Facebook",
+          'date' => "2024-07-15",
+          'date_formatted' => "Jul 8, 2023",
+          'title' => "Be Black",
+          'text' => "The world is filled with ' Color ' and ' Rainbows '. If you are't the one, be the Balck; click to view on Facebook."
+    ],
+    [
+      'link' => "https://www.facebook.com/photo.php?fbid=1064175378348775&set=a.100419004724422&type=3&ref=embed_post",
+      'iframe' => "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto%2F%3Ffbid%3D1064175378348775%26set%3Da.100419004724422&show_text=false&width=500" ,
+      'image_alt' => "Did't give a shit",
+      'category' => "Facebook",
+      'date' => "2024-07-15",
+      'date_formatted' => "Jul 8, 2023",
+      'title' => "Did't give a shit",
+      'text' => "And the moral of the story is '' Don't give a lecture to someone, who just needs a hug ''. They dont give a Fuck about your lecture; click to view on Facebook."
+    ],
+    [
+      'link' => "https://www.facebook.com/share/p/15YDwD9kiY/",
+      'iframe' => "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D994762201956760%26set%3Da.191979372235051%26type%3D3&show_text=false&width=500",
+      'image_alt' => "Tarapith - 1, 2k23 ✨",
+      'category' => "Facebook",
+      'date' => "2024-07-15",
+      'date_formatted' => "Jul 8, 2023",
+      'title' => "Tarapith - 1, 2k23 ✨",
+      'text' => "Bhaichara..!! @_the_swagatam also some sorts clicked by him. Just in case if you're interested, click to view on Facebook."
+    ],
+    [
+      'link' => "https://www.facebook.com/share/p/19g563kDKT/",
+      'iframe' => "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D994757075290606%26set%3Da.191979372235051%26type%3D3&show_text=false&width=500",
+      'image_alt' => "Tarapith - 2, 2k23 ✨",
+      'category' => "Facebook",
+      'date' => "2024-07-15",
+      'date_formatted' => "Jul 8, 2023",
+      'title' => "Tarapith - 2, 2k23 ✨",
+      'text' => "Bhaichara..!! @_the_swagatam also some sorts clicked by him. Just in case if you're interested, click to view on Facebook."
+    ],
+    [
+      'link' => "https://www.facebook.com/photo.php?fbid=1231288908304087&set=a.100419004724422&type=3&ref=embed_post",
+      'iframe' => "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto%2F%3Ffbid%3D1231288908304087%26set%3Da.100419004724422&show_text=false&width=500",
+      'image_alt' => "Fest - KEI, 2k24 ✨",
+      'category' => "Facebook",
+      'date' => "2024-07-15",
+      'date_formatted' => "Nov 9, 2023",
+      'title' => "Fest - KEI, 2k24 ✨",
+      'text' => "The first feshers Fest of Kingston Educational Institute '23. Thats an extream day, click to view on Facebook."
+    ],
+    [
+      'link' => "https://www.facebook.com/share/p/15NQqY1EoF/",
+      'iframe' => "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D967628648003449%26set%3Da.191979372235051%26type%3D3&show_text=false&width=500",
+      'image_alt' => "Did't give a shit",
+      'category' => "Facebook",
+      'date' => "2024-07-15",
+      'date_formatted' => "May 9, 2023",
+      'title' => "Blood Moon 🌒",
+      'text' => "Randomly at 📍 Basirhat Picnic Spot, spotted a Blood Moon. Here's some potoshots as I'm a selenophile 🌓 , click to view photoshots on Facebook."
+    ],
+    [
+      'link' => "https://www.facebook.com/photo.php?fbid=968598017906512&set=pb.100042689670857.-2207520000&type=3",
+      'iframe' => "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto%2F%3Ffbid%3D968598017906512%26set%3Da.100419004724422&show_text=false&width=500",
+      'image_alt' => "Did't give a shit",
+      'category' => "Facebook",
+      'date' => "2024-07-15",
+      'date_formatted' => "May 7, 2023",
+      'title' => "Selenophile 🌒",
+      'text' => "Hi, I'm selenophile 🌓 , thats enough about me !! So what is your type ? click to view on Facebook."
+    ],
+    [
+      'link' => "https://www.facebook.com/share/1CvRJpYgr8/",
+      'iframe' => "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D959398318826482%26set%3Da.290981085668212%26type%3D3&show_text=false&width=500",
+      'image_alt' => "Did't give a shit",
+      'category' => "Facebook",
+      'date' => "2024-07-15",
+      'date_formatted' => "Apr 20, 2022",
+      'title' => "Childish <",
+      'text' => "This is kinda Doraemon - era, So if we go back to time; But if we can 🫥.! click to view on Facebook."
+    ],
+    [
+      'link' => "https://www.facebook.com/share/12E7Gz9Dn5q/",
+      'iframe' => "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D967019374731043%26set%3Da.191979372235051%26type%3D3&show_text=false&width=500" ,
+      'image_alt' => "Did't give a shit",
+      'category' => "Facebook",
+      'date' => "2024-07-15",
+      'date_formatted' => "May 4, 2022",
+      'title' => "Railway Station ",
+      'text' => "I'm wondered that a raiway station can be fells like Angel 🦋, Here's some shots! click to view on Facebook."
+    ],
+    [
+      'link' => "https://www.facebook.com/share/19VToboxEU/",
+      'iframe' => "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D927474668685514%26set%3Da.191979372235051%26type%3D3&show_text=false&width=500",
+      'image_alt' => "Did't give a shit",
+      'category' => "Facebook",
+      'date' => "2024-07-15",
+      'date_formatted' => "Feb 22, 2023",
+      'title' => "Getting Over You 📙",
+      'text' => "'' What do you do<br> when your problem<br> and your solution<br> is the same person 🦋 ? ''<br>- One of my fav book! click to view on Facebook."
+    ],
+    [
+      'link' => "https://www.facebook.com/share/14gwR67wAQq/",
+      'iframe' => "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D917376926361955%26set%3Da.290981085668212%26type%3D3&show_text=false&width=500",
+      'image_alt' => "Did't give a shit",
+      'category' => "Facebook",
+      'date' => "2024-07-15",
+      'date_formatted' => "Fav 6, 2022",
+      'title' => "Nostagia 🎐",
+      'text' => "'' Hold her while you can<br>
+      &nbsp;'Cause someday you won't get the chance !! ''<br>- Some of my fav lyrics, click to view on Facebook."
+    ],
+    [
+      'link' => "https://www.facebook.com/share/14gwR67wAQq/",
+      'iframe' => "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D935622664537381%26set%3Da.191979372235051%26type%3D3&show_text=false&width=500",
+      'image_alt' => "Did't give a shit",
+      'category' => "Facebook",
+      'date' => "2024-07-15",
+      'date_formatted' => "Mar 8, 2023",
+      'title' => "Talks 🌒",
+      'text' => "'' Like if you hold me without hurting me<br>
+      &nbsp;You'll be the one who ever did. ''<br>- And the Sun replies, click to view on Facebook."
+    ],
+];
+?>
+
+
+<!--
+TEMP FOR META NOT RELOVED IFRAME
+-->
+
+<!-- Notification -->
+<div id="mobile-notification" class="notification">
+    <span class="close-btn" onclick="closeNotification()">&#10005;</span> <!-- Sharper Close Button -->
+    <p><span class="highlight-text">Apologies,</span> some blogs are unreachable due to <span class="highlight-text">x-iframe</span><br> not being resolved by <span class="highlight-text">meta</span>. For the best experience,<br> switch to the <span class="highlight-text">desktop mode</span>. Thanks for your understanding.</p>
+</div>
+
+<!-- CSS Styling -->
+<style>
+.notification {
+    background-color: #0e182c;
+    color: hsl(0, 0%, 100%);
+    padding: 30px;
+    text-align: center;
+    font-size: 12.5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for better visibility */
+    display: block; /* Show by default */
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Initially hidden */
+    transition: opacity 2s ease, visibility 1s 3s; /* Add fade-in and delay for fade-out */
+}
+
+.notification.show {
+    opacity: 1; /* Fade in */
+    visibility: visible; /* Make the notification visible */
+    transition: opacity 2s ease, visibility 1s 3s; /* Fade in immediately */
+}
+
+.highlight-text {
+    color: #37BDF9; /* Highlight color */
+    font-weight: bold;
+    display: inline-block; /* Prevent line breaks within the span */
+}
+
+.notification p {
+    white-space: nowrap; /* Prevent breaking or wrapping of text */
+    overflow: hidden; /* Prevent overflow */
+    text-overflow: ellipsis; /* Optional: Add ellipsis if text is too long */
+}
+
+/* Sharper Close Button Styling */
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 15px; /* Increased font size for sharper look */
+    font-weight: bold; /* Make the X thicker */
+    color: white;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 5px;
+    z-index: 1000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add shadow for better sharpness */
+}
+
+.close-btn:hover {
+    color: #ff4747; /* Change color on hover */
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7); /* Sharper shadow on hover */
+}
+
+</style>
+
+<!-- JavaScript -->
+<script>
+// Function to show the notification with a fade-in effect
+window.addEventListener('load', function() {
+    if (window.innerWidth < 768) {
+        const notification = document.getElementById('mobile-notification');
+        notification.classList.add('show'); // Add class to trigger the fade-in effect
+    }
+});
+
+// Function to close the notification with a fade-out effect
+function closeNotification() {
+    const notification = document.getElementById('mobile-notification');
+    notification.classList.remove('show'); // Remove the class to trigger fade-out
+    setTimeout(function() {
+        notification.style.display = 'none'; // Hide the notification completely after fade-out
+    }, 3000); // Match the fade-out time (3 second)
+}
+
+</script>
+
+
+
+
+
+<?php foreach ($blog_posts as $post): ?>
+<li class="blog-post-item">
+  <a href="<?php echo $post['link']; ?>">
+    <figure class="blog-banner-box">
+      <!-- Responsive container for the Facebook embed -->
+      <div class="responsive-iframe-container">
+        <iframe src="<?php echo $post['iframe']; ?>" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+      </div>
+    </figure>
+    <div class="blog-content">
+      <div class="blog-meta">
+        <p class="blog-category"><?php echo $post['category']; ?></p>
+        <span class="dot"></span>
+        <time datetime="<?php echo $post['date']; ?>"><?php echo $post['date_formatted']; ?></time>
+      </div>
+      <h3 class="h3 blog-item-title"><?php echo $post['title']; ?></h3>
+      <p class="blog-text"><?php echo $post['text']; ?></p>
+    </div>
+  </a>
+</li>
+<?php endforeach; ?>
+
+
+
             <!--
 
             <li class="blog-post-item">
@@ -1768,7 +2078,10 @@ $blog_post_text = "There is no such thing as bad people. We're all just people w
 
       <!--
         - #CONTACT
-      --><article class="contact" data-page="contact">
+      -->
+        
+      
+      <article class="contact" data-page="contact">
   <header>
     <h2 class="h2 article-title">Contact</h2>
   </header>

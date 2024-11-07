@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   setTimeout(function() {
       document.querySelector(".preloader").style.display = "none";
-  }, 1500);
+  }, 3000);
 });
 
 //Cursor Hover Animination
@@ -198,4 +198,4 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
- 
+  

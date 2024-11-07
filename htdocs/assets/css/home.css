@@ -1209,6 +1209,36 @@
   100% { transform: rotate(360deg); }
 }
 
+
+
+.responsive-iframe-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.responsive-iframe-container iframe {
+  width: 100%;
+  height: 350px; /* Adjust height as needed */
+}
+
+@media (max-width: 768px) { /* Tablet */
+  .responsive-iframe-container iframe {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) { /* Mobile */
+  .responsive-iframe-container iframe {
+    height: 250px;
+    width: 100%;
+    transform: scale(1); /* Scale down to fit mobile */
+    transform-origin: 0 0;
+  }
+}
+
+
   
   
   /*-----------------------------------*\
