@@ -1174,6 +1174,29 @@
     line-height: 1.6;
   }
 
+/* Tablet view */
+@media (min-width: 600px) and (max-width: 1023px) {
+  .blog-post-item {
+
+    margin-left: -15px;       /* Center horizontally */
+  
+  }
+
+
+  .instagram-media {
+         /* Full width within centered container */
+    height: 350px;         /* Maintain natural height */
+  }
+}
+/* Mobile view (767px and below) */
+@media (max-width: 767px) {
+  .blog-post-item {
+
+    margin-left: 0px;       /* Center horizontally */
+  
+  }
+}
+
   /* Simplified CSS */
 
 .container {
@@ -1238,9 +1261,6 @@
   }
 }
 
-
-  
-  
   /*-----------------------------------*\
     #CONTACT
   \*-----------------------------------*/
