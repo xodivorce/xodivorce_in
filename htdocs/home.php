@@ -717,7 +717,7 @@
 
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">ASSEMPLY SCRIPT</h5>
+                <h5 class="h5">ASSEMBLY SCRIPT</h5>
                 <data value="25">25%</data>
               </div>
               <div class="skill-progress-bg">
@@ -1066,27 +1066,29 @@ $xeorl_buzz_category = "Web development";
               </a>
             </li>
 
-
             <?php
-        $xeporn_link = "https://xeporn-beta-2.vercel.app";
-        $xeporn_image = "./assets/images/xeporn.png";
-        $xeporn_title = "XePORN.In ©2024 𝔟𝔢𝔱𝔞 𝔦𝔦<br> ‣ 𝘦𝘮𝘢𝘪𝘭 𝘧𝘰𝘳 𝘦𝘢𝘳𝘭𝘺 𝘢𝘤𝘤𝘦𝘴..";
-        $xeporn_category= "Web development";
-        ?>
+/*
+$xeporn_link = "https://xeporn-beta-2.vercel.app";
+$xeporn_image = "./assets/images/xeporn.png";
+$xeporn_title = "XePORN.In ©2024 𝔟𝔢𝔱𝔞 𝔦𝔦<br> ‣ 𝘦𝘮𝘢𝘪𝘭 𝘧𝘰𝘳 𝘦𝘢𝘳𝘭𝘺 𝘢𝘤𝘤𝘦𝘴..";
+$xeporn_category = "Web development";
+*/
+?>
+<!--
+<li class="project-item active" data-filter-item data-category="web development">
+  <a href="<?php /* echo $xeporn_link; */ ?>">
+    <figure class="project-img">
+      <div class="project-item-icon-box">
+        <ion-icon name="eye-outline"></ion-icon>
+      </div>
+      <img src="<?php /* echo $xeporn_image; */ ?>" alt="<?php /* echo $xeporn_title; */ ?>" loading="lazy">
+    </figure>
+    <h3 class="project-title"><?php /* echo $xeporn_title; */ ?></h3>
+    <p class="project-category"><?php /* echo $xeporn_category; */ ?></p>
+  </a>
+</li>
 
-        <li class="project-item active" data-filter-item data-category="web development">
-          <a href="<?php echo $xeporn_link; ?>">
-            <figure class="project-img">
-              <div class="project-item-icon-box">
-                <ion-icon name="eye-outline"></ion-icon>
-              </div>
-              <img src="<?php echo $xeporn_image; ?>" alt="<?php echo $xeporn_title; ?>" loading="lazy">
-            </figure>
-             <h3 class="project-title"><?php echo $xeporn_title; ?></h3>
-              <p class="project-category"><?php echo $xeporn_category; ?></p>
-            </a>
-          </li>
-
+-->
 
 
             
@@ -1360,7 +1362,8 @@ $blog_post_text = "Memories in 2k24, the fan meet up on Sep was unexpected. Alth
   <a href="<?php echo $blog_post_link; ?>">
     <figure class="blog-banner-box">
       <!-- Embed the Instagram post directly instead of using an img tag -->
-      <blockquote class="instagram-media" data-instgrm-permalink="<?php echo $blog_post_link; ?>" data-instgrm-version="14" style="width:100%;">
+      <blockquote 
+      class="instagram-media" data-instgrm-permalink="<?php echo $blog_post_link; ?>" data-instgrm-version="14" style="width:100%;">
       </blockquote>
       <script async src="//www.instagram.com/embed.js"></script>
     </figure>
