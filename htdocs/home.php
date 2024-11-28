@@ -656,54 +656,39 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">Web Development</h5>
-                <data value="85">85%</data>
+                <h5 class="h5">HTML</h5>
+                <data value="95">95%</data>
               </div>
 
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
+                <div class="skill-progress-fill" style="width: 95%;"></div>
               </div>
 
             </li>
-
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">Java</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Python</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
+              <h5 class="h5">CSS</h5>
+              <data value="90">90%</data>
+            </div>
+            <div class="skill-progress-bg">
                 <div class="skill-progress-fill" style="width: 90%;"></div>
               </div>
 
             </li>
-
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">C</h5>
-                <data value="50">50%</data>
-              </div>
+              <h5 class="h5">Java Script</h5>
+              <data value="70">70%</data>
+            </div>
 
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
+            <div class="skill-progress-bg">
+               <div class="skill-progress-fill" style="width: 85%;"></div>
+             </div>
 
             </li>
+
             <li class="skills-item">
               <div class="title-wrapper">
                 <h5 class="h5">PHP</h5>
@@ -711,17 +696,6 @@
               </div>
               <div class="skill-progress-bg">
                 <div class="skill-progress-fill" style="width: 65%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">ASSEMBLY SCRIPT</h5>
-                <data value="25">25%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 25%;"></div>
               </div>
 
             </li>
@@ -736,6 +710,7 @@
               </div>
 
             </li>
+            
 
             <li class="skills-item">
               <div class="title-wrapper">
@@ -746,7 +721,115 @@
                 <div class="skill-progress-fill" style="width: 95%;"></div>
               </div>
 
+
+              <li class="skills-item">
+                
+
+              <div class="title-wrapper">
+    <h5 class="h5">Tailwindcss</h5>
+    <data value="65">65%</data>
+</div>
+
+<div class="skill-progress-bg">
+<div class="skill-progress-fill" style="width: 65%;"></div>
+</div>
+</li>
+<li class="skills-item">
+
+                <div class="title-wrapper">
+                    <h5 class="h5">MongoDB</h5>
+                    <data value="70">70%</data>
+              </div>
+
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 70%;"></div>
+            </div>
+          </li>
+
+
+<li class="skills-item">
+
+<div class="title-wrapper">
+    <h5 class="h5">Express.js</h5>
+    <data value="40">40%</data>
+</div>
+
+<div class="skill-progress-bg">
+<div class="skill-progress-fill" style="width: 40%;"></div>
+</div>
+</li>
+<li class="skills-item">
+
+<div class="title-wrapper">
+    <h5 class="h5">React.js</h5>
+    <data value="80">80%</data>
+</div>
+
+<div class="skill-progress-bg">
+<div class="skill-progress-fill" style="width: 80%;"></div>
+</div>
+</li>
+<li class="skills-item">
+
+<div class="title-wrapper">
+    <h5 class="h5">Node.js</h5>
+    <data value="85">85%</data>
+</div>
+
+<div class="skill-progress-bg">
+<div class="skill-progress-fill" style="width: 85%;"></div>
+</div>
+</li>
             </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Assembly Script</h5>
+                <data value="25">25%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 25%;"></div>
+              </div>
+
+            </li>
+            </li>
+
+<li class="skills-item">
+
+  <div class="title-wrapper">
+    <h5 class="h5">Java</h5>
+    <data value="50">50%</data>
+  </div>
+
+  <div class="skill-progress-bg">
+    <div class="skill-progress-fill" style="width: 50%;"></div>
+  </div>
+
+</li>
+
+<li class="skills-item">
+
+  <div class="title-wrapper">
+    <h5 class="h5">Python</h5>
+    <data value="90">90%</data>
+  </div>
+
+  <div class="skill-progress-bg">
+    <div class="skill-progress-fill" style="width: 90%;"></div>
+  </div>
+
+</li>
+
+<li class="skills-item">
+
+  <div class="title-wrapper">
+    <h5 class="h5">C</h5>
+    <data value="50">50%</data>
+  </div>
+
+  <div class="skill-progress-bg">
+    <div class="skill-progress-fill" style="width: 50%;"></div>
+  </div>
+              
 
 
           </ul>
