@@ -1,60 +1,3 @@
-.preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #0e182c;
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loader {
-  border: 5px solid #37BDF9;
-  border-top: 5px solid #545454b4;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 2s linear infinite;
-  margin: auto;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Cursor Hover Animination */
-.hoverAnimatedContainer {
-  position: relative;
-  overflow: hidden;
-  cursor: url("/assets/images/cursor/cursor-2.png"), auto;
-  --mouse-x: 0;
-  --mouse-y: 0;
-}
-
-.hoverAnimatedContainer:hover::before {
-  opacity: 1;
- 
-}
-
-.hoverAnimatedContainer::before {
-  background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.112), transparent 40%);
-  border-radius: 20px;
-  content: "";
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  opacity: 0;
-  transition: opacity 500ms;
-  pointer-events: none;
- 
-}
-
 :root {
 
     --bg-gradient-onyx: linear-gradient(
@@ -343,11 +286,14 @@
   100% { transform: rotate(360deg); }
 }
 
-/* Cursor Hover Animination */
+
+   /*-----------------------------------*\
+    #CURSOR HOVER ANIMATION
+  \*-----------------------------------*/
+
 .hoverAnimatedContainer {
   position: relative;
   overflow: hidden;
-  cursor: url("/assets/images/cursor/cursor-2.png"), auto;
   --mouse-x: 0;
   --mouse-y: 0;
 }
@@ -355,6 +301,13 @@
 .hoverAnimatedContainer:hover::before {
   opacity: 1;
  
+}
+
+/* Disable hover effect on tablets and mobile devices */
+@media (max-width: 1023px) {
+  .hoverAnimatedContainer:hover::before {
+    opacity: 0;
+  }
 }
 
 .hoverAnimatedContainer::before {
@@ -371,7 +324,42 @@
   pointer-events: none;
  
 }
+ 
+
+
+  /*-----------------------------------*\
+    #PRELOADER
+  \*-----------------------------------*/
   
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0e182c;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  border: 5px solid #37BDF9;
+  border-top: 5px solid #545454b4;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
   
 
   /*-----------------------------------*\
