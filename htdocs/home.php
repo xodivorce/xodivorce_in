@@ -61,6 +61,7 @@
           <h1 class="name" title="Prasid Mandal">Xodivorce</h1>
           <a href="./assets/pdf/Curriculum_Vitae.pdf" download class="view-cv-btn">View CV</a>
         </div>
+        
 
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
@@ -599,10 +600,19 @@
 
           <ol class="timeline-list">
 
-          
           <li class="timeline-item">
     <h4 class="h4 timeline-item-title">Web Developer</h4>
     <span>2024 – Present</span>
+    <p class="timeline-text">
+    Currently expanding my skills with the MERN stack (MongoDB, Express, React, Node.js). Working on new and exciting projects using modern web technologies. More MERN stack-based projects are coming soon!
+    </p>
+    </p>
+</li>
+
+          
+          <li class="timeline-item">
+    <h4 class="h4 timeline-item-title">Web Developer</h4>
+    <span>2023 – Present</span>
     <p class="timeline-text">
         Self-employed in Basirhat, West Bengal. Developed and managed web projects, including xodivorce.in. Collaborated with clients to create and deploy customized web solutions using HTML5, CSS3, JavaScript, PHP, and MySQL. Ensured mobile-friendliness with responsive design principles.
     </p>
