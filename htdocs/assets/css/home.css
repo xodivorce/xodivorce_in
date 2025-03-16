@@ -495,14 +495,15 @@
 }
 
 .social-item .social-link {
-    color: var(--light-gray-70);
+    color: var(--vegas-gold);
     font-size: 18px;
 }
 
 .social-item .social-link:hover {
-    color: var(--light-gray);
+  color: var(--white-1);
+  transform: scale(1.5);
+  transition: transform 0.5s ease;
 }
-  
 
   
   /*-----------------------------------*\
