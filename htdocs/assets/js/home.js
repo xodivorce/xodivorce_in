@@ -27,26 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
-//Cacualte Date & About
-function calculateYearDiff(startDate) {
-  const start = new Date(startDate);
-  const now = new Date();
-  const diff = now.getFullYear() - start.getFullYear();
-  return diff;
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const messageElement = document.getElementById('message');
-  const years = calculateYearDiff('2020-01-01');
-  messageElement.innerHTML = `My passion is to build your website so that it is functional and user-friendly but at the same time attractive.
-            Moreover, I
-            add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
-            across your
-            message and identity in the most creative way. Have been crafting modern websites and iOS apps for  ${years}+ years.`;
-});
-
-
-
 
 // sidebar variables
 const sidebar = document.querySelector("[data-sidebar]");

@@ -6,13 +6,17 @@
   <meta name="description" content="Official Portfolio Website of Prasid Mandal - Full-Stack Web, iOS Developer and UI/UX Designer - (Also Reknowned as @xodivorce).">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xodivorce - Personal Portfolio</title>
+  <title>Xodivorce - Portfolio</title>
 
   <!--
     - favicon
   -->
-    
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+<link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+<link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+<link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
 
   <!--
     - custom css link
@@ -26,9 +30,8 @@
     - google font link
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!--<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">-->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -126,9 +129,9 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Location</p>
+              <p class="contact-title">Based On</p>
 
-              <address>Kolkata, INDIA</address>
+              <address>Kolkata, India</address>
             </div>
 
           </li>
@@ -162,8 +165,6 @@
       </div>
 
     </aside>
-
-
 
     <!--
       - #main-content
@@ -213,22 +214,36 @@
 
       <article class="about  active" data-page="about">
         
-
         <header>
           <h2 class="h2 article-title">About me</h2>
         </header>
         
+        <?php
+        // Get birth date from environment variables
+        $birthDateString = $_ENV['USER_BDAY'] ?? $_SERVER['USER_BDAY'] ?? null;
+        $experienceStartYear = $_ENV['USER_EXPY'] ?? $_SERVER['USER_EXPY'] ?? null;
 
-        <section class="about-text">
+        // Calculate age
+        $birthDate = DateTime::createFromFormat('d-m-Y', $birthDateString);
+        if (!$birthDate) {
+          die("Invalid date format: Expected 'd-m-Y'.");
+        }
+
+        $today = new DateTime('today');
+        $age = $birthDate->diff($today)->y;
+
+        // Calculate experience years
+        $experienceYears = $today->format('Y') - (int)$experienceStartYear;
+        ?>
           <p>
-          Anyeonghaseyo, I'm Prasid, a Creative Director and UI/UX Designer from Kolkata, India, 
-          specializing in Web & iOS App development. I excel at transforming complex problems into elegant, 
-          beautiful, and intuitive designs.
+              Hey there! I'm Prasid, a <?php echo $age; ?>-year-old tech enthusiast, self-taught Full Stack Web and Android Developer.
+              Delivering modern websites and Android apps with AI & modern Frameworks for more than <?php echo $experienceYears; ?>+ years.
           </p>
-
-          <p id="message">
-            </p>
-        </section>
+          
+          <p>
+          Crafting my passion into delivering industry-grade experience websites that are functional and user-friendly, also attractive at the same time. 
+          Moreover, I add a handcrafted touch to every line of code, No! Every pixel I've placed. Howover, I'm On A Mission To Make The Web More Interesting...
+          </p>
 
 
         <!--
@@ -252,7 +267,7 @@
                 <h4 class="h4 service-item-title">Web design</h4>
 
                 <p class="service-item-text">
-                  The most modern and high-quality design made at a professional level.
+                  Crafting modern design concepts into high quality web designs.
                 </p>
               </div>
 
@@ -268,7 +283,7 @@
                 <h4 class="h4 service-item-title">Web development</h4>
 
                 <p class="service-item-text">
-                  High-quality development of sites at the professional level.
+                  Transforming modern design concepts into industry-ready, high-quality code.
                 </p>
               </div>
 
@@ -281,10 +296,8 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">iOS apps</h4>
-
-                <p class="service-item-text">
-                  Professional development of applications for iOS and Mac.
+                <h4 class="h4 service-item-title">Android apps</h4>
+                  Transforming visionary concepts into cutting-edge Android applications.
                 </p>
               </div>
 
@@ -298,9 +311,7 @@
 
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Photography</h4>
-
-                <p class="service-item-text">
-                  I make high-quality photos of any category at a professional level.
+                  Capturing high-quality, professional-grade photographs across the world.
                 </p>
               </div>
 
@@ -328,20 +339,18 @@
                   <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
                 </figure>
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Sundar Pichai</h4>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>AutoSquare Store</h4>
 
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
-                  Prasid's work in creating our corporate identity was outstanding. 
-                  They demonstrated a deep understanding of our needs and delivered designs that exceeded our expectations. 
-                  Prasid's experience and dedication were evident throughout the project, ensuring every detail was meticulously crafted to resonate with our clients.
+                  We recently came across your GitHub profile and were truly impressed by your skills and projects. We think you could be a fantastic addition to our team at AutoSquare as a Full Stack Software Engineer.
                   </p>
                 </div>
 
               </div>
             </li>
 
-            <li class="testimonials-item">
+            <!-- <li class="testimonials-item">
               <div class="content-card" data-testimonials-item>
 
                 <figure class="testimonials-avatar-box">
@@ -402,7 +411,7 @@
                 </div>
 
               </div>
-            </li>
+            </li> -->
 
           </ul>
 
@@ -439,11 +448,7 @@
 
               <div data-modal-text>
                 <p>
-                  Prasid was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere earum deleniti sint sit debitis expedita animi deserunt autem distinctio veniam ipsum porro perferendis totam magni fugit excepturi, officia maxime? Harum.
                 </p>
               </div>
 
@@ -465,39 +470,9 @@
 
 <ul class="clients-list has-scrollbar">
 
-  <li class="clients-item">
-    <a href="https://www.microsoft.com/software-download/windows11" target="_main">
-      <img src="./assets/images/logo-1-color.png" alt="Windows logo">
-    </a>
-  </li>
-
-  <li class="clients-item">
-    <a href="https://www.visa.co.in/" target="_main">
-      <img src="./assets/images/logo-2-color.png" alt="Visa logo">
-    </a>
-  </li>
-
-  <li class="clients-item">
-    <a href="https://about.meta.com/metaverse/" target="_main">
-      <img src="./assets/images/logo-3-color.png" alt="Meta logo">
-    </a>
-  </li>
-
-  <li class="clients-item">
-    <a href="https://www.oreo.com/" target="_main">
-      <img src="./assets/images/logo-4-color.png" alt="Oreo logo">
-    </a>
-  </li>
-
-  <li class="clients-item">
-    <a href="https://www.unilever.com/" target="_main">
-      <img src="./assets/images/logo-5-color.png" alt="Unilever logo">
-    </a>
-  </li>
-
-  <li class="clients-item">
-    <a href="https://www.paypal.com/in/home" target="_main">
-      <img src="./assets/images/logo-6-color.png" alt="Paypal logo">
+<li class="clients-item">
+    <a href="https://autosquare.store" target="_main">
+      <img src="./assets/images/autosquare.png" alt="Autosquare logo">
     </a>
   </li>
 
@@ -2185,7 +2160,7 @@ function closeNotification() {
   <section class="mapbox" data-mapbox>
     <figure>
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117925.21689758253!2d88.26495109688607!3d22.535564936243723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f882db4908f667%3A0x43e330e68f6c2cbc!2sKolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1720215955684!5m2!1sen!2sin"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58908.79709660985!2d88.82763828272911!3d22.66125108349142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff567854e8190f%3A0xf12dc8b635ba902f!2sBasirhat%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1742137535998!5m2!1sen!2sin"
         width="400" height="300" loading="lazy"></iframe>
     </figure>
   </section>
