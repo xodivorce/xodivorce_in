@@ -17,7 +17,6 @@
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
   <link rel="manifest" href="./assets/favicon/site.webmanifest" />
 
-
   <!--
     - custom css link
   -->
@@ -25,17 +24,16 @@
   <link rel="stylesheet" href="./assets/css/exeption.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
-
   <!--
     - google font link
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
-<body>
 
+<body>
 
   <!--
     - #MAIN
@@ -46,7 +44,6 @@
   </div> 
   <main>
     
-
     <!--
       - #SIDEBAR
     -->
@@ -157,6 +154,18 @@
           <li class="social-item">
             <a href="https://www.instagram.com/xodivorce" class="social-link" target="_main">
               <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://in.pinterest.com/xodivorcee" class="social-link" target="_main">
+              <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/prasid-mandal-85aa05268/" class="social-link" target="_main">
+              <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
 
