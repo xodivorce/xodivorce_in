@@ -1,7 +1,7 @@
 # [Xodivorce - Portfolio Website](https://www.xodivorce.in)
 ### 👀 Preview:
 
-<img src="./images/xodivorce_in_preview1.jpg">
+<img src="./images/xodivorce_in_preview.jpg">
 
 ### Welcome to the Official Portfolio Website of Prasid ([@xodivorce](https://instagram.com/xodivorce)) ✨
 [![status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)

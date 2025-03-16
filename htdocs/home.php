@@ -242,7 +242,7 @@
           
           <p>
           Crafting my passion into delivering industry-grade experience websites that are functional and user-friendly, also attractive at the same time. 
-          Moreover, I add a handcrafted touch to every line of code, No! Every pixel I've placed. Howover, I'm On A Mission To Make The Web More Interesting...
+          Moreover, I add a handcrafted touch to every line of code, No! Every pixel I've placed. However, I'm On A Mission To Make The Web More Interesting...
           </p>
 
 
