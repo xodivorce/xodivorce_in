@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 17, 2025 at 09:57 AM
+-- Generation Time: Mar 17, 2025 at 03:36 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -43,6 +43,87 @@ INSERT INTO `maintenance` (`id`, `is_active`, `updated_at`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `resume_education`
+--
+
+CREATE TABLE `resume_education` (
+  `id` int(11) NOT NULL,
+  `institution` varchar(255) NOT NULL,
+  `degree` varchar(255) NOT NULL,
+  `start_year` year(4) NOT NULL,
+  `end_year` year(4) NOT NULL,
+  `description` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `resume_education`
+--
+
+INSERT INTO `resume_education` (`id`, `institution`, `degree`, `start_year`, `end_year`, `description`) VALUES
+(1, 'Kingston Polytechnic College', 'Diploma in Computer Science and Technology (CST)', '2023', '2025', 'Kingston Polytechnic College, affiliated with Kingston Educational Institute (KEI); Barasat - Barrackpore Rd, Kajibari, Kolkata, West Bengal 700126.'),
+(2, 'Basirhat High School (HS)', 'Higher Secondary Education (WBCHSE)', '2021', '2023', 'Completed 11th and 12th grade with Science (Physics, Chemistry, Biology) and Computer Applications under the WB Board at Basirhat High School (HS).'),
+(3, 'Basirhat Town High School (HS)', 'Secondary Education (WBBSE)', '2015', '2021', 'Completed 5th to 10th grades under the WB Board at Basirhat Town High School (HS). Studied PT (Physical Training), Computer Studies, and Construction, gaining foundational knowledge and practical skills.'),
+(4, 'Bhawanipur Harimohan Primary School', 'Primary Education (WBBPE)', '2011', '2015', 'Attended Bhawanipur Harimohan Primary School from class 1 to 4, starting with basic ABC and computer skills. Introduced to MS Paint, Word, and other applications from class 3 onwards.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `resume_experience`
+--
+
+CREATE TABLE `resume_experience` (
+  `id` int(11) NOT NULL,
+  `job_title` varchar(255) NOT NULL,
+  `start_year` year(4) NOT NULL,
+  `end_year` varchar(10) NOT NULL,
+  `description` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `resume_experience`
+--
+
+INSERT INTO `resume_experience` (`id`, `job_title`, `start_year`, `end_year`, `description`) VALUES
+(1, 'Web Developer (MERN)', '2024', 'Present', 'Currently expanding my skills with the MERN stack (MongoDB, Express, React, Node.js). \r\nWorking on new and exciting projects using modern web technologies. \r\nMore MERN stack-based projects are coming soon!'),
+(2, 'Web Developer (Laravel)', '2023', 'Present', 'Self-taught Full Stacked Web Developed and managed web projects, including xodivorce.in. Collaborated with clients to create and deploy customized web solutions using HTML5, CSS3, JavaScript, PHP, and MySQL. Ensured mobile-friendliness with responsive design principles.'),
+(3, 'CITA - IT And ITAS', '2023', '2024', 'Completed Youth Computer Training at CITA in Basirhat, West Bengal. Acquired practical experience with a range of IT tools and technologies. Successfully finished the IT/ITAS training program, which lasted for 6 months.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `resume_skills`
+--
+
+CREATE TABLE `resume_skills` (
+  `id` int(11) NOT NULL,
+  `skill_name` varchar(100) NOT NULL,
+  `skill_level` int(11) NOT NULL CHECK (`skill_level` between 0 and 100)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `resume_skills`
+--
+
+INSERT INTO `resume_skills` (`id`, `skill_name`, `skill_level`) VALUES
+(1, 'HTML', 95),
+(2, 'CSS', 90),
+(3, 'JavaScript', 65),
+(4, 'PHP', 80),
+(5, 'MySQL', 85),
+(6, 'GIT', 85),
+(7, 'Tailwindcss', 70),
+(8, 'MongoDB', 75),
+(9, 'Express.js', 50),
+(10, 'React.js', 60),
+(11, 'Node.js', 45),
+(12, 'Python', 75),
+(13, 'C', 35),
+(14, 'Java', 45),
+(15, 'Kotlin', 15);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `testimonials`
 --
 
@@ -73,6 +154,24 @@ ALTER TABLE `maintenance`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `resume_education`
+--
+ALTER TABLE `resume_education`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resume_experience`
+--
+ALTER TABLE `resume_experience`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resume_skills`
+--
+ALTER TABLE `resume_skills`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `testimonials`
 --
 ALTER TABLE `testimonials`
@@ -87,6 +186,24 @@ ALTER TABLE `testimonials`
 --
 ALTER TABLE `maintenance`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `resume_education`
+--
+ALTER TABLE `resume_education`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `resume_experience`
+--
+ALTER TABLE `resume_experience`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `resume_skills`
+--
+ALTER TABLE `resume_skills`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `testimonials`
