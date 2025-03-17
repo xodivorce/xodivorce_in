@@ -55,7 +55,7 @@
 
         <div class="info-content">
           <h1 class="name" title="Prasid Mandal">Xodivorce</h1>
-          <a href="./assets/pdf/Curriculum_Vitae.pdf" download class="view-cv-btn">View CV</a>
+          <a href="./assets/pdf/CV_PRASID.pdf" download class="view-cv-btn">View CV</a>
         </div>
         
 
@@ -123,7 +123,6 @@
 
             <div class="contact-info">
               <p class="contact-title">Based On</p>
-
               <address>Kolkata, India</address>
             </div>
 

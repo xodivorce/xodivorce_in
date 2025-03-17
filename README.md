@@ -5,7 +5,7 @@
 
 ### Welcome to the Official Portfolio Website of Prasid ([@xodivorce](https://instagram.com/xodivorce)) ✨
 [![status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
-[![version](https://img.shields.io/badge/version-v9.14.7-yellow.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
+[![version](https://img.shields.io/badge/version-v9.14.8-yellow.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
 [![PRs](https://img.shields.io/badge/PRs-welcome-blue.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
 <br></br>
 
@@ -81,25 +81,7 @@ Don’t be shy! [*Open an issue*](https://github.com/xodivorce/xodivorce_in/issu
 
 ### 📝 License & Usage
 
-This project is licensed under the [**Xodivorce License Agreement**](xodivorce_license.txt) . By accessing or contributing to this project, you agree to the following terms:
-
-1. **Contributions**:
-   - Contributions (code, documentation, etc.) are welcome but must be reviewed and approved by the Owner.
-
-2. **Use of Content**:
-   - Content can be viewed, downloaded, and printed for personal use only. For any other use, explicit permission from the Owner is required.
-
-3. **Attribution**:
-   - Proper credit must be given to the Owner, including a link to this license and noting any changes made.
-
-4. **No Derivative Works**:
-   - Modified versions of the content cannot be distributed without prior written permission.
-
-5. **Requesting Permission**:
-   - To use any content from this project, contact the Owner at *hey@xodivorce.in* .
-
-6. **Copyright Infringement**:
-   - Unauthorized use may result in a copyright strike and legal action.
+Xodivorce - Portfolio Website is a Fully Open Sourced Project licensed under the [**MIT LICENSE**](LICENSE), but still some parts of this website are not allowed to use or distribute without proper permission or attribution. All the contents (eg: informations, blog posts, articles) published in this website and the visual components (eg: layout, design, animations, images, videos, graphics) used in this website are not covered under the MIT License and requires special permission to be used. Using these without prior permission will cause legal actions.
 
 **🌟 Like this project? Please consider giving it a star to show your support!**
 
