@@ -1470,7 +1470,9 @@
   
     .avatar-box img { width: 120px; }
   
-    .info-content .name { margin-bottom: 15px; }
+    .info-content .name { 
+      margin-bottom: 15px; 
+    }
   
     .info-content .title { padding: 5px 18px; }
   

@@ -1,4 +1,6 @@
-
+<?php
+  require 'core/connection.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -140,7 +142,7 @@
         <ul class="social-list">
 
           <li class="social-item">
-            <a href="https://www.facebook.com/xodivorce.1" class="social-link" target="_main">
+            <a href="https://www.facebook.com/xodivorce" class="social-link" target="_main">
               <ion-icon name="logo-facebook"></ion-icon>
             </a>
           </li>
@@ -306,6 +308,7 @@
 
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Android apps</h4>
+                <p class="service-item-text">
                   Transforming visionary concepts into cutting-edge Android applications.
                 </p>
               </div>
@@ -320,6 +323,7 @@
 
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Photography</h4>
+                <p class="service-item-text">
                   Capturing high-quality, professional-grade photographs across the world.
                 </p>
               </div>
@@ -330,143 +334,72 @@
 
         </section>
 
-
-        <!--
-          - testimonials
+        <!-- 
+        - Testimonials 
         -->
+
+        <?php
+        $sql = "SELECT * FROM testimonials ORDER BY date_added DESC";
+        $result = $conn->query($sql);
+        ?>
 
         <section class="testimonials">
-
           <h3 class="h3 testimonials-title">Testimonials</h3>
-
           <ul class="testimonials-list has-scrollbar">
+            <?php while ($row = $result->fetch_assoc()) { ?>
+              <li class="testimonials-item" data-testimonials-item
+                  data-name="<?php echo htmlspecialchars($row['name']); ?>"
+                  data-avatar="<?php echo htmlspecialchars($row['avatar']); ?>"
+                  data-message="<?php echo htmlspecialchars($row['message']); ?>"
+                  data-date="<?php echo !empty($row['date_added']) ? htmlspecialchars($row['date_added']) : 'N/A'; ?>">
 
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
+                <div class="content-card" data-modal-trigger>
+                  <figure class="testimonials-avatar-box">
+                    <img src="<?php echo htmlspecialchars($row['avatar']); ?>" alt="<?php echo htmlspecialchars($row['name']); ?>" width="60" data-testimonials-avatar>
+                  </figure>
 
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
-                </figure>
+                  <h4 class="h4 testimonials-item-title" data-testimonials-title><?php echo htmlspecialchars($row['name']); ?></h4>
+                  <time datetime="<?php echo htmlspecialchars($row['date_added']); ?>">
+                    <?php echo !empty($row['date_added']) ? date("d F, Y", strtotime($row['date_added'])) : "Date not available"; ?>
+                  </time>
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>AutoSquare Store</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                  We recently came across your GitHub profile and were truly impressed by your skills and projects. We think you could be a fantastic addition to our team at AutoSquare as a Full Stack Software Engineer.
-                  </p>
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p><?php echo htmlspecialchars($row['message']); ?></p>
+                  </div>
                 </div>
-
-              </div>
-            </li>
-
-            <!-- <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Mark Zuckerberg</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                  Prasid was hired to create a corporate identity.
-                   We were very pleased with the work done. 
-                   They have a lot of experience and are very concerned about the needs of the client. 
-                   Prasid's experience and dedication were evident throughout the project, 
-                   ensuring every detail was meticulously crafted to resonate with our clients.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Kim Jisoo </h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                  Prasid's photography skills are exceptional. 
-                  They have a unique ability to capture moments that tell compelling stories. 
-                  Prasid's attention to detail and creative vision make them a standout photographer.
-                  
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Tim Cook</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                  Prasid was hired to create a corporate identity. We were very pleased with the work done.
-                  He has lot of experience and is very concerned about the needs of client. 
-                  Prasid's expertise and attention to detail were instrumental in shaping a cohesive and impactful brand identity for us.
-                  </p>
-                </div>
-
-              </div>
-            </li> -->
-
+              </li>
+            <?php } ?>
           </ul>
-
         </section>
 
-
-        <!--
-          - testimonials modal
+        <!-- 
+        - Testimonials Modal 
         -->
-
+        
         <div class="modal-container" data-modal-container>
-
           <div class="overlay" data-overlay></div>
 
           <section class="testimonials-modal">
-
             <button class="modal-close-btn" data-modal-close-btn>
               <ion-icon name="close-outline"></ion-icon>
             </button>
 
             <div class="modal-img-wrapper">
               <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+                <img src="" alt="" width="80" data-modal-img>
               </figure>
-
               <img src="./assets/images/icon-quote.svg" alt="quote icon">
             </div>
 
             <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2023-10-13">13 October, 2023</time>
-
-              <div data-modal-text>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere earum deleniti sint sit debitis expedita animi deserunt autem distinctio veniam ipsum porro perferendis totam magni fugit excepturi, officia maxime? Harum.
-                </p>
-              </div>
-
+              <h4 class="h3 modal-title" data-modal-title></h4>
+              <time datetime="" data-modal-date></time>
+              <div data-modal-text></div>
             </div>
-
           </section>
-
         </div>
 
+        <?php $conn->close(); ?>
 
         <!--
           - clients
@@ -474,21 +407,19 @@
 
         <section class="clients">
 
-<h3 class="h3 clients-title">Clients</h3>
+          <h3 class="h3 clients-title">Clients</h3>
 
+          <ul class="clients-list has-scrollbar">
 
-<ul class="clients-list has-scrollbar">
+            <li class="clients-item">
+              <a href="https://autosquare.store" target="_main">
+          <img src="./assets/images/autosquare.png" alt="Autosquare logo">
+              </a>
+            </li>
 
-<li class="clients-item">
-    <a href="https://autosquare.store" target="_main">
-      <img src="./assets/images/autosquare.png" alt="Autosquare logo">
-    </a>
-  </li>
+          </ul>
 
-</ul>
-
-
-</section>
+        </section>
 
       </article>
 

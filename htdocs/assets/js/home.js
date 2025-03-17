@@ -43,9 +43,10 @@ const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
 
-// modal variable
+// modal variables
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
+const modalDate = document.querySelector("[data-modal-date]");
 const modalText = document.querySelector("[data-modal-text]");
 
 // modal toggle function
@@ -54,26 +55,35 @@ const testimonialsModalFunc = function () {
   overlay.classList.toggle("active");
 }
 
-// add click event to all modal items
 for (let i = 0; i < testimonialsItem.length; i++) {
-
   testimonialsItem[i].addEventListener("click", function () {
-
     modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
     modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
     modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
     modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
 
+    // Fetch the date from the clicked testimonial's data attribute
+    const rawDate = this.getAttribute("data-date");
+
+    if (rawDate && rawDate !== "N/A") {
+      const formattedDate = new Date(rawDate).toLocaleDateString("en-US", {
+        day: "2-digit", month: "long", year: "numeric"
+      });
+
+      modalDate.setAttribute("datetime", rawDate);  // Update the datetime attribute
+      modalDate.innerHTML = formattedDate;  // Set the formatted date as content
+    } else {
+      modalDate.innerHTML = "Date not available";
+    }
+
     testimonialsModalFunc();
-
   });
-
 }
+
 
 // add click event to modal close button
 modalCloseBtn.addEventListener("click", testimonialsModalFunc);
 overlay.addEventListener("click", testimonialsModalFunc);
-
 
 
 // custom select variables

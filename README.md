@@ -5,7 +5,7 @@
 
 ### Welcome to the Official Portfolio Website of Prasid ([@xodivorce](https://instagram.com/xodivorce)) ✨
 [![status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
-[![version](https://img.shields.io/badge/version-v9.14.5-yellow.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
+[![version](https://img.shields.io/badge/version-v9.14.6-yellow.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
 [![PRs](https://img.shields.io/badge/PRs-welcome-blue.svg?style=flat)](https://github.com/xodivorce/xodivorce-portfolio/)
 <br></br>
 
