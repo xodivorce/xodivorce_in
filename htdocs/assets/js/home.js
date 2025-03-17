@@ -1,9 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-  setTimeout(function() {
-      document.querySelector(".preloader").style.display = "none";
-  }, 1200);
-});
-
 //Cursor Hover Animination
 const animate_card_mouseover_effect = e => {
   const { currentTarget: target } = e;

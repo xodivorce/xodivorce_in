@@ -1,6 +1,4 @@
-<?php
-  require 'core/connection.php';
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,20 +34,16 @@
 
 
 <body>
-
+<?php include 'assets/_preloader.php';?>
   <!--
     - #MAIN
   -->
 
-  <div class="preloader">
-    <div class="loader"></div>
-  </div> 
   <main>
     
     <!--
       - #SIDEBAR
     -->
-
 
     <aside class="sidebar" data-sidebar>
 
@@ -399,8 +393,6 @@
           </section>
         </div>
 
-        <?php $conn->close(); ?>
-
         <!--
           - clients
         -->
@@ -422,7 +414,6 @@
         </section>
 
       </article>
-
 
       <!--
         - #RESUME
@@ -2207,6 +2198,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     - custom js link
   -->
   <script src="./assets/js/home.js"></script>
+  <script src="./assets/js/preloader_config.js"></script>
   <script src="./assets/js/developer_tools.js"></script>
 
   <!--
