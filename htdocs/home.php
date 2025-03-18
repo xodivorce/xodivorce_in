@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xodivorce - Portfolio</title>
 
-           <!--
+    <!--
     - #Favicon
   -->
     <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
@@ -18,7 +18,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
     <link rel="manifest" href="./assets/favicon/site.webmanifest" />
 
-                  <!--
+    <!--
     - #Custom Css Link
   -->
     <link rel="stylesheet" href="./assets/css/home.css">
@@ -36,13 +36,13 @@
 
 <body>
     <?php include 'assets/_preloader.php'; ?>
-        <!--
+    <!--
     - #MAIN
   -->
 
     <main>
 
-             <!--
+        <!--
       - #SIDEBAR
     -->
 
@@ -172,7 +172,7 @@
 
         </aside>
 
-                  <!--
+        <!--
       - #Main-Content
     -->
 
@@ -341,7 +341,7 @@
                     <section class="testimonials">
                         <h3 class="h3 testimonials-title">Testimonials</h3>
 
-                      <?php
+                        <?php
                         $sql = "SELECT * FROM testimonials ORDER BY date_added DESC";
                         $result = $conn->query($sql);
                       ?>
@@ -486,9 +486,9 @@
                             </li>
                             <?php endwhile; ?>
                         </ol>
-                      </section>
+                    </section>
 
-              <!--
+                    <!--
         - #SKILLS
         -->
                     <section class="skill">
@@ -512,13 +512,13 @@
                                 </li>
                                 <?php endwhile; ?>
                             </ul>
-                          </section>
-                    </article>
-                
+                        </section>
+                </article>
+
                 <!--
         - #PORTFOLIO
       -->
-        
+
                 <article class="portfolio" data-page="portfolio">
 
                     <header>
@@ -579,379 +579,44 @@
 
                             </ul>
 
-
                         </div>
 
+                                                <!-- 
+                    //For Isuues, Deploy Comeing-soon
+
+                        <div class="container">
+                         <div class="title"><i class="fa-regular fa-clock icon-spin"></i>&nbsp; Coming Soon</div>
+                          <div class="subtitle">Please be patient, something interesting is cooking up...!!
+                          </div>
+                        </div>
+                -->
+
+                        <?php
+                         $sql = "SELECT * FROM portfolio_projects ORDER BY id ASC";
+                         $result = $conn->query($sql);
+                        ?>
+
                         <ul class="project-list">
-
-                            <!-- 
-          //For Isuues, Deploy Comeing-soon
-
-          <div class="container">
-          <div class="title"><i class="fa-regular fa-clock icon-spin"></i>&nbsp; Coming Soon</div>
-          <div class="subtitle">Please be patient, something interesting is cooking up...!!
-          </div>
-        </div>
-        -->
-                            <?php
-              $xodivorce_org_link = "https://github.com/xodivorce/xodivorce_org";
-              $xodivorce_org_image = "./assets/images/xodivorce_org.png";
-              $xodivorce_org_title = "Xodivorce.Org";
-              $xodivorce_org_category = "Web development";
-              ?>
-
-                            <li class="project-item active" data-filter-item data-category="web development">
-                                <a href="<?php echo $xodivorce_org_link; ?>">
+                            <?php while ($row = $result->fetch_assoc()): ?>
+                            <li class="project-item active" data-filter-item
+                                data-category="<?= strtolower($row['project_category']) ?>">
+                                <a href="<?= htmlspecialchars($row['project_link']) ?>">
                                     <figure class="project-img">
                                         <div class="project-item-icon-box">
                                             <ion-icon name="eye-outline"></ion-icon>
                                         </div>
-                                        <img src="<?php echo $xodivorce_org_image; ?>"
-                                            alt="<?php echo $xodivorce_org_title; ?>" loading="lazy">
+                                        <img src="<?= htmlspecialchars($row['project_image']) ?>"
+                                            alt="<?= htmlspecialchars($row['project_name']) ?>" loading="lazy">
                                     </figure>
-                                    <h3 class="project-title"><?php echo $xodivorce_org_title; ?></h3>
-                                    <p class="project-category"><?php echo $xodivorce_org_category; ?></p>
+                                    <h3 class="project-title"><?= htmlspecialchars($row['project_name']) ?></h3>
+                                    <p class="project-category"><?= htmlspecialchars($row['project_category']) ?></p>
                                 </a>
                             </li>
+                            <?php endwhile; ?>
 
-
-
-                            <?php
-              $xodivorce_in_link = "https://github.com/xodivorce/xodivorce_in";
-              $xodivorce_in_image = "./assets/images/xodivorce_in.png";
-              $xodivorce_in_title = "Xodivorce.In";
-              $xodivorce_in_category = "Web development";
-              ?>
-
-                            <li class="project-item  active" data-filter-item data-category="web development">
-                                <a href="<?php echo $xodivorce_in_link; ?>">
-                                    <figure class="project-img">
-                                        <div class="project-item-icon-box">
-                                            <ion-icon name="eye-outline"></ion-icon>
-                                        </div>
-                                        <img src="<?php echo $xodivorce_in_image; ?>"
-                                            alt="<?php echo $xodivorce_in_title; ?>" loading="lazy">
-                                    </figure>
-                                    <h3 class="project-title"><?php echo $xodivorce_in_title; ?></h3>
-                                    <p class="project-category"><?php echo $xodivorce_in_category; ?></p>
-                                </a>
-                            </li>
-                            <!--
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-            
-            -->
-
-                            <?php
-              $face_recognise_attend_link = "https://github.com/xodivorce/face_recognise_attend";
-              $face_recognise_attend_image = "./assets/images/face_recognation.png";
-              $face_recognise_attend_title = "Face Recognise";
-              $face_recognise_attend_category = "Applications";
-              ?>
-
-                            <li class="project-item  active" data-filter-item data-category="applications">
-                                <a href="<?php echo $face_recognise_attend_link; ?>">
-                                    <figure class="project-img">
-                                        <div class="project-item-icon-box">
-                                            <ion-icon name="eye-outline"></ion-icon>
-                                        </div>
-                                        <img src="<?php echo $face_recognise_attend_image; ?>"
-                                            alt="<?php echo $face_recognise_attend_title; ?>" loading="lazy">
-                                    </figure>
-                                    <h3 class="project-title"><?php echo $face_recognise_attend_title; ?></h3>
-                                    <p class="project-category"><?php echo $face_recognise_attend_category; ?></p>
-                                </a>
-                            </li>
-
-
-
-                            <?php
-              $Anyencypter_link = "https://telegram.me/anyencrypter_bot";
-              $Anyencypter_image = "./assets/images/telegram.png";
-              $Anyencypter_title = "Encrypter";
-              $Anyencypter_category = "Applications";
-              ?>
-
-                            <li class="project-item  active" data-filter-item data-category="applications">
-                                <a href="<?php echo $Anyencypter_link; ?>">
-                                    <figure class="project-img">
-                                        <div class="project-item-icon-box">
-                                            <ion-icon name="eye-outline"></ion-icon>
-                                        </div>
-                                        <img src="<?php echo $Anyencypter_image; ?>"
-                                            alt="<?php echo $Anyencypter_title; ?>" loading="lazy">
-                                    </figure>
-                                    <h3 class="project-title"><?php echo $Anyencypter_title; ?></h3>
-                                    <p class="project-category"><?php echo $Anyencypter_category; ?></p>
-                                </a>
-                            </li>
-
-
-
-
-                            <?php
-              $xeorl_buzz_link = "https://xeorl.buzz";
-              $xeorl_buzz_image = "./assets/images/xeorl_buzz.png";
-              $xeorl_buzz_title = "Xeorl - link shortener";
-              $xeorl_buzz_category = "Web development";
-              ?>
-
-                            <li class="project-item active" data-filter-item data-category="web development">
-                                <a href="<?php echo $xeorl_buzz_link; ?>">
-                                    <figure class="project-img">
-                                        <div class="project-item-icon-box">
-                                            <ion-icon name="eye-outline"></ion-icon>
-                                        </div>
-                                        <img src="<?php echo $xeorl_buzz_image; ?>"
-                                            alt="<?php echo $xeorl_buzz_title; ?>" loading="lazy">
-                                    </figure>
-                                    <h3 class="project-title"><?php echo $xeorl_buzz_title; ?></h3>
-                                    <p class="project-category"><?php echo $xeorl_buzz_category; ?></p>
-                                </a>
-                            </li>
-
-                            <?php
-              $DDOS_link = "https://telegram.me/ddos_xodivorcebot";
-              $DDOS_image = "./assets/images/ddos.jpg";
-              $DDOS_title = "Propoganda DDOS";
-              $DDOS_category = "Applications";
-              ?>
-
-                            <li class="project-item  active" data-filter-item data-category="applications">
-                                <a href="<?php echo $DDOS_link; ?>">
-                                    <figure class="project-img">
-                                        <div class="project-item-icon-box">
-                                            <ion-icon name="eye-outline"></ion-icon>
-                                        </div>
-                                        <img src="<?php echo $DDOS_image; ?>" alt="<?php echo $DDOS_title; ?>"
-                                            loading="lazy">
-                                    </figure>
-                                    <h3 class="project-title"><?php echo $DDOS_title; ?></h3>
-                                    <p class="project-category"><?php echo $DDOS_category; ?></p>
-                                </a>
-                            </li>
-
-                            <?php
-              $breakout_ball_link = "https://github.com/xodivorce/Breakout-Game";
-              $breakout_ball_image = "./assets/images/breakout_game.png";
-              $breakout_ball_title = "Breakout Ball Game";
-              $breakout_ball_category = "Applications";
-              ?>
-
-                            <li class="project-item  active" data-filter-item data-category="applications">
-                                <a href="<?php echo $breakout_ball_link; ?>">
-                                    <figure class="project-img">
-                                        <div class="project-item-icon-box">
-                                            <ion-icon name="eye-outline"></ion-icon>
-                                        </div>
-                                        <img src="<?php echo $breakout_ball_image; ?>"
-                                            alt="<?php echo $breakout_ball_title; ?>" loading="lazy">
-                                    </figure>
-                                    <h3 class="project-title"><?php echo $breakout_ball_title; ?></h3>
-                                    <p class="project-category"><?php echo $breakout_ball_category; ?></p>
-                                </a>
-                            </li>
-
-                            <!--
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-            
-            -->
-
-                            <?php
-              $kei_portfolio_link = "https://github.com/xodivorce/kei_portfolio";
-              $kei_portfolio_image = "./assets/images/kei_portfolio.png";
-              $kei_portfolio_title = "STUDENT INFORMATION SYSTEM";
-              $kei_portfolio_category = "Web development";
-              ?>
-
-                            <li class="project-item  active" data-filter-item data-category="web development">
-                                <a href="<?php echo $kei_portfoliolink; ?>">
-                                    <figure class="project-img">
-                                        <div class="project-item-icon-box">
-                                            <ion-icon name="eye-outline"></ion-icon>
-                                        </div>
-                                        <img src="<?php echo $kei_portfolio_image; ?>"
-                                            alt="<?php echo $kei_portfolio_title; ?>" loading="lazy">
-                                    </figure>
-                                    <h3 class="project-title"><?php echo $kei_portfolio_title; ?></h3>
-                                    <p class="project-category"><?php echo $kei_portfolio_category; ?></p>
-                                </a>
-                            </li>
-
-                            <?php
-              /*
-$xeporn_link = "https://xeporn-beta-2.vercel.app";
-$xeporn_image = "./assets/images/xeporn.png";
-$xeporn_title = "XePORN.In ©2024 𝔟𝔢𝔱𝔞 𝔦𝔦<br> ‣ 𝘦𝘮𝘢𝘪𝘭 𝘧𝘰𝘳 𝘦𝘢𝘳𝘭𝘺 𝘢𝘤𝘤𝘦𝘴..";
-$xeporn_category = "Web development";
-*/
-              ?>
-                            <!--
-<li class="project-item active" data-filter-item data-category="web development">
-  <a href="<?php /* echo $xeporn_link; */ ?>">
-    <figure class="project-img">
-      <div class="project-item-icon-box">
-        <ion-icon name="eye-outline"></ion-icon>
-      </div>
-      <img src="<?php /* echo $xeporn_image; */ ?>" alt="<?php /* echo $xeporn_title; */ ?>" loading="lazy">
-    </figure>
-    <h3 class="project-title"><?php /* echo $xeporn_title; */ ?></h3>
-    <p class="project-category"><?php /* echo $xeporn_category; */ ?></p>
-  </a>
-</li>
-
--->
-
-
-
-
-
-                            <?php
-              $solar_system_design_link = "https://github.com/xodivorce/solar_syestem_design";
-              $solar_system_design_image = "./assets/images/solar_system_design.png";
-              $solar_system_design_title = "SOLAR SYATEM DESIGN";
-              $solar_system_design_category = "Web design";
-              ?>
-
-                            <li class="project-item active" data-filter-item data-category="web design">
-                                <a href="<?php echo $solar_system_design_link; ?>">
-                                    <figure class="project-img">
-                                        <div class="project-item-icon-box">
-                                            <ion-icon name="eye-outline"></ion-icon>
-                                        </div>
-
-                                        <img src="<?php echo $solar_system_design_image; ?>"
-                                            alt="<?php echo $solar_system_design_title; ?>" loading="lazy">
-                                    </figure>
-                                    <h3 class="project-title"><?php echo $solar_system_design_title; ?></h3>
-                                    <p class="project-category"><?php echo $solar_system_design_category; ?></p>
-                                </a>
-
-                            </li>
-
-
-
-
-                            <?php
-              $kei_portfolio_design_link = "https://github.com/xodivorce/kei-portfolio";
-              $kei_portfolio_design_image = "./assets/images/kei_portfolio_design.png";
-              $kei_portfolio_design_title = "STUDENT INFORMATION SYSTEM";
-              $kei_portfolio_design_category = "Web design";
-              ?>
-
-                            <li class="project-item active" data-filter-item data-category="web design">
-                                <a href="<?php echo $kei_portfolio_design_link; ?>">
-                                    <figure class="project-img">
-                                        <div class="project-item-icon-box">
-                                            <ion-icon name="eye-outline"></ion-icon>
-                                        </div>
-                                        <img src="<?php echo $kei_portfolio_design_image; ?>"
-                                            alt="<?php echo $kei_portfolio_design_title; ?>" loading="lazy">
-                                    </figure>
-                                    <h3 class="project-title"><?php echo $kei_portfolio_design_title; ?></h3>
-                                    <p class="project-category"><?php echo $kei_portfolio_design_category; ?></p>
-                                </a>
-                            </li>
-
-
-
-
-                            <!--
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-            
-
-          </ul>
-          
-          -->
+                        </ul>
 
                     </section>
-
 
                 </article>
 
@@ -2032,7 +1697,7 @@ TEMP FOR META NOT RELOVED IFRAME
   -->
     <script src="./assets/js/home.js"></script>
     <script src="./assets/js/preloader_config.js"></script>
-    <script src="./assets/js/developer_tools.js"></script>
+    <script src="./assets/js/developer_config.js"></script>
 
     <!--
     - ionicon link

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 17, 2025 at 03:36 PM
+-- Generation Time: Mar 18, 2025 at 08:15 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -39,6 +39,35 @@ CREATE TABLE `maintenance` (
 
 INSERT INTO `maintenance` (`id`, `is_active`, `updated_at`) VALUES
 (1, 0, '2024-07-29 05:27:28');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `portfolio_projects`
+--
+
+CREATE TABLE `portfolio_projects` (
+  `id` int(11) NOT NULL,
+  `project_name` varchar(255) NOT NULL,
+  `project_category` varchar(100) NOT NULL,
+  `project_image` varchar(255) NOT NULL,
+  `project_link` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `portfolio_projects`
+--
+
+INSERT INTO `portfolio_projects` (`id`, `project_name`, `project_category`, `project_image`, `project_link`) VALUES
+(1, 'Xodivorce.Org', 'Web development', './assets/images/xodivorce_org.png', 'https://github.com/xodivorce/xodivorce_org'),
+(4, 'Xodivorce.In', 'Web development', './assets/images/xodivorce_in.png', 'https://github.com/xodivorce/xodivorce_in'),
+(5, 'Face Recognise', 'Applications', './assets/images/face_recognation.png', 'https://github.com/xodivorce/face_recognise_attend'),
+(6, 'Encrypter', 'Applications', './assets/images/telegram.png', 'https://telegram.me/anyencrypter_bot'),
+(7, 'Xeorl - link shortener', 'Web development', './assets/images/xeorl_buzz.png', 'https://xeorl.buzz'),
+(8, 'Propoganda DDOS', 'Applications', './assets/images/ddos.jpg', 'https://telegram.me/ddos_xodivorcebot'),
+(9, 'Breakout Ball Game', 'Applications', './assets/images/breakout_game.png', 'https://github.com/xodivorce/Breakout-Game'),
+(10, 'STUDENT INFORMATION SYSTEM', 'Web development', './assets/images/kei_portfolio.png', 'https://github.com/xodivorce/kei_portfolio'),
+(11, 'SOLAR SYSTEM DESIGN', 'Web design', './assets/images/solar_system_design.png', 'https://github.com/xodivorce/solar_syestem_design');
 
 -- --------------------------------------------------------
 
@@ -154,6 +183,12 @@ ALTER TABLE `maintenance`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `portfolio_projects`
+--
+ALTER TABLE `portfolio_projects`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `resume_education`
 --
 ALTER TABLE `resume_education`
@@ -186,6 +221,12 @@ ALTER TABLE `testimonials`
 --
 ALTER TABLE `maintenance`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `portfolio_projects`
+--
+ALTER TABLE `portfolio_projects`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `resume_education`
