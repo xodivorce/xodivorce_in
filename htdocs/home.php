@@ -582,7 +582,7 @@
 
                         </div>
 
-                                                <!-- 
+                        <!-- 
                     - #For Isuues, Deploy Comeing-soon
 
                         <div class="container">
@@ -625,8 +625,8 @@
                 <!--
         - #Blog
       -->
-                
-                                    <!-- 
+
+                <!-- 
           //For Isuues, Deploy Comeing-soon
           
           <div class="container">
@@ -656,8 +656,8 @@
                                 <a href="<?= htmlspecialchars($row['post_link']) ?>">
                                     <figure class="blog-banner-box">
                                         <?php if ($row['platform'] == 'Instagram'): ?>
-                                               
-                                                <!-- 
+
+                                        <!-- 
                                     - #Instagram Embed 
                                 -->
 
@@ -668,8 +668,8 @@
                                         <script async src="//www.instagram.com/embed.js"></script>
 
                                         <?php elseif ($row['platform'] == 'Facebook' && !empty($row['post_iframe'])): ?>
-                                                
-                                                <!--
+
+                                        <!--
                                     - #Facebook Embed 
                                 -->
 
@@ -679,8 +679,8 @@
                                         </iframe>
 
                                         <?php else: ?>
-                                                
-                                                <!-- 
+
+                                        <!-- 
                     - #Default Image (Other & YouTube) 
                 -->
 
@@ -704,11 +704,11 @@
                             <?php endwhile; ?>
                         </ul>
 
-                                                <!--
+                        <!--
                 - #Temp For META Not Resolved Iframe
             -->
-                
-                    <!-- 
+
+                        <!-- 
                         <div id="mobile-notification" class="notification">
                             <span class="close-btn" onclick="closeNotification()">&#10005;</span>
 
@@ -730,7 +730,6 @@
         - #Contact
       -->
 
-
                 <article class="contact" data-page="contact">
                     <header>
                         <h2 class="h2 article-title">Contact</h2>
@@ -738,105 +737,41 @@
 
                     <section class="mapbox" data-mapbox>
                         <figure>
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58908.79709660985!2d88.82763828272911!3d22.66125108349142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff567854e8190f%3A0xf12dc8b635ba902f!2sBasirhat%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1742137535998!5m2!1sen!2sin"
-                                width="400" height="300" loading="lazy"></iframe>
+                            <iframe src="<?= $_ENV['USER_GMAP']; ?>" width="400" height="300" loading="lazy">
+                            </iframe>
                         </figure>
                     </section>
 
                     <section class="contact-form">
+
                         <h3 class="h3 form-title">Contact Form</h3>
+                        <form id="contact-form" class="form" data-form>
 
-                        <?php
-            require './core/vendor/autoload.php'; // Adjust path as necessary
-
-            use PHPMailer\PHPMailer\PHPMailer;
-            use PHPMailer\PHPMailer\Exception;
-            use Dotenv\Dotenv;
-
-            // Load environment variables
-            $dotenv = Dotenv::createImmutable(__DIR__);
-            $dotenv->load();
-
-            // Check if POST request
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-              $fullname = filter_var($_POST['fullname'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-              $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-              $message = filter_var($_POST['message'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-
-              // Load restricted values from environment variables
-              $name_restriction = explode(',', $_ENV['RESTRICTED_NAMES']);
-              $email_restriction = explode(',', $_ENV['RESTRICTED_EMAILS']);
-              $message_restriction = explode(',', $_ENV['RESTRICTED_MESSAGES']);
-
-              // Validation
-              if (!filter_var($email, FILTER_VALIDATE_EMAIL) || in_array($email, $email_restriction)) {
-                echo "<script>alert('Whoopsie! 🐾 It seems there\'s a keyword restriction or the email address is playing hide-and-seek! 🕵️‍♂️ Please check the email address and try again ✨. Thanks a bunch!'); window.history.back();</script>";
-                exit;
-              }
-
-              foreach ($name_restriction as $keyword) {
-                if (stripos($fullname, $keyword) !== false) {
-                  echo "<script>alert('Whoopsie! 🐾 It seems your name contains restricted keywords.'); window.history.back();</script>";
-                  exit;
-                }
-              }
-
-              foreach ($message_restriction as $keyword) {
-                if (stripos($message, $keyword) !== false) {
-                  echo "<script>alert('Whoopsie! 🐾 It seems your message contains restricted keywords! 🕵️‍♂️ Please check and try again ✨'); window.history.back();</script>";
-                  exit;
-                }
-              }
-
-              $mail = new PHPMailer(true);
-              try {
-                $mail->isSMTP();
-                $mail->Host = $_ENV['SMTP_HOST'];
-                $mail->SMTPAuth = true;
-                $mail->Username = $_ENV['SMTP_USER'];
-                $mail->Password = $_ENV['SMTP_PASS'];
-                $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-                $mail->Port = $_ENV['SMTP_PORT'];
-
-                // Recipients
-                $mail->setFrom($_ENV['SMTP_USER'], 'Xodivorce Website');
-                $mail->addAddress($_ENV['SMTP_SENDTO']);
-                $mail->addReplyTo($email, $fullname);
-
-                // Content
-                $mail->isHTML(true);
-                $mail->Subject = 'New Contact Form Submission';
-                $mail->Body    = "Ta-da! You've got a mail, from the contact form on your website.<br><br>" .
-                  "Full Name: " . $fullname . "<br>" .
-                  "Email: " . $email . "<br>" .
-                  "Message: <br>" . nl2br($message);
-
-                $mail->send();
-                echo "<script>alert('Success! Your message has taken off like a rocket! 🚀 We\'ll get back to you soon. Thanks for reaching out! ✨');</script>";
-              } catch (Exception $e) {
-                echo "<script>alert('Whoopsie! 🐾 Our feedback feature seems to be chasing squirrels right now. Please reach out to us via email or try again later. 🌟 Mailer Error: {$mail->ErrorInfo}');</script>";
-              }
-            }
-            ?>
-
-
-
-                        <form action="" method="post" class="form" data-form onsubmit="return validateForm()">
                             <div class="input-wrapper">
-                                <input type="text" name="fullname" class="form-input" placeholder="Full name" required
-                                    data-form-input>
-                                <input type="email" name="email" class="form-input" placeholder="Email address" required
-                                    data-form-input>
+                                <input type="text" name="fullname" class="form-input" placeholder="Your Full Name"
+                                    required data-form-input>
+                                <input type="email" name="email" class="form-input" placeholder="Your Email address"
+                                    required data-form-input>
                             </div>
+
                             <textarea name="message" class="form-input" placeholder="Your Message" required
                                 data-form-input></textarea>
-                            <!--<button class="form-btn" type="submit" disabled data-form-btn onclick="alert('Whoopsie! 🐾 Our feedback feature seems to be chasing squirrels right now. Please reach out to us via email or try again later. 🌟')">-->
-                            <button class="form-btn" type="submit" data-form-btn>
+
+                            <!-- 
+                            Status Message 
+                        -->
+
+                            <div class="status-message">
+                                <p id="form-status" style="display: none;"></p>
+                            </div>
+
+                            <button id="form-btn" class="form-btn" type="submit">
                                 <ion-icon name="paper-plane"></ion-icon>
                                 <span>Send Message</span>
                             </button>
+
                         </form>
+
                     </section>
                 </article>
 
@@ -851,6 +786,7 @@
     <script src="./assets/js/home.js"></script>
     <script src="./assets/js/preloader_config.js"></script>
     <script src="./assets/js/meta_config.js"></script>
+    <script src="./assets/js/mail_config.js"></script>
     <script src="./assets/js/developer_config.js"></script>
 
     <!--

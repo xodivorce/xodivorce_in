@@ -38,6 +38,7 @@
     --white-3:hsla(0, 0%, 98%, 0.69);
     --orange-yellow-crayola: #37BDF9;
     --vegas-gold: #37BDF9;
+    --lighter-cyan: #37bbf92f;
     --light-gray: hsl(0, 0%, 84%);
     --light-gray-70: hsla(0, 0%, 84%, 0.7);
     --bittersweet-shimmer: #f3f4f5d1;
@@ -1030,7 +1031,6 @@
   
   .project-item-icon-box {
     --scale: 0.8;
-  
     background: var(--jet);
     color: var(--orange-yellow-crayola);
     position: absolute;
@@ -1314,47 +1314,81 @@
   .form-btn {
     position: relative;
     width: 100%;
-    background: var(--border-gradient-onyx);
-    color: var(--orange-yellow-crayola);
+    background: var(--vegas-gold);
+    color: var(--eerie-black-1);
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -10px;
     gap: 10px;
-    padding: 13px 20px;
-    border-radius: 14px;
+    padding: 5px 15px;
+    border-radius: 20px;
     font-size: var(--fs-6);
     text-transform: capitalize;
-    box-shadow: var(--shadow-3);
     z-index: 1;
-    transition: var(--transition-1);
+    transition: transform 0.5s, box-shadow 0.5s, background-color 0.5s, border-radius 0.5s;
   }
   
   .form-btn::before {
     content: "";
     position: absolute;
     inset: 1px;
-    background: var(--bg-gradient-jet);
     border-radius: inherit;
     z-index: -1;
-    transition: var(--transition-1);
   }
   
   .form-btn ion-icon { font-size: 16px; }
   
-  .form-btn:hover { background: var(--bg-gradient-yellow-1); }
-  
-  .form-btn:hover::before { background: var(--bg-gradient-yellow-2); }
-  
+  .form-btn:hover { 
+    background: var(--bg-gradient-yellow-1);
+    box-shadow: 0 4px 15px rgba(167, 167, 167, 0.898);
+    background: var(--white-1);
+    border-radius: 8px;
+   }
+
   .form-btn:disabled {
-    opacity: 0.7;
     cursor: not-allowed;
   }
   
-  .form-btn:disabled:hover { background: var(--border-gradient-onyx); }
+  .form-btn:disabled:hover { 
+    background: var(--border-gradient-onyx);
+   }
   
-  .form-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
+  .form-btn:disabled:hover::before { 
+    background: var(--white-1);
+   }
   
+  .form-btn span { 
+    font-weight: var(--fw-500); 
+  }
   
+  #form-status {
+    background-color: var(--lighter-cyan);
+    color: var(--white-3);
+    font-size: 16px;
+    font-weight: 400;
+    padding: 12px 16px;
+    border-radius: 4px;
+    border-left: 8px solid var(--vegas-gold);
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: -55px;
+}
+
+
+#form-status ion-icon {
+  color: var(--vegas-gold);
+  vertical-align: middle;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
   
   /*-----------------------------------*\
     #RESPONSIVE
@@ -1668,13 +1702,11 @@
       padding: 16px 20px;
     }
   
-    .form-btn ion-icon { font-size: 18px; }
+    .form-btn ion-icon { 
+      font-size: 18px;
+     }
   
   }
-  
-  
-  
-  
   
   /**
    * responsive larger than 768px screen
@@ -1770,12 +1802,9 @@
       width: max-content;
       margin-left: auto;
     }
-    
-  }
+
   
-  
-  
-  
+  } 
   
   /**
    * responsive larger than 1024px screen
@@ -2192,6 +2221,34 @@ a:hover {
   .responsive-container-block.leftSide {
     max-width: 450px;
   }
+
+  .status-message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #form-status:not([style*="display: none"]) {
+    margin-bottom: 2.5em;
+  }
+}
+
+@media (max-width: 579px){
+  #form-status {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 12px 16px;
+    border-radius: 4px;
+    border-left: 8px solid var(--vegas-gold);
+    max-width: 900px;
+  }
+
+  #form-status ion-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+
 }
 
 @media (max-width: 500px) {
