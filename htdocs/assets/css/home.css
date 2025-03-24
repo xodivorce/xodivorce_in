@@ -156,6 +156,7 @@
     color: var(--orange-yellow-crayola);
     box-shadow: var(--shadow-1);
     z-index: 1;
+    pointer-events: none;
   }
   
   .icon-box::before {
@@ -505,6 +506,11 @@
   transform: scale(1.5);
   transition: transform 0.5s ease;
 }
+
+.icon-wrapper ion-icon {
+  pointer-events: none;
+}
+
 
   
   /*-----------------------------------*\
@@ -1337,7 +1343,10 @@
     z-index: -1;
   }
   
-  .form-btn ion-icon { font-size: 16px; }
+  .form-btn ion-icon { 
+    font-size: 16px;
+    pointer-events: none;
+   }
   
   .form-btn:hover { 
     background: var(--bg-gradient-yellow-1);
@@ -1388,6 +1397,7 @@
   justify-content: center;
   width: 24px;
   height: 24px;
+  pointer-events: none;
 }
   
   /*-----------------------------------*\

@@ -57,7 +57,8 @@
 
                 <div class="info-content">
                     <h1 class="name" title="Prasid Mandal">Xodivorce</h1>
-                    <a href="./assets/pdf/CV_PRASID.pdf" download class="view-cv-btn">View CV</a>
+                    <button onclick="window.location.href='./assets/pdf/CV_PRASID.pdf'" class="view-cv-btn">View
+                        CV</button>
                 </div>
 
 
@@ -82,9 +83,14 @@
                         </div>
 
                         <div class="contact-info">
+
                             <p class="contact-title">Email</p>
 
-                            <a href="mailto:hey@xodivorce.in" class="contact-link">hey@xodivorce.in</a>
+                            <button class="contact-link"
+                                onclick="window.location.href='mailto:<?= $_ENV['SMTP_USER'] ?>'">
+                                <?= $_ENV['SMTP_USER'] ?>
+                            </button>
+
                         </div>
 
                     </li>
@@ -98,7 +104,31 @@
                         <div class="contact-info">
                             <p class="contact-title">Phone</p>
 
-                            <a href="tel:+91 8514860677" class="contact-link">+91 (8514) 860-677</a>
+                            <?php
+                             $rawPhone = $_ENV['USER_PHONE'];
+                             $formattedPhone = '';
+                             $telHref = '';
+
+                            if (preg_match('/^\+(\d+)\s*(\d{10,12})$/', $rawPhone, $matches)) {
+                                $countryCode = '+' . $matches[1];
+                                $nationalNumber = $matches[2];
+
+                                $part1 = substr($nationalNumber, 0, 4);
+                                $part2 = substr($nationalNumber, 4, 3);
+                                $part3 = substr($nationalNumber, 7);
+
+                             $formattedPhone = "$countryCode ($part1) $part2-$part3";
+                             $telHref = 'tel:' . preg_replace('/\s+/', '', $rawPhone);
+                            }
+                            ?>
+
+                            <?php if ($formattedPhone && $telHref): ?>
+                            <button class="contact-link"
+                                onclick="window.location.href='<?= $telHref ?>'"><?= $formattedPhone ?></button>
+                            <?php else: ?>
+                            <button class="contact-link">Invalid PH Format!</button>
+                            <?php endif; ?>
+
                         </div>
 
                     </li>
@@ -112,7 +142,14 @@
                         <div class="contact-info">
                             <p class="contact-title">Birthday</p>
 
-                            <time datetime="2006-01-20">January 20, 2006</time>
+                            <?php
+                             $userBday = DateTime::createFromFormat('d-m-Y', $_ENV['USER_BDAY']);
+                            ?>
+
+                            <time datetime="<?= $userBday->format('Y-m-d') ?>">
+                                <?= $userBday->format('F j, Y') ?>
+                            </time>
+
                         </div>
 
                     </li>
@@ -123,10 +160,36 @@
                             <ion-icon name="location-outline"></ion-icon>
                         </div>
 
+                        <?php
+                         $gmapUrl = $_ENV['USER_GMAP'];
+                         $locationName = 'Unknown Location';
+
+                        if (preg_match('/!2s([^!]+)!/', $gmapUrl, $matches)) {
+                            $rawLocation = urldecode($matches[1]);
+
+                            $sql = "SELECT town_name, main_city FROM town_map";
+                            $result = $conn->query($sql);
+
+                            if ($result && $result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    if (stripos($rawLocation, $row['town_name']) !== false) {
+                                        $locationName = $row['main_city'];
+                                        break;
+                                    }
+                                }
+                            }
+
+                            if ($locationName === 'Unknown Location') {
+                                $locationName = 'Unknown Location!'; #Set Your Location In Db(Town_Map) as "INSERT INTO `town_map` (`town_name`, `main_city`) VALUES ('Your Location', 'Your Nearby Khown Main City, Country');"
+                            }
+                        }
+                        ?>
+
                         <div class="contact-info">
                             <p class="contact-title">Based On</p>
-                            <address>Kolkata, India</address>
+                            <address><?= htmlspecialchars($locationName) ?></address>
                         </div>
+
 
                     </li>
 
@@ -134,39 +197,29 @@
 
                 <div class="separator"></div>
 
+                <?php
+                 $socials = [];
+                 $sql = "SELECT * FROM social_links ORDER BY display_order ASC";
+                 $result = $conn->query($sql);
+                
+                if ($result && $result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        $socials[] = $row;
+                    }
+                }
+                ?>
+
                 <ul class="social-list">
-
+                    <?php foreach ($socials as $social): ?>
                     <li class="social-item">
-                        <a href="https://www.facebook.com/xodivorce" class="social-link" target="_main">
-                            <ion-icon name="logo-facebook"></ion-icon>
-                        </a>
+                        <button class="social-link"
+                            onclick="window.open('<?= htmlspecialchars($social['url']) ?>', '_blank')">
+                            <span class="icon-wrapper">
+                                <ion-icon name="<?= htmlspecialchars($social['icon_name']) ?>"></ion-icon>
+                            </span>
+                        </button>
                     </li>
-
-                    <li class="social-item">
-                        <a href="https://x.com/xodivorce1" class="social-link" target="_main">
-                            <ion-icon name="logo-twitter"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li class="social-item">
-                        <a href="https://www.instagram.com/xodivorce" class="social-link" target="_main">
-                            <ion-icon name="logo-instagram"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li class="social-item">
-                        <a href="https://in.pinterest.com/xodivorcee" class="social-link" target="_main">
-                            <ion-icon name="logo-pinterest"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li class="social-item">
-                        <a href="https://www.linkedin.com/in/prasid-mandal-85aa05268/" class="social-link"
-                            target="_main">
-                            <ion-icon name="logo-linkedin"></ion-icon>
-                        </a>
-                    </li>
-
+                    <?php endforeach; ?>
                 </ul>
 
             </div>

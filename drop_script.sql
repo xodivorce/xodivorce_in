@@ -6,7 +6,9 @@ DROP TABLE IF EXISTS
     portfolio_projects, 
     resume_education, 
     resume_experience, 
-    resume_skills, 
-    testimonials;
+    resume_skills,
+    social_links,
+    testimonials,
+    town_map;
 
 SET foreign_key_checks = 1;

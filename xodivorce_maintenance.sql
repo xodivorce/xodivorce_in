@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 18, 2025 at 10:42 AM
+-- Generation Time: Mar 24, 2025 at 09:39 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -208,6 +208,31 @@ INSERT INTO `resume_skills` (`id`, `skill_name`, `skill_level`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `social_links`
+--
+
+CREATE TABLE `social_links` (
+  `id` int(11) NOT NULL,
+  `platform` varchar(50) NOT NULL,
+  `url` varchar(255) NOT NULL,
+  `icon_name` varchar(50) NOT NULL,
+  `display_order` int(11) DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `social_links`
+--
+
+INSERT INTO `social_links` (`id`, `platform`, `url`, `icon_name`, `display_order`) VALUES
+(1, 'Facebook', 'https://www.facebook.com/xodivorce', 'logo-facebook', 1),
+(2, 'Twitter (X)', 'https://x.com/xodivorce1', 'logo-twitter', 2),
+(3, 'Instagram', 'https://www.instagram.com/xodivorce', 'logo-instagram', 3),
+(4, 'Pinterest', 'https://in.pinterest.com/xodivorcee', 'logo-pinterest', 4),
+(5, 'LinkedIn', 'https://www.linkedin.com/in/prasid-mandal-85aa05268/', 'logo-linkedin', 5);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `testimonials`
 --
 
@@ -226,6 +251,71 @@ CREATE TABLE `testimonials` (
 INSERT INTO `testimonials` (`id`, `name`, `avatar`, `message`, `date_added`) VALUES
 (1, 'AutoSquare Store', './assets/images/avatar-1.png', 'We recently came across your GitHub profile and were truly impressed by your skills and projects. We think you could be a fantastic addition to our team at AutoSquare as a Full Stack Software Engineer.', '2024-11-30'),
 (3, 'IIT Guwahati', './assets/images/avatar-5.png', 'We are delighted to welcome you to the Credit-linked Program in Data Science, offered by Daksh Gurukul IIT Guwahati.\r\n\r\nYour journey toward academic excellence and personal growth begins now, and we are committed to supporting you every step of the way.', '2025-01-19');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `town_map`
+--
+
+CREATE TABLE `town_map` (
+  `id` int(11) NOT NULL,
+  `town_name` varchar(255) NOT NULL,
+  `main_city` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `town_map`
+--
+
+INSERT INTO `town_map` (`id`, `town_name`, `main_city`) VALUES
+(1, 'Alipurduar', 'Alipurduar, India'),
+(2, 'Asansol', 'Asansol, India'),
+(3, 'Bagdogra', 'Siliguri, India'),
+(4, 'Balurghat', 'Dakshin Dinajpur, India'),
+(5, 'Bally', 'Howrah, India'),
+(6, 'Bankura', 'Bankura, India'),
+(7, 'Baranagar', 'Kolkata, India'),
+(8, 'Barasat', 'Kolkata, India'),
+(9, 'Barrackpore', 'Kolkata, India'),
+(10, 'Basirhat', 'Kolkata, India'),
+(11, 'Bhadreswar', 'Howrah, India'),
+(12, 'Bhatpara', 'Kolkata, India'),
+(13, 'Bidhannagar', 'Kolkata, India'),
+(14, 'Birnagar', 'Nadia, India'),
+(15, 'Bishnupur', 'Bankura, India'),
+(16, 'Bolpur', 'Birbhum, India'),
+(17, 'Bongaon', 'Kolkata, India'),
+(18, 'Burnpur', 'Asansol, India'),
+(19, 'Chakdaha', 'Nadia, India'),
+(20, 'Contai', 'Purba Medinipur, India'),
+(21, 'Domjur', 'Howrah, India'),
+(22, 'Dumdum', 'Kolkata, India'),
+(23, 'Durgapur', 'Durgapur, India'),
+(24, 'Egra', 'Purba Medinipur, India'),
+(25, 'Haldia', 'Purba Medinipur, India'),
+(26, 'Howrah', 'Howrah, India'),
+(27, 'Jamuria', 'Asansol, India'),
+(28, 'Jalpaiguri', 'Jalpaiguri, India'),
+(29, 'Kalyani', 'Nadia, India'),
+(30, 'Kharagpur', 'Midnapore, India'),
+(31, 'Krishnanagar', 'Nadia, India'),
+(32, 'Kulti', 'Asansol, India'),
+(33, 'Matigara', 'Siliguri, India'),
+(34, 'Memari', 'Durgapur, India'),
+(35, 'Nabadwip', 'Nadia, India'),
+(36, 'Naihati', 'Kolkata, India'),
+(37, 'Naxalbari', 'Siliguri, India'),
+(38, 'Panagarh', 'Durgapur, India'),
+(39, 'Purulia', 'Purulia, India'),
+(40, 'Raiganj', 'Uttar Dinajpur, India'),
+(41, 'Ranaghat', 'Nadia, India'),
+(42, 'Raniganj', 'Asansol, India'),
+(43, 'Salt Lake City', 'Kolkata, India'),
+(44, 'Sankrail', 'Howrah, India'),
+(45, 'Siliguri', 'Darjeeling, India'),
+(46, 'Tamluk', 'Purba Medinipur, India'),
+(47, 'Uluberia', 'Howrah, India');
 
 --
 -- Indexes for dumped tables
@@ -268,9 +358,21 @@ ALTER TABLE `resume_skills`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `social_links`
+--
+ALTER TABLE `social_links`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `testimonials`
 --
 ALTER TABLE `testimonials`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `town_map`
+--
+ALTER TABLE `town_map`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -314,10 +416,22 @@ ALTER TABLE `resume_skills`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
+-- AUTO_INCREMENT for table `social_links`
+--
+ALTER TABLE `social_links`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `testimonials`
 --
 ALTER TABLE `testimonials`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `town_map`
+--
+ALTER TABLE `town_map`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
