@@ -7,6 +7,16 @@
         content="Official Portfolio Website of Prasid Mandal - Full-Stack Web, Android App Developer - (Also Reknowned as @xodivorce).">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+    - #Pinterest Domain Varification
+    -->
+
+    <?php
+     $domainVerifyContent = $_ENV['PINTEREST_CONTENT_SECRET'] ?? 'default_verification_code';
+    ?>
+    <meta name="p:domain_verify" content="<?= htmlspecialchars($domainVerifyContent) ?>" />
+
     <title>Xodivorce - Portfolio</title>
 
     <!--
@@ -98,7 +108,7 @@
                     <li class="contact-item">
 
                         <div class="icon-box">
-                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                            <ion-icon name="call-outline"></ion-icon>
                         </div>
 
                         <div class="contact-info">
@@ -212,12 +222,16 @@
                 <ul class="social-list">
                     <?php foreach ($socials as $social): ?>
                     <li class="social-item">
+
                         <button class="social-link"
                             onclick="window.open('<?= htmlspecialchars($social['url']) ?>', '_blank')">
+
                             <span class="icon-wrapper">
                                 <ion-icon name="<?= htmlspecialchars($social['icon_name']) ?>"></ion-icon>
                             </span>
+
                         </button>
+
                     </li>
                     <?php endforeach; ?>
                 </ul>
@@ -280,11 +294,9 @@
 
                     <?php
 
-                   // Get birth date from environment variables
                     $birthDateString = $_ENV['USER_BDAY'] ?? $_SERVER['USER_BDAY'] ?? null;
                     $experienceStartYear = $_ENV['USER_EXPY'] ?? $_SERVER['USER_EXPY'] ?? null;
 
-                  // Calculate age
                     $birthDate = DateTime::createFromFormat('d-m-Y', $birthDateString);
                     if (!$birthDate) {
                       die("Invalid date format: Expected 'd-m-Y'.");
@@ -293,7 +305,6 @@
                     $today = new DateTime('today');
                     $age = $birthDate->diff($today)->y;
 
-                  // Calculate experience years
                     $experienceYears = $today->format('Y') - (int)$experienceStartYear;
                     
                       ?>
@@ -310,7 +321,6 @@
                         Moreover, I add a handcrafted touch to every line of code, No! Every pixel I've placed. However,
                         I'm On A Mission To Make The Web More Interesting...
                     </p>
-
 
                     <!--
           - #Service
@@ -542,7 +552,7 @@
                         </ol>
                     </section>
 
-                    <!--
+                <!--
         - #Skills
         -->
                     <section class="skill">
@@ -569,7 +579,7 @@
                         </section>
                 </article>
 
-                <!--
+                    <!--
         - #Portfolio
       -->
 
@@ -635,15 +645,15 @@
 
                         </div>
 
-                        <!-- 
-                    - #For Isuues, Deploy Comeing-soon
+                                                        <!-- 
+                        - #For Isuues, Deploy Comeing-soon
 
                         <div class="container">
                          <div class="title"><i class="fa-regular fa-clock icon-spin"></i>&nbsp; Coming Soon</div>
                           <div class="subtitle">Please be patient, something interesting is cooking up...!!
                           </div>
                         </div>
-                -->
+                    -->
 
                         <?php
                          $sql = "SELECT * FROM portfolio_projects ORDER BY id ASC";
@@ -679,15 +689,15 @@
         - #Blog
       -->
 
-                <!-- 
-          //For Isuues, Deploy Comeing-soon
+                                        <!-- 
+        //For Isuues, Deploy Comeing-soon
           
-          <div class="container">
+        <div class="container">
           <div class="title"><i class="fa-regular fa-clock icon-spin"></i>&nbsp; Coming Soon</div>
           <div class="subtitle">Please be patient, something interesting is cooking up...!!
           </div>
         </div>
-        -->
+    -->
 
                 <article class="blog" data-page="blog">
 
@@ -699,20 +709,25 @@
 
                         <?php
                          $sql = "SELECT * FROM blog_posts 
-                         ORDER BY FIELD(platform, 'Other', 'YouTube', 'Instagram', 'Facebook'), post_date DESC";                 
+                         ORDER BY FIELD(platform, 'Other', 'YouTube', 'Instagram', 'Facebook', 'Pinterest'), post_date DESC";                 
                          $result = $conn->query($sql);
                         ?>
 
                         <ul class="blog-posts-list">
+
                             <?php while ($row = $result->fetch_assoc()): ?>
+
                             <li class="blog-post-item">
+
                                 <a href="<?= htmlspecialchars($row['post_link']) ?>">
+
                                     <figure class="blog-banner-box">
-                                        <?php if ($row['platform'] == 'Instagram'): ?>
 
                                         <!-- 
-                                    - #Instagram Embed 
-                                -->
+                                            Instagram Embed
+                                        -->
+
+                                        <?php if ($row['platform'] == 'Instagram'): ?>
 
                                         <blockquote class="instagram-media"
                                             data-instgrm-permalink="<?= htmlspecialchars($row['post_link']) ?>"
@@ -720,48 +735,70 @@
                                         </blockquote>
                                         <script async src="//www.instagram.com/embed.js"></script>
 
+                                        <!-- 
+                                            Facebook Embed 
+                                        -->
+
                                         <?php elseif ($row['platform'] == 'Facebook' && !empty($row['post_iframe'])): ?>
 
-                                        <!--
-                                    - #Facebook Embed 
-                                -->
-
                                         <iframe src="<?= htmlspecialchars($row['post_iframe']) ?>" width="100%"
-                                            height="650" style="border:none;overflow:hidden;" scrolling="no"
+                                            height="365" style="border:none;overflow:hidden;" scrolling="no"
                                             frameborder="0" allowfullscreen="true">
                                         </iframe>
 
-                                        <?php else: ?>
+                                        <!-- 
+                                            Pinterest Embed 
+                                        -->
+
+                                        <?php elseif ($row['platform'] == 'Pinterest' && !empty($row['post_iframe'])): ?>
+
+                                        <iframe src="<?= htmlspecialchars($row['post_iframe']) ?>" height="365"
+                                            width="100%" frameborder="0" scrolling="no"></iframe>
 
                                         <!-- 
-                    - #Default Image (Other & YouTube) 
-                -->
+                                            Default Image (YouTube, Other) 
+                                        -->
+
+                                        <?php else: ?>
 
                                         <img src="<?= htmlspecialchars($row['post_image']) ?>"
                                             alt="<?= htmlspecialchars($row['post_image_alt']) ?>" loading="lazy">
+
                                         <?php endif; ?>
+
                                     </figure>
+
                                     <div class="blog-content">
                                         <div class="blog-meta">
+
                                             <p class="blog-category"><?= htmlspecialchars($row['post_category']) ?></p>
+
                                             <span class="dot"></span>
+
                                             <time datetime="<?= $row['post_date'] ?>">
                                                 <?= date("M d, Y", strtotime($row['post_date'])) ?>
                                             </time>
+
                                         </div>
+
                                         <h3 class="h3 blog-item-title"><?= htmlspecialchars($row['post_title']) ?></h3>
                                         <p class="blog-text"><?= htmlspecialchars_decode($row['post_text']) ?></p>
+
                                     </div>
+
                                 </a>
+
                             </li>
+
                             <?php endwhile; ?>
+
                         </ul>
 
                         <!--
                 - #Temp For META Not Resolved Iframe
             -->
 
-                        <!-- 
+                                                                        <!-- 
                         <div id="mobile-notification" class="notification">
                             <span class="close-btn" onclick="closeNotification()">&#10005;</span>
 

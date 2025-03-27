@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 24, 2025 at 09:39 PM
+-- Generation Time: Mar 27, 2025 at 06:12 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -36,7 +36,7 @@ CREATE TABLE `blog_posts` (
   `post_date` date NOT NULL,
   `post_title` varchar(255) NOT NULL,
   `post_text` text NOT NULL,
-  `platform` enum('YouTube','Instagram','Facebook','Other') NOT NULL,
+  `platform` enum('YouTube','Instagram','Facebook','Pinterest','Other') NOT NULL,
   `post_iframe` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -383,7 +383,7 @@ ALTER TABLE `town_map`
 -- AUTO_INCREMENT for table `blog_posts`
 --
 ALTER TABLE `blog_posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `maintenance`

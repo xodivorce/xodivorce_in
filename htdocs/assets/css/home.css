@@ -410,8 +410,8 @@
     right: -15px;
     border-radius: 0 15px;
     font-size: 13px;
-    color: var(--orange-yellow-crayola);
-    background: var(--border-gradient-onyx);
+    color: var(--eerie-black);
+    background: var(--vegas-gold);
     padding: 10px;
     box-shadow: var(--shadow-2);
     transition: var(--transition-1);
@@ -423,19 +423,19 @@
     position: absolute;
     inset: 1px;
     border-radius: inherit;
-    background: var(--bg-gradient-jet);
+    background: var(--vegas-gold);
     transition: var(--transition-1);
     z-index: -1;
 }
 
 .info_more-btn:hover,
 .info_more-btn:focus {
-    background: var(--bg-gradient-yellow-1);
+    background: var(--white-1);
 }
 
 .info_more-btn:hover::before,
 .info_more-btn:focus::before {
-    background: var(--bg-gradient-yellow-2);
+    background: var(--white-1);
 }
 
 .info_more-btn span {

@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         } catch (error) {
             statusMessage.style.display = "block";
-            statusMessage.innerHTML = "Error sending message. Please try again.";
+            statusMessage.innerHTML = "An Error Occurred.";
             span.textContent = "Send Message";
             button.disabled = false;
         }
