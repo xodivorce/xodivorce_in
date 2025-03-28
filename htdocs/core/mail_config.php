@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             "Name: " . $fullname . "<br>" .
             "Email: " . $email . "<br>" .
             "Message: <br>" . nl2br($message)."<br><br>" .
-            "<small style='color: #777;'>&copy; " . date('Y') . " {$_ENV['DOMAIN']}. All rights reserved.</small>";
+            "<small style='color: #777;'>&copy; {$_ENV['WEB_INDEXY']} - " . date('y') . " {$_ENV['DOMAIN']}. All rights reserved.</small>";
 
         if ($mail->send()) {
             echo "<span><ion-icon name='checkmark-circle-outline'></ion-icon> Thanks! Your Message Sent Successfully. </span>";
@@ -74,8 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         "Warm regards,<br>" .
                         "<b>Prasid Mandal</b><br>" .
                         "<i>Founder, {$_ENV['DOMAIN']}</i><br><br>" .
-                        "<small style='color: #777;'>&copy; " . date('Y') . " {$_ENV['DOMAIN']}. All rights reserved.</small>";
-
+                        "<small style='color: #777;'>&copy; {$_ENV['WEB_INDEXY']} - " . date('y') . " {$_ENV['DOMAIN']}. All rights reserved.</small>";
 
                 $autoReply->send();
             } catch (Exception $e) {
