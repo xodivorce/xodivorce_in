@@ -240,7 +240,7 @@
 
         </aside>
 
-        <!--
+                <!--
       - #Main-Content
     -->
 
@@ -439,9 +439,9 @@
                         </ul>
                     </section>
 
-                    <!-- 
+                        <!-- 
         - #Testimonials Modal 
-        -->
+    -->
 
                     <div class="modal-container" data-modal-container>
                         <div class="overlay" data-overlay></div>
@@ -554,7 +554,7 @@
 
                 <!--
         - #Skills
-        -->
+    -->
                     <section class="skill">
                         <section class="skill">
                             <h3 class="h3 skills-title">My Skills</h3>
@@ -690,7 +690,7 @@
       -->
 
                                         <!-- 
-        //For Isuues, Deploy Comeing-soon
+        - #For Isuues, Deploy Comeing-soon
           
         <div class="container">
           <div class="title"><i class="fa-regular fa-clock icon-spin"></i>&nbsp; Coming Soon</div>
@@ -723,8 +723,8 @@
 
                                     <figure class="blog-banner-box">
 
-                                        <!-- 
-                                            Instagram Embed
+                                                        <!-- 
+                                            - #Instagram Embed
                                         -->
 
                                         <?php if ($row['platform'] == 'Instagram'): ?>
@@ -735,8 +735,8 @@
                                         </blockquote>
                                         <script async src="//www.instagram.com/embed.js"></script>
 
-                                        <!-- 
-                                            Facebook Embed 
+                                                        <!-- 
+                                            - #Facebook Embed 
                                         -->
 
                                         <?php elseif ($row['platform'] == 'Facebook' && !empty($row['post_iframe'])): ?>
@@ -746,8 +746,8 @@
                                             frameborder="0" allowfullscreen="true">
                                         </iframe>
 
-                                        <!-- 
-                                            Pinterest Embed 
+                                                        <!-- 
+                                            - #Pinterest Embed 
                                         -->
 
                                         <?php elseif ($row['platform'] == 'Pinterest' && !empty($row['post_iframe'])): ?>
@@ -755,7 +755,7 @@
                                         <iframe src="<?= htmlspecialchars($row['post_iframe']) ?>" height="365"
                                             width="100%" frameborder="0" scrolling="no"></iframe>
 
-                                        <!-- 
+                                                                    <!-- 
                                             Default Image (YouTube, Other) 
                                         -->
 
@@ -794,7 +794,7 @@
 
                         </ul>
 
-                        <!--
+                                                <!--
                 - #Temp For META Not Resolved Iframe
             -->
 
@@ -847,8 +847,8 @@
                             <textarea name="message" class="form-input" placeholder="Your Message" required
                                 data-form-input></textarea>
 
-                            <!-- 
-                            Status Message 
+                                        <!-- 
+                            - #Status Message 
                         -->
 
                             <div class="status-message">
@@ -870,8 +870,8 @@
     </main>
 
 
-    <!--
-    - custom js link
+                <!--
+    - #Custom js link
   -->
     <script src="./assets/js/home.js"></script>
     <script src="./assets/js/preloader_config.js"></script>
@@ -879,8 +879,8 @@
     <script src="./assets/js/mail_config.js"></script>
     <script src="./assets/js/developer_config.js"></script>
 
-    <!--
-    - ionicon link
+                <!--
+    - #Ionicon link
   -->
     <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
