@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 27, 2025 at 06:12 PM
+-- Generation Time: Jun 12, 2025 at 11:01 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `xodivorce_maintenance`
+-- Database: `xodivorce_in`
 --
 
 -- --------------------------------------------------------
@@ -144,10 +144,11 @@ CREATE TABLE `resume_education` (
 --
 
 INSERT INTO `resume_education` (`id`, `institution`, `degree`, `start_year`, `end_year`, `description`) VALUES
-(1, 'Kingston Polytechnic College', 'Diploma in Computer Science and Technology (CST)', '2023', '2025', 'Kingston Polytechnic College, affiliated with Kingston Educational Institute (KEI); Barasat - Barrackpore Rd, Kajibari, Kolkata, West Bengal 700126.'),
+(1, 'Kingston Polytechnic College', 'Diploma in Computer Science and Technology (WBSCVTESD)', '2023', '2025', 'Kingston Polytechnic College, affiliated with Kingston Educational Institute (KEI); Barasat - Barrackpore Rd, Kajibari, Kolkata, West Bengal 700126.'),
 (2, 'Basirhat High School (HS)', 'Higher Secondary Education (WBCHSE)', '2021', '2023', 'Completed 11th and 12th grade with Science (Physics, Chemistry, Biology) and Computer Applications under the WB Board at Basirhat High School (HS).'),
 (3, 'Basirhat Town High School (HS)', 'Secondary Education (WBBSE)', '2015', '2021', 'Completed 5th to 10th grades under the WB Board at Basirhat Town High School (HS). Studied PT (Physical Training), Computer Studies, and Construction, gaining foundational knowledge and practical skills.'),
-(4, 'Bhawanipur Harimohan Primary School', 'Primary Education (WBBPE)', '2011', '2015', 'Attended Bhawanipur Harimohan Primary School from class 1 to 4, starting with basic ABC and computer skills. Introduced to MS Paint, Word, and other applications from class 3 onwards.');
+(4, 'Bhawanipur Harimohan Primary School', 'Primary Education (WBBPE)', '2011', '2015', 'Attended Bhawanipur Harimohan Primary School from class 1 to 4, starting with basic ABC and computer skills. Introduced to MS Paint, Word, and other applications from class 3 onwards.'),
+(5, 'Camellia Institute of Technology', 'Bachelor of Technology (B.Tech) in Computer Science and Engineering (CSE)', '2025', '2028', 'Camellia Institute of Technology, under Maulana Abul Kalam Azad University of Technology (MAKAUT); located at Digberia, Badu Road, Near NSG Hub, Madhyamgram, Kolkata - 700128.');
 
 -- --------------------------------------------------------
 
@@ -170,7 +171,8 @@ CREATE TABLE `resume_experience` (
 INSERT INTO `resume_experience` (`id`, `job_title`, `start_year`, `end_year`, `description`) VALUES
 (1, 'Web Developer (MERN)', '2024', 'Present', 'Currently expanding my skills with the MERN stack (MongoDB, Express, React, Node.js). \r\nWorking on new and exciting projects using modern web technologies. \r\nMore MERN stack-based projects are coming soon!'),
 (2, 'Web Developer (Laravel)', '2023', 'Present', 'Self-taught Full Stacked Web Developed and managed web projects, including xodivorce.in. Collaborated with clients to create and deploy customized web solutions using HTML5, CSS3, JavaScript, PHP, and MySQL. Ensured mobile-friendliness with responsive design principles.'),
-(3, 'CITA - IT And ITAS', '2023', '2024', 'Completed Youth Computer Training at CITA in Basirhat, West Bengal. Acquired practical experience with a range of IT tools and technologies. Successfully finished the IT/ITAS training program, which lasted for 6 months.');
+(3, 'CITA - IT And ITAS', '2023', '2024', 'Completed Youth Computer Training at CITA in Basirhat, West Bengal. Acquired practical experience with a range of IT tools and technologies. Successfully finished the IT/ITAS training program, which lasted for 6 months.'),
+(4, 'Android App Developer (Kotlin)', '2025', 'Present', 'Creating modern Android applications using Kotlin and Jetpack Compose, with a strong emphasis on clean UI design, smooth performance, and intuitive user interactions.');
 
 -- --------------------------------------------------------
 
@@ -203,7 +205,7 @@ INSERT INTO `resume_skills` (`id`, `skill_name`, `skill_level`) VALUES
 (12, 'Python', 75),
 (13, 'C', 35),
 (14, 'Java', 45),
-(15, 'Kotlin', 15);
+(15, 'Kotlin', 55);
 
 -- --------------------------------------------------------
 
@@ -250,7 +252,8 @@ CREATE TABLE `testimonials` (
 
 INSERT INTO `testimonials` (`id`, `name`, `avatar`, `message`, `date_added`) VALUES
 (1, 'AutoSquare Store', './assets/images/avatar-1.png', 'We recently came across your GitHub profile and were truly impressed by your skills and projects. We think you could be a fantastic addition to our team at AutoSquare as a Full Stack Software Engineer.', '2024-11-30'),
-(3, 'IIT Guwahati', './assets/images/avatar-5.png', 'We are delighted to welcome you to the Credit-linked Program in Data Science, offered by Daksh Gurukul IIT Guwahati.\r\n\r\nYour journey toward academic excellence and personal growth begins now, and we are committed to supporting you every step of the way.', '2025-01-19');
+(3, 'IIT Guwahati', './assets/images/avatar-5.png', 'We are delighted to welcome you to the Credit-linked Program in Data Science, offered by Daksh Gurukul IIT Guwahati.\r\n\r\nYour journey toward academic excellence and personal growth begins now, and we are committed to supporting you every step of the way.', '2025-01-19'),
+(4, 'Xiaorui from AutoMQ', './assets/images/avatar-3.png', 'Prasid has shown a deep interest in open source, which immediately stood out to us. His passion and contributions align perfectly with high-performance systems like AutoMQ, and we believe his feedback and insights would be incredibly valuable.', '2025-06-12');
 
 -- --------------------------------------------------------
 
@@ -401,13 +404,13 @@ ALTER TABLE `portfolio_projects`
 -- AUTO_INCREMENT for table `resume_education`
 --
 ALTER TABLE `resume_education`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `resume_experience`
 --
 ALTER TABLE `resume_experience`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `resume_skills`
@@ -425,7 +428,7 @@ ALTER TABLE `social_links`
 -- AUTO_INCREMENT for table `testimonials`
 --
 ALTER TABLE `testimonials`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `town_map`

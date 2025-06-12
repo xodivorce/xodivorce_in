@@ -477,9 +477,11 @@
                         <ul class="clients-list has-scrollbar">
 
                             <li class="clients-item">
-                                <a href="https://autosquare.store" target="_main">
                                     <img src="./assets/images/autosquare.png" alt="Autosquare logo">
-                                </a>
+                            </li>
+
+                            <li class="clients-item">
+                                    <img src="./assets/images/steamstube.png" alt="Aut">
                             </li>
 
                         </ul>

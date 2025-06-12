@@ -791,8 +791,8 @@
   
   .clients-list {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     gap: 15px;
     margin: 0 -15px;
     padding: 25px;
@@ -811,7 +811,7 @@
   
   .clients-item img {
     height: 35%;
-    width: 35%;
+    width: 80%;
     filter: grayscale(1);
     transition: var(--transition-1);
   }
@@ -1415,6 +1415,7 @@
      */
   
     .clients-item { min-width: calc(33.33% - 10px); }
+    
   
   
   
