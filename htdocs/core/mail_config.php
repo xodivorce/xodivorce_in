@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $filteredEmails = explode(',', $_ENV['FILTER_EMAILS']);
     if (in_array(strtolower($email), array_map('strtolower', $filteredEmails))) {
-        echo "<span><ion-icon name='mail-open-outline'></ion-icon>Yep, That's My Email! Use A Valid Email.</span>";
+        echo "<span><ion-icon name='mail-open-outline'></ion-icon> Yep, that's my email! Use a valid email.</span>";
         exit;
     }
 
@@ -42,15 +42,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->addReplyTo($email, $fullname);
 
         $mail->isHTML(true);
-        $mail->Subject = 'New Contact Form Submission by ' . $fullname;
+        $mail->Subject = 'New contact form submission by ' . $fullname;
         $mail->Body =
             "Name: " . $fullname . "<br>" .
             "Email: " . $email . "<br>" .
             "Message: <br>" . nl2br($message)."<br><br>" .
-            "<small style='color: #777;'>&copy; {$_ENV['WEB_INDEXY']} - " . date('y') . " {$_ENV['DOMAIN']}. All rights reserved.</small>";
-
+            "Sincerely,<br>The Xodivorce Team<br>
+            <p style='font-size:12px;color:#6E6E73;'>
+            &copy; {$_ENV['WEB_INDEXY']} - " . date('Y') . " {$_ENV['DOMAIN']}. All rights reserved.
+            </p>";
         if ($mail->send()) {
-            echo "<span><ion-icon name='checkmark-circle-outline'></ion-icon> Thanks! Your Message Sent Successfully. </span>";
+            echo "<span><ion-icon name='checkmark-circle-outline'></ion-icon> Thanks! Your message sent successfully. </span>";
 
             $autoReply = new PHPMailer(true);
             try {
@@ -66,25 +68,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $autoReply->addAddress($email, $fullname);
 
                 $autoReply->isHTML(true);
-                $autoReply->Subject = "We've Received Your Message!";
-                $autoReply->Body =
-                        "Dear <b>{$fullname}</b>,<br><br>" .
-                        "Thank you for reaching out to <a href='{$_ENV['DOMAIN']}' target='_blank'>{$_ENV['DOMAIN']}</a>.<br>" .
-                        "Your message has been received, and I’ll get back to you as soon as possible.<br><br>" .
-                        "Warm regards,<br>" .
-                        "<b>Prasid Mandal</b><br>" .
-                        "<i>Founder, {$_ENV['DOMAIN']}</i><br><br>" .
-                        "<small style='color: #777;'>&copy; {$_ENV['WEB_INDEXY']} - " . date('y') . " {$_ENV['DOMAIN']}. All rights reserved.</small>";
+                $autoReply->Subject = "We've received your message!";
+                $firstName = explode(' ', trim($fullname))[0];
 
+                $autoReply->Body = "
+                    <div style='font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;'>
+                        <p>Dear <strong>{$firstName}</strong>,</p>
+                        <p>
+                            Thank you for reaching out on 
+                            <a href='{$_ENV['DOMAIN']}' target='_blank'>{$_ENV['DOMAIN']}</a>.<br>
+                            Your message has been received, and I will get back to you as soon as possible.
+                        </p>
+                        <p>Warm regards,</p>
+                        <p>
+                            <strong>Prasid Mandal</strong><br>
+                            <em>Web Developer, {$_ENV['DOMAIN']}</em>
+                        </p>
+                        <p style='font-size:12px;color:#6E6E73;'>
+                            &copy; {$_ENV['WEB_INDEXY']} - " . date('Y') . " {$_ENV['DOMAIN']}. All rights reserved.
+                        </p>
+                    </div>
+                ";
                 $autoReply->send();
             } catch (Exception $e) {
                 
             }
         } else {
-            echo "<span><ion-icon name='close-circle-outline'></ion-icon> Error Sending Message! Please Try Again. </span>";
+            echo "<span><ion-icon name='close-circle-outline'></ion-icon> Error sending message! Please try again. </span>";
         }
     } catch (Exception $e) {
-        echo "<span><ion-icon name='bug-outline'></ion-icon> A Mailer Error Occurred: <br><br> {$mail->ErrorInfo}</span>";
+        echo "<span><ion-icon name='bug-outline'></ion-icon> A mailer error occurred: <br><br> {$mail->ErrorInfo}</span>";
     }
 }
 ?>

@@ -1,0 +1,55 @@
+.notification {
+    background-color: #0e182c;
+    color: hsl(0, 0%, 100%);
+    padding: 30px;
+    text-align: center;
+    font-size: 12.5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 2s ease, visibility 1s 3s;
+}
+
+.notification.show {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 2s ease, visibility 1s 3s;
+}
+
+.highlight-text {
+    color: #37BDF9;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.notification p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 5px;
+    z-index: 1000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.close-btn:hover {
+    color: #ff4747;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
+}
