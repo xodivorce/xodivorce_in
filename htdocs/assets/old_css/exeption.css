@@ -9,8 +9,8 @@
 .view-cv-btn {
     padding: 5px 15px;
     font-weight: var(--fw-500);
-    background-color: var(--hover-grey);
-    color: var(  --light-gray);
+    background-color: var(--vegas-gold);
+    color: var(--eerie-black);
     width: max-content;
     border-radius: 20px;
     cursor: pointer;
@@ -21,7 +21,7 @@
 
 .view-cv-btn:hover {
     box-shadow: 0 4px 15px rgba(167, 167, 167, 0.898);
-    background-color: var(--hover-grey);
+    background-color: var(--white-1);
     border-radius: 8px;
 }
 
