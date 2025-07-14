@@ -481,7 +481,7 @@
                             </li>
 
                             <li class="clients-item">
-                                    <img src="./assets/images/steamstube.png" alt="Steamstube logo">
+                                    <img src="./assets/images/Steamstube.png" alt="Steamstube logo">
                             </li>
 
                         </ul>
