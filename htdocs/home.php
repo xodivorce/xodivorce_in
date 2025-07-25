@@ -67,10 +67,8 @@
 
                 <div class="info-content">
                     <h1 class="name" title="Prasid Mandal">Xodivorce</h1>
-                    <button onclick="window.location.href='./assets/pdf/CV_PRASID.pdf'" class="view-cv-btn">View
-                        CV</button>
+                    <button onclick="window.location.href='core/pdf_config.php'" class="view-cv-btn">View CV</button>
                 </div>
-
 
                 <button class="info_more-btn" data-sidebar-btn>
                     <span>Show Contacts</span>
